@@ -23,6 +23,7 @@ class Home extends CI_Controller {
 		$this->load->model('M_ppdb');
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
+		$this->load->view('dashboard');
 		$this->load->view('template/footer');
 
 

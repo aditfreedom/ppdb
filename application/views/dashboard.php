@@ -21,13 +21,13 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-6 col-6">
+        <div class="col-lg-4 col-4">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Jumlah User Terdaftar</p>
+                <p>Sisa Kuota SD</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -35,24 +35,113 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-6 col-6">
+
+        <div class="col-lg-4 col-4">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Sisa Kuota SMP</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-graduate"></i>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+        <div class="col-lg-4 col-4">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Sisa Kuota SMA</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-graduate"></i>
+              </div>
+            </div>
+          </div>
+             <!-- ./col -->
+             <div class="col-lg-4 col-4">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
+                <h3>20</h3>
+
+                <p>Sisa Kuota pindahan SD</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-graduate"></i>
+              </div>
+            </div>
+          </div>
+                    <!-- ./col -->
+        <div class="col-lg-4 col-4">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Sisa Kuota pindahan SMP</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-graduate"></i>
+              </div>
+            </div>
+          </div>
+
+                       <!-- ./col -->
+        <div class="col-lg-4 col-4">
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Sisa Kuota pindahan SMA</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user-graduate"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ./col -->
+          <div class="col-lg-3 col-3">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Jumlah User Terdaftar</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user"></i>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-3 col-3">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
                 <h3>20<sup style="font-size: 20px"></sup></h3>
 
-                <p>Jumlah Calon PD Telah Bayar Formulir</p>
+                <p>Jumlah Calon PD Bayar Formulir</p>
               </div>
               <div class="icon">
                 <i class="fa fa-money-check-alt"></i>
                 
               </div>
             </div>
+
+    
           </div>
           <!-- ./col -->
-          <div class="col-lg-6 col-6">
+          <div class="col-lg-3 col-3">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-primary">
               <div class="inner">
                 <h3>20</h3>
 
@@ -64,9 +153,9 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-6 col-6">
+          <div class="col-lg-3 col-3">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-primary">
               <div class="inner">
                 <h3>20</h3>
 
@@ -79,17 +168,19 @@
           </div>
           <!-- ./col -->
         </div>
+
+        
         <!-- /.row -->
         <!-- Main row -->
         <div class="row">
           <!-- Left col -->
           <div class="col-lg-6 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Jumlah Calon PD Telah Daftar Ulang</p>
+                <p>Jumlah PD Telah Daftar Ulang</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-check"></i>
@@ -99,11 +190,11 @@
 
           <div class="col-lg-6 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-warning">
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Jumlah Calon PD Tidak Daftar Ulang</p>
+                <p>Jumlah PD Tidak Daftar Ulang</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-times"></i>

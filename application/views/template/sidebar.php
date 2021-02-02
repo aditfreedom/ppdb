@@ -35,7 +35,25 @@
 
           <li class="nav-item ">
             <a href="<?=base_url('dashboard/datarumahmakan');?>" class="nav-link">
-              <i class="nav-icon fa fa-home"></i>
+              <i class="nav-icon fa fa-tasks"></i>
+              <p>
+                Kuota Penerimaan
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="<?=base_url('dashboard/datarumahmakan');?>" class="nav-link">
+              <i class="nav-icon fa fa-clipboard-check"></i>
+              <p>
+                Approval Pengguna
+              </p>
+            </a>
+          </li>
+
+          <li class="nav-item ">
+            <a href="<?=base_url('dashboard/datarumahmakan');?>" class="nav-link">
+              <i class="nav-icon fa fa-clipboard-check"></i>
               <p>
                 Approval Formulir
               </p>
@@ -51,7 +69,7 @@
           </li>
           <li class="nav-item ">
             <a href="<?=base_url('dashboard/datameja');?>" class="nav-link">
-              <i class="nav-icon fa fa-table"></i>
+              <i class="nav-icon fa fa-user-check"></i>
               <p>
                 Approval Daftar Ulang
               </p>
@@ -59,7 +77,7 @@
           </li>
           <li class="nav-item ">
             <a href="<?=base_url('dashboard/datamenu');?>" class="nav-link">
-              <i class="nav-icon fa fa-book"></i>
+              <i class="nav-icon fa fa-users"></i>
               <p>
                 Data Pengguna
               </p>
@@ -73,6 +91,12 @@
               </p>
             </a> -->
           </li>
+          <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="far fa-money-bill-alt nav-icon"></i>
+                  <p>Konfirmasi Daftar Ulang</p>
+                </a>
+              </li>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user-graduate"></i>
@@ -96,18 +120,26 @@
               </li>
               <li class="nav-item">
                 <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Daftar Ulang</p>
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Download Surat Pernyataan</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Download Pakta Integritas</p>
                 </a>
               </li>
               </ul>
               </li>
+
+              
           
           <li class="nav-item ">
             <a href="<?=base_url('dashboard/dataprofilpengguna');?>" class="nav-link">
-              <i class="nav-icon fa fa-user"></i>
+              <i class="nav-icon fa fa-key"></i>
               <p>
-                Profil Pengguna
+                Ubah Password
               </p>
             </a>
           </li>

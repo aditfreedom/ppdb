@@ -12,14 +12,14 @@
 
     <title>Registrasi Pengguna</title>
   </head>
-  <body >
-  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-    <a class="navbar-brand text-light font-weight-bold" href="#">  <img class="img" src="<?php echo base_url('logo.png');?>" width="50px">
-    PPDB ONLINE SSB BIREUEN</a></img>
+  <body  >
+  <nav class="navbar navbar-expand-lg navbar-light bg-info" style="height:50px">
+ 
     </nav>
-
     <div class="container text-center">
-<h1 style="margin-top:30px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK<br>SEKOLAH SUKMA BANGSA BIREUEN TA.2020-2021</h1>
+    <br>
+    <img src="<?php echo base_url()?>logo.png" width="200px">
+<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK<br>SEKOLAH SUKMA BANGSA BIREUEN TA.2020-2021</h1>
 </div>
 <br>
     <div class="container">
@@ -27,7 +27,7 @@
     <div class="row">
     <div class="col">
     <div class="form-group">
-        <label for="">Nama Calon Peserta Didik</label>
+        <label for="">Nama Panjang Calon Peserta Didik</label>
         <input type="text" name="nama" class="form-control">
         </div>
         <div class="form-group">
@@ -41,9 +41,18 @@
     </div>
     <div class="col">
         <div class="form-group">
-        <label for="">No. HP Orang Tua</label>
-        <input type="text" name="no_hp" class="form-control">
+        <label for="">Jenis Pendaftaran</label>
+        <select class="form-control form-control" name="jenis">
+          <option>Peserta Didik Baru SD</option>
+          <option>Peserta Didik Baru SMP</option>
+          <option>Peserta Didik Baru SMA</option>
+          <option>Pindahan SD</option>
+          <option>Pindahan SMP</option>
+          <option>Pindahan SMA</option>
+          <option>Alumni</option>
+          </select>
         </div>
+
         <div class="form-group">
         <label for="">Foto</label>
         <input type="file" name="foto_rm" class="form-control" required>
@@ -54,11 +63,11 @@
         </div>
     </div>
   </div>
-        <button type="submit" class="btn btn-primary font-weight-bold" style="width:100%;">DAFTAR</button>
+        <button type="submit" class="btn btn-info font-weight-bold" style="width:100%;">DAFTAR</button>
       </div>
         </form>
 
-
+<br>
     </div>
 
 
