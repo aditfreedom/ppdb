@@ -47,4 +47,34 @@ class Home extends CI_Controller {
 		$this->load->view('dashboard');
 		$this->load->view('template/footer');
 	}
+	
+	public function kuota()
+	{
+		$data['kuota'] = $this->M_ppdb->tampil_data_kuota()->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('kuota',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function tambahkuota(){
+		$jenis           = $this->input->post('jenis');
+		$kuota          = $this->input->post('kuota');
+
+	   
+		$data = array(
+			'jenis' => $jenis,
+			'kuota' => $kuota
+		);
+	
+		$this->M_ppdb->tambahkuota($data,'kuota');
+		redirect(base_url('home/kuota'));
+	}
+
+	public function hapuskuota($id){
+		$id =    array ('id' => $id);
+		$this->M_ppdb->hapuskuota($id,'kuota');
+		redirect(base_url('home/kuota'));
+	}
 }

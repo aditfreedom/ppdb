@@ -33,20 +33,12 @@
             </a>
           </li>
 
+
           <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datarumahmakan');?>" class="nav-link">
+            <a href="<?=base_url('home/kuota');?>" class="nav-link">
               <i class="nav-icon fa fa-tasks"></i>
               <p>
                 Kuota Penerimaan
-              </p>
-            </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datarumahmakan');?>" class="nav-link">
-              <i class="nav-icon fa fa-clipboard-check"></i>
-              <p>
-                Approval Pengguna
               </p>
             </a>
           </li>
@@ -63,7 +55,7 @@
             <a href="<?=base_url('dashboard/datarumahmakanapproval');?>" class="nav-link">
               <i class="nav-icon fa fa-check"></i>
               <p>
-                Approval Kelulusan
+                Konfirmasi Kelulusan
               </p>
             </a>
           </li>
@@ -71,7 +63,7 @@
             <a href="<?=base_url('dashboard/datameja');?>" class="nav-link">
               <i class="nav-icon fa fa-user-check"></i>
               <p>
-                Approval Daftar Ulang
+                Konfirmasi Daftar Ulang
               </p>
             </a>
           </li>
@@ -91,12 +83,6 @@
               </p>
             </a> -->
           </li>
-          <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="far fa-money-bill-alt nav-icon"></i>
-                  <p>Konfirmasi Daftar Ulang</p>
-                </a>
-              </li>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user-graduate"></i>
@@ -115,15 +101,32 @@
               <li class="nav-item">
                 <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Cetak Kartu Peserta</p>
+                  <p>Cetak Kartu</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registrasi Ulang</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Alur Pendaftaran</p>
+                </a>
+              </li>
+
               <li class="nav-item">
                 <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
                   <i class="fa fa-download nav-icon"></i>
                   <p>Download Surat Pernyataan</p>
                 </a>
               </li>
+
+
+
               <li class="nav-item">
                 <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
                   <i class="fa fa-download nav-icon"></i>
