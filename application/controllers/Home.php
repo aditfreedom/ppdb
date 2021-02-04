@@ -108,11 +108,73 @@ class Home extends CI_Controller {
 
 	public function approve_formulir()
 	{
-		$data['kuota'] = $this->M_ppdb->tampil_data_kuota()->result();
+		$data['formulir'] = $this->M_ppdb->tampil_approval()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
 		$this->load->view('approve_formulir',$data);
 		$this->load->view('template/footer');
 	}
+
+	public function tambahuser(){
+		$nama_lengkap           	= $this->input->post('nama_lengkap');
+		$sekolah_asal       = $this->input->post('sekolah_asal');
+		$jenis    		    = $this->input->post('jenis');
+		$foto       	    = $_FILES['foto'];
+		$username           = $this->input->post('username');
+		$password           = $this->input->post('password');
+		$status             = $this->input->post('status');
+	
+	
+	
+			$config['upload_path']          = 'asset/foto/';
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 10000;
+			$config['max_width']            = 10000;
+			$config['max_height']           = 10000;
+	
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+			 
+			if (! $this->upload->do_upload('foto')) {
+				$this->load->view('errorupload');
+			}else{
+				$foto=$this->upload->data('file_name');
+			}
+	
+		
+		$data = array(
+			'nama_lengkap' => $nama_lengkap,
+			'sekolah_asal' => $sekolah_asal,
+			'nisn' => "0",
+			'alamat' => "",
+			'no_hp' => "",
+			'bukti_tf' => "",
+			'jenis' => $jenis,
+			'foto' => $foto,
+			'username' => $username,
+			'password' => $password,
+			'role' => "1",
+			'approve_formulir' 	=> "Antrian",
+			'approve_lulus' 	=> "Antrian",
+			'approve_daftarulang' => "Antrian",
+
+
+
+		);
+	
+		$this->M_ppdb->tambahuser($data,'pengguna');
+		$this->load->view('status');    
+		// redirect(base_url('home/registrasi'));
+	}
+
+	public function editapproval($id){
+		$id =    array ('id' => $id);
+		$data['approval'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('editapproval',$data);
+		$this->load->view('template/footer');
+	}
+
 }

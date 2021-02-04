@@ -17,27 +17,46 @@
     </div>
     <!-- /.content-header -->
     <div class="content">
-    <p align="right">
+    <!-- <p align="right">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    <i class="fa fa-plus"></i> Tambah Data</button><br><br></p>
+    <i class="fa fa-plus"></i> Tambah Data</button><br><br></p> -->
 
     <table class="table table-hover" id="example">
           <thead class="text-center">
             <tr>
               <th scope="col">NO</th>
+              <th scope="col">NAMA LENGKAP</th>
+              <th scope="col">NISN</th>
+              <th scope="col">SEKOLAH ASAL</th>
+              <th scope="col">ALAMAT</th>
               <th scope="col">JENIS PENERIMAAN</th>
-              <th scope="col">KUOTA</th>
+              <th scope="col">APPROVAL FORMULIR</th>
               <th scope="col">AKSI</th>
             </tr>
           </thead>
           <tbody>
           <?php $i = 1; 
-	        foreach ($kuota as $data) : ?>
+	        foreach ($formulir as $data) : ?>
 		<tr class="nomor text-center">
             <th scope="row"><?php echo $i ;?></th>
+            <td><?php echo $data->nama_lengkap;?></td>
+            <td><?php echo $data->nisn;?></td>
+            <td><?php echo $data->sekolah_asal;?></td>
+            <td><?php echo $data->alamat;?></td>
             <td><?php echo $data->jenis;?></td>
-            <td><?php echo $data->kuota;?></td>
-            <td><?php echo anchor('home/editkuota/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?> <?php echo anchor('home/hapuskuota/'.$data->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>	
+    <?php
+    $approval= $data->approve_formulir;
+      if ($approval=="Antrian") {
+        $class="btn-warning";
+      }elseif($approval=="Diterima"){
+        $class="btn-info";
+      }
+      else{
+        $class="btn-danger";
+      }    
+    ?>
+            <td><a class="font-weight-bold text-uppercase <?= $class;?>" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_formulir?>&nbsp&nbsp</a></td>
+            <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>

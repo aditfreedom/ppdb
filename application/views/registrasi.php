@@ -19,20 +19,20 @@
     <div class="container text-center">
     <br>
     <img src="<?php echo base_url()?>logo.png" width="200px">
-<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK<br>SEKOLAH SUKMA BANGSA BIREUEN TA.2020-2021</h1>
+<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK<br>SEKOLAH SUKMA BANGSA BIREUEN TA.2021-2022</h1>
 </div>
 <br>
     <div class="container">
-    <?php echo form_open_multipart('home/tambauser');?>
+    <?php echo form_open_multipart('home/tambahuser');?>
     <div class="row">
     <div class="col">
     <div class="form-group">
-        <label for="">Nama Panjang Calon Peserta Didik</label>
-        <input type="text" name="nama" class="form-control">
+        <label for="">Nama Lengkap</label>
+        <input type="text" name="nama_lengkap" class="form-control">
         </div>
         <div class="form-group">
-        <label for="">Nama Panggilan</label>
-        <input type="text" name="panggilan" class="form-control">
+        <label for="">Asal Sekolah</label>
+        <input type="text" name="sekolah_asal" class="form-control">
         </div>
         <div class="form-group">
         <label for="">Username</label>
@@ -53,8 +53,8 @@
         </div>
 
         <div class="form-group">
-        <label for="">Foto</label>
-        <input type="file" name="foto_rm" class="form-control" required>
+        <label for="">Foto (Maks. 1MB) </label>
+        <input type="file" name="foto" class="form-control" required>
         </div>
         <div class="form-group">
         <label for="">Password</label>

@@ -20,7 +20,7 @@
   </div>
 <div class="container shadow p-3 mb-5 bg-white rounded">
         <img class="img mx-auto d-block" src="<?php echo base_url('logo.png');?>" width="100px">
-        <h6 class="text-center font-weight-bold">PPDB ONLINE TA.2020/2021<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
+        <h6 class="text-center font-weight-bold">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
         <form action="<?php echo base_url('home/login_aksi');?>" method="post">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
