@@ -27,7 +27,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota SD</p>
+                <p>Kuota Penerimaan SD</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -42,7 +42,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota SMP</p>
+                <p>Kuota Penerimaan SMP</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -56,7 +56,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota SMA</p>
+                <p>Kuota Penerimaan SMA</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -70,7 +70,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota pindahan SD</p>
+                <p>Kuota pindahan SD</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -84,7 +84,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota pindahan SMP</p>
+                <p>Kuota pindahan SMP</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -99,7 +99,7 @@
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Sisa Kuota pindahan SMA</p>
+                <p>Kuota pindahan SMA</p>
               </div>
               <div class="icon">
                 <i class="fa fa-user-graduate"></i>
@@ -108,7 +108,7 @@
           </div>
           
           <!-- ./col -->
-          <div class="col-lg-3 col-3">
+          <div class="col-lg-2 col-2">
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
@@ -121,14 +121,29 @@
               </div>
             </div>
           </div>
+
           <!-- ./col -->
-          <div class="col-lg-3 col-3">
+          <div class="col-lg-2 col-2">
+            <!-- small box -->
+            <div class="small-box bg-primary">
+              <div class="inner">
+                <h3>20</h3>
+
+                <p>Jumlah Calon PD Bayar Formulir</p>
+              </div>
+              <div class="icon">
+                <i class="fa fa-user"></i>
+              </div>
+            </div>
+          </div>
+          <!-- ./col -->
+          <div class="col-lg-2 col-2">
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
                 <h3>20<sup style="font-size: 20px"></sup></h3>
 
-                <p>Jumlah Calon PD Bayar Formulir</p>
+                <p>Jumlah Pindahan Bayar Formulir</p>
               </div>
               <div class="icon">
                 <i class="fa fa-money-check-alt"></i>
@@ -136,16 +151,20 @@
               </div>
             </div>
 
+            
+
+            
+
     
           </div>
           <!-- ./col -->
           <div class="col-lg-3 col-3">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Jumlah Calon PD Lulus</p>
+                <p>Jumlah Calon PD Lulus</p><br>
               </div>
               <div class="icon">
                 <i class="fa fa-check"></i>
@@ -155,11 +174,11 @@
           <!-- ./col -->
           <div class="col-lg-3 col-3">
             <!-- small box -->
-            <div class="small-box bg-primary">
+            <div class="small-box bg-danger">
               <div class="inner">
                 <h3>20</h3>
 
-                <p>Jumlah Calon PD Tidak Lulus</p>
+                <p>Jumlah Calon PD Tidak Lulus</p><br>
               </div>
               <div class="icon">
                 <i class="fa fa-times"></i>

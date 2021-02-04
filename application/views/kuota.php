@@ -72,7 +72,6 @@
           <option>Pindahan SD</option>
           <option>Pindahan SMP</option>
           <option>Pindahan SMA</option>
-          <option>Alumni</option>
           </select>
       </div>
         <div class="form-group">
