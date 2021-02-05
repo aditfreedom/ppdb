@@ -177,4 +177,140 @@ class Home extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function updateapproval(){
+		$id              = $this->input->post('id');
+		$nama            = $this->input->post('nama');
+		$jenis      	 = $this->input->post('jenis');
+		$nisn	         = $this->input->post('nisn');
+		$alamat	         = $this->input->post('alamat');
+		$sekolah_asal    = $this->input->post('sekolah_asal');
+		$no_hp           = $this->input->post('no_hp');
+		$foto            = $this->input->post('foto');
+		$bukti_tf        = $this->input->post('bukti_tf');
+		$username        = $this->input->post('username');
+		$password        = $this->input->post('password');
+		$role            = $this->input->post('role');
+		$approve_formulir    = $this->input->post('approve_formulir');
+		$approve_lulus       = $this->input->post('approve_lulus');
+		$approve_daftarulang = $this->input->post('approve_daftarulang');
+
+
+	
+		$data = array(
+			'nama_lengkap' => $nama,
+			'jenis' => $jenis,
+			'nisn' => $nisn,
+			'alamat' =>$alamat,
+			'sekolah_asal' => $sekolah_asal,
+			'no_hp' => $no_hp,
+			'foto' => $foto,
+			'bukti_tf' => $bukti_tf,
+			'username' => $username,
+			'password' => $password,
+			'role' => $role,
+			'approve_formulir' => $approve_formulir,
+			'approve_lulus' => $approve_lulus,
+			'approve_daftarulang' => $approve_daftarulang
+		);
+	
+		$where = array(
+			'id' => $id
+		);
+		$this->M_ppdb->updateformulir($where,$data,'pengguna');
+		$this->load->view('berhasil_ubah_formulir');
+		$this->load->view('approve_formulir');	}
+
+		public function cetakformulir(){
+			// membaca data dari form
+			$jenis      	 = $this->input->post('jenis');
+			$nama            = $this->input->post('nama');
+			$nisn	         = $this->input->post('nisn');
+			$alamat	         = $this->input->post('alamat');
+			$sekolah_asal    = $this->input->post('sekolahasal');
+			$no_hp           = $this->input->post('no_hp');
+			
+			// memanggil dan membaca template dokumen yang telah kita buat
+			$document = file_get_contents("formulir_pendaftaran.rtf");
+			
+			// isi dokumen dinyatakan dalam bentuk string
+			$document = str_replace("#JENIS", $jenis, $document);
+			$document = str_replace("#NAMA", $nama, $document);
+			$document = str_replace("#NISN", $nisn, $document);
+			$document = str_replace("#ALAMAT", $alamat, $document);
+			$document = str_replace("#SEKOLAHASAL", $sekolah_asal, $document);
+			$document = str_replace("#NO_HP", $no_hp, $document);
+			
+			// header untuk membuka file output RTF dengan MS. Word
+			
+			header("Content-type: application/msword");
+			header("Content-disposition: inline; filename=formulir_pendaftaran.doc");
+			header("Content-length: ".strlen($document));
+			echo $document;
+ 
+
+		}
+
+		public function approve_lulus()
+	{
+		$data['lulus'] = $this->M_ppdb->tampil_lulus()->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('approve_lulus',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function editlulus($id){
+		$id =    array ('id' => $id);
+		$data['lulus'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('editlulus',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function updatelulus(){
+		$id              = $this->input->post('id');
+		$nama            = $this->input->post('nama');
+		$jenis      	 = $this->input->post('jenis');
+		$nisn	         = $this->input->post('nisn');
+		$alamat	         = $this->input->post('alamat');
+		$sekolah_asal    = $this->input->post('sekolah_asal');
+		$no_hp           = $this->input->post('no_hp');
+		$foto            = $this->input->post('foto');
+		$bukti_tf        = $this->input->post('bukti_tf');
+		$username        = $this->input->post('username');
+		$password        = $this->input->post('password');
+		$role            = $this->input->post('role');
+		$approve_formulir    = $this->input->post('approve_formulir');
+		$approve_lulus       = $this->input->post('approve_lulus');
+		$approve_daftarulang = $this->input->post('approve_daftarulang');
+
+
+	
+		$data = array(
+			'nama_lengkap' => $nama,
+			'jenis' => $jenis,
+			'nisn' => $nisn,
+			'alamat' =>$alamat,
+			'sekolah_asal' => $sekolah_asal,
+			'no_hp' => $no_hp,
+			'foto' => $foto,
+			'bukti_tf' => $bukti_tf,
+			'username' => $username,
+			'password' => $password,
+			'role' => $role,
+			'approve_formulir' => $approve_formulir,
+			'approve_lulus' => $approve_lulus,
+			'approve_daftarulang' => $approve_daftarulang
+		);
+	
+		$where = array(
+			'id' => $id
+		);
+		$this->M_ppdb->updatelulus($where,$data,'pengguna');
+		$this->load->view('berhasil_ubah_lulus');
+		$this->load->view('approve_lulus');	}
+	
+
 }

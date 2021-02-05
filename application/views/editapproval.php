@@ -16,17 +16,50 @@
     </div>
     <section class="content">
     <?php foreach ($approval as $data) : ?>
+		<form method="post" action="<?php echo base_url().'home/cetakformulir'; ?>">
+        <div class="form-group">
+        <input hidden type="text" name="nama" class="form-control" value="<?php echo $data->nama_lengkap;?>">
+        </div>
+    <div class="form-group">
+        <select hidden class="form-control form-control" name="jenis">
+          <option selected hidden><?php echo $data->jenis;?></option>
+          <option>Peserta Didik Baru SD</option>
+          <option>Peserta Didik Baru SMP</option>
+          <option>Peserta Didik Baru SMA</option>
+          <option>Pindahan SD</option>
+          <option>Pindahan SMP</option>
+          <option>Pindahan SMA</option>
+          </select>
+      </div>
+        <div class="form-group">
+        <input hidden type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
+        </div>
+        <div class="form-group">
+        <input hidden type="text" name="alamat" class="form-control" value="<?php echo $data->alamat;?>">
+        </div>
+        <div class="form-group">
+        <input hidden type="text" name="sekolahasal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
+        </div>
+        <div class="form-group">
+        <input hidden type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        </div>
+
+        <p align="right"><button type="submit" class="btn btn-success"><i class="fa fa-print"></i> Cetak</button></p>         
+        </form>
+	<?php endforeach ;?>
+
+    <?php foreach ($approval as $data) : ?>
 		<form method="post" action="<?php echo base_url().'home/updateapproval'; ?>">
     <div class="form-group">
         <input type="hidden" name="id" class="form-control" value="<?php echo $data->id;?>">
         </div>
         <div class="form-group">
         <label for="">Nama Lengkap</label>
-        <input disabled type="text" name="nama" class="form-control" value="<?php echo $data->nama_lengkap;?>">
+        <input readonly type="text" name="nama" class="form-control" value="<?php echo $data->nama_lengkap;?>">
         </div>
     <div class="form-group">
         <label for="">Jenis Penerimaan</label>
-        <select disabled class="form-control form-control" name="jenis">
+        <select readonly class="form-control form-control" name="jenis">
           <option selected hidden><?php echo $data->jenis;?></option>
           <option>Peserta Didik Baru SD</option>
           <option>Peserta Didik Baru SMP</option>
@@ -38,19 +71,19 @@
       </div>
         <div class="form-group">
         <label for="">NISN</label>
-        <input disabled type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
+        <input readonly type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
         </div>
         <div class="form-group">
         <label for="">Alamat</label>
-        <input disabled type="text" name="alamat" class="form-control" value="<?php echo $data->alamat;?>">
+        <input readonly type="text" name="alamat" class="form-control" value="<?php echo $data->alamat;?>">
         </div>
         <div class="form-group">
         <label for="">Sekolah Asal</label>
-        <input disabled type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
+        <input readonly type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
         </div>
         <div class="form-group">
         <label for="">No HP</label>
-        <input disabled type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        <input readonly type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
         </div>
         <div class="form-group">
         <label for="">Foto</label><br>
@@ -87,11 +120,11 @@
       <input  type="hidden" name="approve_daftarulang" class="form-control" value="<?php echo $data->approve_daftarulang;?>">
       </div>  
 
-        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button> 
-        <a class="btn btn-success" href="<?php echo base_url().'home/cetakformulir';?>" role="button"><i class="fa fa-print"> </i> Cetak</a>
-        
+        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>         
         </form>
 	<?php endforeach ;?>
+
+
 
     </section>
 </div>

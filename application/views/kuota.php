@@ -17,9 +17,9 @@
     </div>
     <!-- /.content-header -->
     <div class="content">
-    <p align="right">
+    <!-- <p align="right">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    <i class="fa fa-plus"></i> Tambah Data</button><br><br></p>
+    <i class="fa fa-plus"></i> Tambah Data</button><br><br></p> -->
 
     <table class="table table-hover" id="example">
           <thead class="text-center">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 04 Feb 2021 pada 16.20
+-- Waktu pembuatan: 05 Feb 2021 pada 17.46
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 7.4.14
 
@@ -39,7 +39,11 @@ CREATE TABLE `kuota` (
 
 INSERT INTO `kuota` (`id`, `jenis`, `kuota`) VALUES
 (3, 'Peserta Didik Baru SD', 100),
-(5, 'Peserta Didik Baru SMP', 65);
+(5, 'Peserta Didik Baru SMP', 65),
+(6, 'Peserta Didik Baru SMA', 60),
+(7, 'Pindahan SD', 5),
+(8, 'Pindahan SMP', 5),
+(9, 'Pindahan SMA', 5);
 
 -- --------------------------------------------------------
 
@@ -71,9 +75,10 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`id`, `nama_lengkap`, `nisn`, `alamat`, `sekolah_asal`, `no_hp`, `foto`, `bukti_tf`, `jenis`, `username`, `password`, `role`, `approve_formulir`, `approve_lulus`, `approve_daftarulang`) VALUES
 (1, 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', 'admin', '0', 'admin', 'admin', 'admin'),
-(3, 'Aditya Aziz Fikhri', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', 'struk1.jpg', 'Peserta Didik Baru SMA', 'adit', 'adit', '1', 'Antrian', 'Antrian', 'Antrian'),
-(4, 'Fitria Aprianty', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'adit', 'ADIT', '1', 'Diterima', 'Antrian', 'Antrian'),
-(5, 'Dieky Zulfikar Md.', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'adit', 'ADIT', '1', 'Ditolak', 'Antrian', 'Antrian');
+(3, 'Aditya Aziz Fikhri', '1457301021', 'Desa Juli Cot Meurak, Kec. Juli Kab. Bireuen', 'SMP SUKMA BANGSA', '0811362059403', 'foto22.jpg', 'struk1.jpg', 'Peserta Didik Baru SMA', 'adit', 'adit', '1', 'Diterima', 'Tidak Lulus', 'Antrian'),
+(4, 'Fitria Aprianty', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'adit', 'ADIT', '1', 'Antrian', 'Tidak Lulus', 'Antrian'),
+(5, 'Dieky Zulfikar Md.', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'adit', 'ADIT', '1', 'Ditolak', 'Antrian', 'Antrian'),
+(6, 'MOMO MOLANA', '0', '', 'TK KUCING', '', 'download.jpg', '', 'Peserta Didik Baru SD', 'momo', 'momo', '1', 'Diterima', 'Lulus', 'Antrian');
 
 --
 -- Indexes for dumped tables
@@ -99,13 +104,13 @@ ALTER TABLE `pengguna`
 -- AUTO_INCREMENT untuk tabel `kuota`
 --
 ALTER TABLE `kuota`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

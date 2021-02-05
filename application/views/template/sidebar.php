@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datarumahmakanapproval');?>" class="nav-link">
+            <a href="<?=base_url('home/approve_lulus');?>" class="nav-link">
               <i class="nav-icon fa fa-check"></i>
               <p>
                 Konfirmasi Kelulusan
