@@ -312,5 +312,23 @@ class Home extends CI_Controller {
 		$this->load->view('berhasil_ubah_lulus');
 		$this->load->view('approve_lulus');	}
 	
+		public function approve_daftarulang()
+	{
+		$data['daftarulang'] = $this->M_ppdb->tampil_daftarulang()->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('approve_daftarulang',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function editdaftarulang($id){
+		$id =    array ('id' => $id);
+		$data['daftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('editdaftarulang',$data);
+		$this->load->view('template/footer');
+	}
 
 }

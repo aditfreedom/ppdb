@@ -54,5 +54,15 @@ class M_ppdb extends CI_Model{
     {   $this->db->where($where);
         $this->db->update('pengguna',$data); 
     }
+
+    public function tampil_daftarulang(){
+        $query = $this->db->query("SELECT * from pengguna where (approve_daftarulang = 'Antrian' OR approve_daftarulang = 'Diterima' OR approve_lulus = 'Ditolak') AND approve_lulus = 'Lulus' ");
+        return $query;
+    }
+
+    public function editdaftarulang($id)
+    {
+        return $this->db->get_where('daftarulang',$id);  
+    }
 }
 ?>

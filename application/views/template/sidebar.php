@@ -60,7 +60,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datameja');?>" class="nav-link">
+            <a href="<?=base_url('home/approve_daftarulang');?>" class="nav-link">
               <i class="nav-icon fa fa-user-check"></i>
               <p>
                 Konfirmasi Daftar Ulang
