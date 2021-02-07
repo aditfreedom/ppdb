@@ -286,6 +286,99 @@ class Home extends CI_Controller {
 		$approve_lulus       = $this->input->post('approve_lulus');
 		$approve_daftarulang = $this->input->post('approve_daftarulang');
 
+	
+		$data = array(
+			'nama_lengkap' => $nama,
+			'jenis' => $jenis,
+			'nisn' => $nisn,
+			'alamat' =>$alamat,
+			'sekolah_asal' => $sekolah_asal,
+			'no_hp' => $no_hp,
+			'foto' => $foto,
+			'bukti_tf' => $bukti_tf,
+			'username' => $username,
+			'password' => $password,
+			'role' => $role,
+			'approve_formulir' => $approve_formulir,
+			'approve_lulus' => $approve_lulus,
+			'approve_daftarulang' => $approve_daftarulang
+		);
+
+		$where = array(
+			'id' => $id
+		);
+
+		$data2 = array(
+			'id' => $id, 'tingkat' => "", 'nama_lengkap' => "", 'nama_panggilan' => "", 'nisn' => "",
+			'tpt_lahir' => "", 'tgl_lahir' => "",'agama' => "", 'suku' => "", 'jk' => "", 'goldar' => "",
+			'anak_ke' => "", 'dari_saudara' => "", 'alamat' => "", 'jarak' => "", 'desa' => "", 'kecamatan' => "",
+			'kabupaten' => "",'provinsi' => "",'nama_ayah' => "",'tptlahir_ayah' => "",'tgllahir_ayah' => "",
+			'pendidikan_ayah' => "",'pekerjaan_ayah' => "", 'penghasilan_ayah' => "",'alamat_ayah' => "",
+			'desa_ayah' => "",'kecamatan_ayah' => "",'kabupaten_ayah' => "",'provinsi_ayah' => "",'hp_ayah' => "",
+			'nama_ibu' => "",'tptlahir_ibu' => "",'tgllahir_ibu' => "",
+			'pendidikan_ibu' => "",'pekerjaan_ibu' => "", 'penghasilan_ibu' => "",'alamat_ibu' => "",
+			'desa_ibu' => "",'kecamatan_ibu' => "",'kabupaten_ibu' => "",'provinsi_ibu' => "",'hp_ibu' => "",
+			'sekolah_asal' => "",'npsn' => "", 'alamat_sekolah' => "", 'kabupaten_sekolah' => "", 'provinsi_sekolah' => "",
+			'penyakit' => "",'olah_raga' => "", 'seni' => "",'tari' => "",'lukis' => "", 'drama' => "", 'sastra' => "",
+			'organisasi' => "",'prestasi' => "",'alasan' => "",'tentang_sekolah' => ""
+		); 
+	
+
+
+		if ($approve_lulus=="Lulus") {
+			$id= $this->M_ppdb->hitungidlulus($id);
+	
+			if ($id==0) {
+				$this->M_ppdb->tambahiddaftarulang($data2,'daftarulang');
+			}		
+		}
+		
+		$this->M_ppdb->updatelulus($where,$data,'pengguna');
+		$this->load->view('berhasil_ubah_lulus');
+		$this->load->view('approve_lulus');
+
+		
+	
+	}
+	
+		public function approve_daftarulang()
+	{
+		$data['daftarulang'] = $this->M_ppdb->tampil_daftarulang()->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('approve_daftarulang',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function editdaftarulang($id){
+		$id =    array ('id' => $id);
+		$data['daftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
+		$data2['approval_daftarulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('editdaftarulang',$data);
+		$this->load->view('konfirm_daftarulang',$data2);
+		$this->load->view('template/footer');
+	}
+
+	public function updatedaftarulang(){
+		$id              = $this->input->post('id');
+		$nama            = $this->input->post('nama');
+		$jenis      	 = $this->input->post('jenis');
+		$nisn	         = $this->input->post('nisn');
+		$alamat	         = $this->input->post('alamat');
+		$sekolah_asal    = $this->input->post('sekolah_asal');
+		$no_hp           = $this->input->post('no_hp');
+		$foto            = $this->input->post('foto');
+		$bukti_tf        = $this->input->post('bukti_tf');
+		$username        = $this->input->post('username');
+		$password        = $this->input->post('password');
+		$role            = $this->input->post('role');
+		$approve_formulir    = $this->input->post('approve_formulir');
+		$approve_lulus       = $this->input->post('approve_lulus');
+		$approve_daftarulang = $this->input->post('approve_daftarulang');
+
 
 	
 		$data = array(
@@ -308,27 +401,9 @@ class Home extends CI_Controller {
 		$where = array(
 			'id' => $id
 		);
-		$this->M_ppdb->updatelulus($where,$data,'pengguna');
-		$this->load->view('berhasil_ubah_lulus');
-		$this->load->view('approve_lulus');	}
+		$this->M_ppdb->updatedaftarulang($where,$data,'pengguna');
+		$this->load->view('berhasil_ubah_daftarulang');
+		$this->load->view('approve_daftarulang');	}
 	
-		public function approve_daftarulang()
-	{
-		$data['daftarulang'] = $this->M_ppdb->tampil_daftarulang()->result();
-		$sess_data = $this->session->userdata();
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('approve_daftarulang',$data);
-		$this->load->view('template/footer');
-	}
-
-	public function editdaftarulang($id){
-		$id =    array ('id' => $id);
-		$data['daftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('editdaftarulang',$data);
-		$this->load->view('template/footer');
-	}
 
 }
