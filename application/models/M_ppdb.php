@@ -54,6 +54,51 @@ class M_ppdb extends CI_Model{
         $result = $this->db->query("SELECT*FROM daftarulang where id='$where'");
         return $result->num_rows();
     }
+
+    public function tampilpensd(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Peserta Didik Baru SD' ");
+        return $query;
+    }
+
+    public function tampilpensmp(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Peserta Didik Baru SMP' ");
+        return $query;
+    }
+
+    public function tampilpensma(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Peserta Didik Baru SMA' ");
+        return $query;
+    }
+
+    public function tampilpindsd(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Pindahan SD' ");
+        return $query;
+    }
+
+    public function tampilpindsmp(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Pindahan SMP' ");
+        return $query;
+    }
+
+    public function tampilpindsma(){
+        $query = $this->db->query("SELECT kuota FROM kuota WHERE jenis='Pindahan SMA' ");
+        return $query;
+    }
+    
+    public function hitunguser(){
+        $result = $this->db->query("SELECT*FROM pengguna");
+        return $result->num_rows();
+    }
+
+    public function hitungformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SD' OR jenis='Peserta Didik Baru SMP' OR jenis='Peserta Didik Baru SMA') AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungformulirpindahan(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Pindahan SD' OR jenis='Pindahan SMP' OR jenis='Pindahan SMA') AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
    
     public function updateformulir($where,$data)
     {   $this->db->where($where);

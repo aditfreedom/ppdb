@@ -21,9 +21,23 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('M_ppdb');
+		$data['pensd'] = $this->M_ppdb->tampilpensd()->result();
+		$data['pensmp'] = $this->M_ppdb->tampilpensmp()->result();
+		$data['pensma'] = $this->M_ppdb->tampilpensma()->result();
+		$data['pindsd'] = $this->M_ppdb->tampilpindsd()->result();
+		$data['pindsmp'] = $this->M_ppdb->tampilpindsmp()->result();
+		$data['pindsma'] = $this->M_ppdb->tampilpindsma()->result();
+		$data['hitunguser'] = $this->M_ppdb->hitunguser();
+		$data['hitungformulir'] = $this->M_ppdb->hitungformulir();
+		$data['hitungformulirpindahan'] = $this->M_ppdb->hitungformulirpindahan();
+
+
+
+
+
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
-		$this->load->view('dashboard');
+		$this->load->view('dashboard',$data);
 		$this->load->view('template/footer');
 
 
@@ -40,13 +54,13 @@ class Home extends CI_Controller {
 		$this->load->view('login');	
 	}
 
-	public function dashboard()
-	{
-		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
-		$this->load->view('dashboard');
-		$this->load->view('template/footer');
-	}
+	// public function dashboard()
+	// {
+	// 	$this->load->view('template/header');
+	// 	$this->load->view('template/sidebar');
+	// 	$this->load->view('dashboard');
+	// 	$this->load->view('template/footer');
+	// }
 	
 	public function kuota()
 	{
@@ -326,9 +340,9 @@ class Home extends CI_Controller {
 
 
 		if ($approve_lulus=="Lulus") {
-			$id= $this->M_ppdb->hitungidlulus($id);
+			$hitungid= $this->M_ppdb->hitungidlulus($id);
 	
-			if ($id==0) {
+			if ($hitungid==0) {
 				$this->M_ppdb->tambahiddaftarulang($data2,'daftarulang');
 			}		
 		}

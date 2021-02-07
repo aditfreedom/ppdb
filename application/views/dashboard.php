@@ -25,8 +25,10 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>20</h3>
-
+              <?php  
+	             foreach ($pensd as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
                 <p>Kuota Penerimaan SD</p>
               </div>
               <div class="icon">
@@ -40,7 +42,10 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>20</h3>
+              <?php  
+	             foreach ($pensmp as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
 
                 <p>Kuota Penerimaan SMP</p>
               </div>
@@ -54,7 +59,11 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>20</h3>
+              <?php  
+	             foreach ($pensma as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
+
 
                 <p>Kuota Penerimaan SMA</p>
               </div>
@@ -68,7 +77,10 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>20</h3>
+              <?php  
+	             foreach ($pindsd as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
 
                 <p>Kuota pindahan SD</p>
               </div>
@@ -82,7 +94,10 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>20</h3>
+              <?php  
+	             foreach ($pindsmp as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
 
                 <p>Kuota pindahan SMP</p>
               </div>
@@ -97,7 +112,10 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>20</h3>
+              <?php  
+	             foreach ($pindsma as $data) : ?>
+                <h3><?php echo $data->kuota;?></h3>
+                <?php endforeach ;?>
 
                 <p>Kuota pindahan SMA</p>
               </div>
@@ -112,7 +130,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>20</h3>
+                <h3><?php echo $hitunguser?></h3>
 
                 <p>Jumlah User Terdaftar</p>
               </div>
@@ -127,7 +145,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>20</h3>
+                <h3><?php echo $hitungformulir?></h3>
 
                 <p>Jumlah Calon PD Bayar Formulir</p>
               </div>
@@ -141,7 +159,7 @@
             <!-- small box -->
             <div class="small-box bg-primary">
               <div class="inner">
-                <h3>20<sup style="font-size: 20px"></sup></h3>
+                <h3><?php echo $hitungformulirpindahan?><sup style="font-size: 20px"></sup></h3>
 
                 <p>Jumlah Pindahan Bayar Formulir</p>
               </div>
