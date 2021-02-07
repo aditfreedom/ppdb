@@ -20,18 +20,10 @@
     <div class="form-group">
         <input type="hidden" name="id" class="form-control" value="<?php echo $data->id;?>">
         </div>
-    <div class="form-group">
-        <label for="">Jenis Penerimaan</label>
-        <select class="form-control form-control" name="jenis">
-          <option selected hidden><?php echo $data->jenis;?></option>
-          <option>Peserta Didik Baru SD</option>
-          <option>Peserta Didik Baru SMP</option>
-          <option>Peserta Didik Baru SMA</option>
-          <option>Pindahan SD</option>
-          <option>Pindahan SMP</option>
-          <option>Pindahan SMA</option>
-          </select>
-      </div>
+        <div class="form-group">
+        <input readonly type="text" name="jenis" class="form-control" value="<?php echo $data->jenis;?>">
+        </div>
+    
         <div class="form-group">
         <label for="">Kuota Penerimaan</label>
         <input type="text" name="kuota" class="form-control" value="<?php echo $data->kuota;?>">

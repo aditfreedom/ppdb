@@ -68,7 +68,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datamenu');?>" class="nav-link">
+            <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
                 Data Pengguna

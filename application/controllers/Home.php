@@ -27,13 +27,23 @@ class Home extends CI_Controller {
 		$data['pindsd'] = $this->M_ppdb->tampilpindsd()->result();
 		$data['pindsmp'] = $this->M_ppdb->tampilpindsmp()->result();
 		$data['pindsma'] = $this->M_ppdb->tampilpindsma()->result();
+		$data['hitungsdformulir'] = $this->M_ppdb->hitungsdformulir();
+		$data['hitungsmpformulir'] = $this->M_ppdb->hitungsmpformulir();
+		$data['hitungsmaformulir'] = $this->M_ppdb->hitungsmaformulir();
+
+		$data['hitungpindsdformulir'] = $this->M_ppdb->hitungpindsdformulir();
+		$data['hitungpindsmpformulir'] = $this->M_ppdb->hitungpindsmpformulir();
+		$data['hitungpindsmaformulir'] = $this->M_ppdb->hitungpindsmaformulir();
+
+		$data['hitungpdlulus'] = $this->M_ppdb->hitungpdlulus();
+		$data['hitungpdtidaklulus'] = $this->M_ppdb->hitungpdtidaklulus();
+
+		$data['hitungpddaftarulang'] = $this->M_ppdb->hitungpddaftarulang();
+		$data['hitungpdtidakdaftarulang'] = $this->M_ppdb->hitungpdtidakdaftarulang();
+
 		$data['hitunguser'] = $this->M_ppdb->hitunguser();
 		$data['hitungformulir'] = $this->M_ppdb->hitungformulir();
 		$data['hitungformulirpindahan'] = $this->M_ppdb->hitungformulirpindahan();
-
-
-
-
 
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar');
@@ -176,10 +186,18 @@ class Home extends CI_Controller {
 
 
 		);
-	
-		$this->M_ppdb->tambahuser($data,'pengguna');
-		$this->load->view('status');    
-		// redirect(base_url('home/registrasi'));
+
+		$hitungusername= $this->M_ppdb->tampildatapengguna1($username);
+
+		if ($hitungusername >=1) {
+			$this->load->view('username_gagal');    
+		}else{
+			$this->M_ppdb->tambahuser($data,'pengguna');
+			$this->load->view('status');    
+			// redirect(base_url('home/registrasi'));
+		}
+		
+
 	}
 
 	public function editapproval($id){
@@ -234,6 +252,7 @@ class Home extends CI_Controller {
 		$this->load->view('berhasil_ubah_formulir');
 		$this->load->view('approve_formulir');	}
 
+		
 		public function cetakformulir(){
 			// membaca data dari form
 			$jenis      	 = $this->input->post('jenis');
@@ -419,5 +438,204 @@ class Home extends CI_Controller {
 		$this->load->view('berhasil_ubah_daftarulang');
 		$this->load->view('approve_daftarulang');	}
 	
+		public function datapengguna()
+	{
+		$data['pengguna'] = $this->M_ppdb->tampildatapengguna()->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('datapengguna',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function editpengguna($id)
+	{
+		$id =    array ('id' => $id);
+		$data['editpengguna'] = $this->M_ppdb->tampilpengguna($id)->result();
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebar');
+		$this->load->view('editpengguna',$data);
+		$this->load->view('template/footer');
+	}
+
+	public function updatedatapengguna(){
+		$id              = $this->input->post('id');
+		$nama            = $this->input->post('nama');
+		$jenis      	 = $this->input->post('jenis');
+		$nisn	         = $this->input->post('nisn');
+		$alamat	         = $this->input->post('alamat');
+		$sekolah_asal    = $this->input->post('sekolah_asal');
+		$no_hp           = $this->input->post('no_hp');
+		$foto            = $this->input->post('foto');
+		$bukti_tf        = $this->input->post('bukti_tf');
+		$username        = $this->input->post('username');
+		$password        = $this->input->post('password');
+		$role            = $this->input->post('role');
+		$approve_formulir    = $this->input->post('approve_formulir');
+		$approve_lulus       = $this->input->post('approve_lulus');
+		$approve_daftarulang = $this->input->post('approve_daftarulang');
+
+
+	
+		$data = array(
+			'nama_lengkap' => $nama,
+			'jenis' => $jenis,
+			'nisn' => $nisn,
+			'alamat' =>$alamat,
+			'sekolah_asal' => $sekolah_asal,
+			'no_hp' => $no_hp,
+			'foto' => $foto,
+			'bukti_tf' => $bukti_tf,
+			'username' => $username,
+			'password' => $password,
+			'role' => $role,
+			'approve_formulir' => $approve_formulir,
+			'approve_lulus' => $approve_lulus,
+			'approve_daftarulang' => $approve_daftarulang
+		);
+	
+		$where = array(
+			'id' => $id
+		);
+		$this->M_ppdb->updatedatapengguna($where,$data,'pengguna');
+		$this->load->view('berhasil_ubah_password');
+		$this->load->view('datapengguna');	}
+
+
+	public function cetakformulirdaftarulang(){
+			// membaca data dari form
+			$nama_lengkap    = $this->input->post('nama_lengkap');
+			$nama_panggilan  = $this->input->post('nama_panggilan');
+			$tingkat		 = $this->input->post('tingkat');
+			$nisn	         = $this->input->post('nisn');
+			$goldar	         = $this->input->post('goldar');
+			$anak_ke         = $this->input->post('anak_ke');
+			$dari_saudara    = $this->input->post('dari_saudara');
+			$jarak	         = $this->input->post('jarak');
+			$tpt_lahir	     = $this->input->post('tpt_lahir');
+			$tgl_lahir       = $this->input->post('tgl_lahir');
+			$agama	         = $this->input->post('agama');
+			$suku	         = $this->input->post('suku');
+			$jk		         = $this->input->post('jk');
+			$alamat	         = $this->input->post('alamat');
+			$desa	         = $this->input->post('desa');
+			$kabupaten       = $this->input->post('kabupaten');
+			$provinsi        = $this->input->post('provinsi');
+			$nama_ayah	     = $this->input->post('nama_ayah');
+			$pendidikan_ayah	= $this->input->post('pendidikan_ayah');
+			$penghasilan_ayah	= $this->input->post('penghasilan_ayah');
+			$hp_ayah	        = $this->input->post('hp_ayah');
+			$tptlahir_ayah      = $this->input->post('tptlahir_ayah');
+			$tgllahir_ayah      = $this->input->post('tgllahir_ayah');
+			$pekerjaan_ayah     = $this->input->post('pekerjaan_ayah');
+			$alamat_ayah        = $this->input->post('alamat_ayah');
+			$desa_ayah          = $this->input->post('desa_ayah');
+			$kabupaten_ayah     = $this->input->post('kabupaten_ayah');
+			$provinsi_ayah      = $this->input->post('provinsi_ayah');
+			$nama_ibu	     = $this->input->post('nama_ibu');
+			$pendidikan_ibu	= $this->input->post('pendidikan_ibu');
+			$penghasilan_ibu	= $this->input->post('penghasilan_ibu');
+			$hp_ibu	        = $this->input->post('hp_ibu');
+			$tptlahir_ibu      = $this->input->post('tptlahir_ibu');
+			$tgllahir_ibu      = $this->input->post('tgllahir_ibu');
+			$pekerjaan_ibu     = $this->input->post('pekerjaan_ibu');
+			$alamat_ibu        = $this->input->post('alamat_ibu');
+			$desa_ibu          = $this->input->post('desa_ibu');
+			$kabupaten_ibu     = $this->input->post('kabupaten_ibu');
+			$provinsi_ibu      = $this->input->post('provinsi_ibu');
+			$sekolah_asal	   = $this->input->post('sekolah_asal');
+			$npsn		       = $this->input->post('npsn');
+			$alamat_sekolah    = $this->input->post('alamat_sekolah');
+			$kabupaten_sekolah		= $this->input->post('kabupaten_sekolah');
+			$provinsi_sekolah		= $this->input->post('provinsi_sekolah');
+			$penyakit	         = $this->input->post('penyakit');
+			$olah_raga	         = $this->input->post('olah_raga');
+			$seni	         = $this->input->post('seni');
+			$tari	         = $this->input->post('tari');
+			$lukis	         = $this->input->post('lukis');
+			$drama	         = $this->input->post('drama');
+			$sastra	         = $this->input->post('sastra');
+			$organisasi	         = $this->input->post('organisasi');
+			$prestasi	         = $this->input->post('prestasi');
+			$alasan	         = $this->input->post('alasan');
+			$tentang_sekolah	         = $this->input->post('tentang_sekolah');
+
+
+
+			
+			// memanggil dan membaca template dokumen yang telah kita buat
+			$document = file_get_contents("formulir_pendaftaran_ulang.rtf");
+			
+			// isi dokumen dinyatakan dalam bentuk string
+			$document = str_replace("#NAMA_LENGKAP", $nama_lengkap, $document);
+			$document = str_replace("#NAMA_PANGGILAN", $nama_panggilan, $document);
+			$document = str_replace("#TINGKAT", $tingkat, $document);
+			$document = str_replace("#NISN", $nisn, $document);
+			$document = str_replace("#GOLDAR", $goldar, $document);
+			$document = str_replace("#ANAK_KE", $anak_ke, $document);
+			$document = str_replace("#DARI_SAUDARA", $dari_saudara, $document);
+			$document = str_replace("#JARAK", $jarak, $document);
+			$document = str_replace("#TPTLAHIR", $tpt_lahir, $document);
+			$document = str_replace("#TGLLAHIR", $tgl_lahir, $document);
+			$document = str_replace("#AGAMA", $agama, $document);
+			$document = str_replace("#SUKU", $suku, $document);
+			$document = str_replace("#JK", $jk, $document);
+			$document = str_replace("#ALAMAT", $alamat, $document);
+			$document = str_replace("#DESA", $desa, $document);
+			$document = str_replace("#KABUPATEN", $kabupaten, $document);
+			$document = str_replace("#PROVINSI", $provinsi, $document);
+			$document = str_replace("#NAMA_AYAH", $nama_ayah, $document);
+			$document = str_replace("#PENDIDIKAN_AYAH", $pendidikan_ayah, $document);
+			$document = str_replace("#PENGHASILAN_AYAH", $penghasilan_ayah, $document);
+			$document = str_replace("#HP_AYAH", $hp_ayah, $document);
+			$document = str_replace("#TPT_AYAH", $tptlahir_ayah, $document);
+			$document = str_replace("#TGL_AYAH", $tgllahir_ayah, $document);
+			$document = str_replace("#PEKERJAAN", $pekerjaan_ayah, $document);
+			$document = str_replace("#ALMAT", $alamat_ayah, $document);
+			$document = str_replace("#DESA_AYAH", $desa_ayah, $document);
+			$document = str_replace("#KABUPATEN_AYAH", $kabupaten_ayah, $document);
+			$document = str_replace("#PROVINSI_AYAH", $provinsi_ayah, $document);
+			$document = str_replace("#NAMA_IBU", $nama_ibu, $document);
+			$document = str_replace("#PENDIDIKAN_IBU", $pendidikan_ibu, $document);
+			$document = str_replace("#PENGHASILAN_IBU", $penghasilan_ibu, $document);
+			$document = str_replace("#HP_IBU", $hp_ibu, $document);
+			$document = str_replace("#TPTLAHIR_IBU", $tptlahir_ibu, $document);
+			$document = str_replace("#TGLLAHIR_IBU", $tgllahir_ibu, $document);
+			$document = str_replace("#PEKERJAAN_IBU", $pekerjaan_ibu, $document);
+			$document = str_replace("#ALAMAT_IBU", $alamat_ibu, $document);
+			$document = str_replace("#DESA_IBU", $desa_ibu, $document);
+			$document = str_replace("#KABUPATEN_IBU", $kabupaten_ibu, $document);
+			$document = str_replace("#PROVINSI_IBU", $provinsi_ibu, $document);
+			$document = str_replace("#SEKOLAH_ASAL", $sekolah_asal, $document);
+			$document = str_replace("#KABUPATEN_SEKOLAH", $kabupaten_sekolah, $document);
+			$document = str_replace("#PROVINSI_SEKOLAH", $provinsi_sekolah, $document);
+			$document = str_replace("#PENYAKIT", $penyakit, $document);
+			$document = str_replace("#OLAH_RAGA", $olah_raga, $document);
+			$document = str_replace("#SENI", $seni, $document);
+			$document = str_replace("#TARI", $tari, $document);
+			$document = str_replace("#LUKIS", $lukis, $document);
+			$document = str_replace("#DRAMA", $drama, $document);
+			$document = str_replace("#SASTRA", $sastra, $document);
+			$document = str_replace("#ORGANISASI", $organisasi, $document);
+			$document = str_replace("#PRESTASI", $prestasi, $document);
+			$document = str_replace("#ALASAN", $alasan, $document);
+			$document = str_replace("#TENTANG_SEKOLAH", $tentang_sekolah, $document);
+
+
+			
+
+
+
+			
+			// header untuk membuka file output RTF dengan MS. Word
+			
+			header("Content-type: application/msword");
+			header("Content-disposition: inline; filename=formulir_pendaftaran_ulang.doc");
+			header("Content-length: ".strlen($document));
+			echo $document;
+ 
+
+		}
 
 }

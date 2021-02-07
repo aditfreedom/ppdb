@@ -6,6 +6,16 @@ class M_ppdb extends CI_Model{
         return $this->db->get('kuota');
      }
 
+     public function tampildatapengguna(){
+        return $this->db->query("SELECT * FROM pengguna WHERE NOT username='Admin' ");
+     }
+
+     public function tampildatapengguna1($username){
+        $result = $this->db->query("SELECT * FROM pengguna WHERE username='$username'");
+        return $result->num_rows();
+
+     }
+
     public function tambahkuota($data)
     {
         $this->db->insert('kuota',$data);
@@ -23,6 +33,11 @@ class M_ppdb extends CI_Model{
     public function updatekuota($where,$data)
     {   $this->db->where($where);
         $this->db->update('kuota',$data); 
+    }
+
+    public function updatedatapengguna($where,$data)
+    {   $this->db->where($where);
+        $this->db->update('pengguna',$data); 
     }
 
     public function tambahuser($data)
@@ -44,6 +59,7 @@ class M_ppdb extends CI_Model{
     {
         return $this->db->get_where('pengguna',$id);  
     }
+
 
     public function tampiliddaftarulang($id)
     {
@@ -87,6 +103,56 @@ class M_ppdb extends CI_Model{
     
     public function hitunguser(){
         $result = $this->db->query("SELECT*FROM pengguna");
+        return $result->num_rows();
+    }
+
+    public function hitungsdformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SD' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+    
+    public function hitungsmpformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SMP' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungsmaformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SMA' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungpindsdformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Pindahan SD' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungpindsmpformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Pindahan SMP' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungpindsmaformulir(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Pindahan SMA' AND approve_formulir='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungpdlulus(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE approve_lulus='Lulus'");
+        return $result->num_rows();
+    }
+
+    public function hitungpdtidaklulus(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE approve_lulus='Tidak Lulus'");
+        return $result->num_rows();
+    }
+
+    public function hitungpddaftarulang(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE approve_daftarulang='Diterima'");
+        return $result->num_rows();
+    }
+
+    public function hitungpdtidakdaftarulang(){
+        $result = $this->db->query("SELECT*FROM pengguna WHERE approve_lulus='Ditolak'");
         return $result->num_rows();
     }
 

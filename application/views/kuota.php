@@ -37,7 +37,7 @@
             <th scope="row"><?php echo $i ;?></th>
             <td><?php echo $data->jenis;?></td>
             <td><?php echo $data->kuota;?></td>
-            <td><?php echo anchor('home/editkuota/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?> <?php echo anchor('home/hapuskuota/'.$data->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>	
+            <td><?php echo anchor('home/editkuota/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?> </td>	
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>
