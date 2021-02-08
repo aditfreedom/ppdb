@@ -40,6 +40,11 @@ class M_ppdb extends CI_Model{
         $this->db->update('pengguna',$data); 
     }
 
+    public function updateformuliruser($where,$data)
+    {   $this->db->where($where);
+        $this->db->update('pengguna',$data); 
+    }
+
     public function tambahuser($data)
     {
         $this->db->insert('pengguna', $data);

@@ -4,12 +4,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
 
-    // function __construct(){
-    //     parent::__construct();
-	// 	if (!empty($this->session->userdata('login'))) {
-	// 		redirect(base_url());
-	// 	}
-    // }
+    function __construct(){
+        parent::__construct();
+		if (empty($this->session->userdata('login'))) {
+			redirect(base_url());
+		}
+    }
 
     // public function login()
 	// {
@@ -18,133 +18,105 @@ class User extends CI_Controller {
 	// }
 
 
-    // public function login_aksi(){
-    //     $username = $this->input->post('username',true);
-    //     $password = $this->input->post('password',true);
- 
-    //     $this->form_validation->set_rules('username','Username','required');
-    //     $this->form_validation->set_rules('password','Password','required');
- 
-    //     if($this->form_validation->run() != FALSE){
-    //          $where = array(
-    //              'username' => $username,
-    //              'password' => $password,
-    //          );
- 
-    //          $ceklogin = $this->M_ppdb->cek_login($where)->num_rows();
-    //          $cekloginid = $this->M_ppdb->cek_login($where)->result();
-    //          if ($ceklogin > 0) {
-    //              foreach ($cekloginid as $cek) {
-    //                  $id = $cek->id;
-    //                  $nama_lengkap = $cek->nama_lengkap;
-    //                  $nisn = $cek->nisn;
-    //                  $no_hp = $cek->no_hp;
-    //                  $role = $cek->role;
-    //                  $username = $cek->username;
-    //                  $password = $cek->password;
-    //                 }
- 
-                     
-    //                  $sess_data =  array(
-    //                      'username' => $username,
-    //                      'password' => $password,
-    //                      'id' => $id,
-    //                      'nama_lengkap' => $nama_lengkap,
-    //                      'nisn' => $nisn,
-    //                      'no_hp' => $no_hp,
-    //                      'role' => $role,
-    //                      'login' => 'Berhasil'              
-    //                     );
- 
-    //             //  redirect(base_url('home'));
-
-    //              if ($sess_data['role'] == 0){
-    //                 $this->session->set_userdata($sess_data); 
-    //                  redirect(base_url('home')); 
-    //              }
-
-    //              else if ($sess_data['role'] == 1){
-    //                 $this->session->set_userdata($sess_data); 
-    //                 redirect(base_url('user')); 
-    //              }
-    //              else{
-    //                 $this->load->view('gagallogin');
-    //             }
-                 
-    //          }else{
-    //              $this->load->view('error');
-    //          }
- 
-    //     }else{
-    //      $this->load->view('error');
- 
-    //     }
-    //  }
-
-    //  public function registrasi()
-	// {
-	// 	$this->load->view('registrasi');
-	// }
-
-    // public function tambahuser(){
-	// 	$nama_lengkap           	= $this->input->post('nama_lengkap');
-	// 	$sekolah_asal       = $this->input->post('sekolah_asal');
-	// 	$jenis    		    = $this->input->post('jenis');
-	// 	$foto       	    = $_FILES['foto'];
-	// 	$username           = $this->input->post('username');
-	// 	$password           = $this->input->post('password');
-	// 	$status             = $this->input->post('status');
-	
-	
-	
-	// 		$config['upload_path']          = 'asset/foto/';
-	// 		$config['allowed_types']        = 'gif|jpg|png';
-	// 		$config['max_size']             = 10000;
-	// 		$config['max_width']            = 10000;
-	// 		$config['max_height']           = 10000;
-	
-	// 		$this->load->library('upload', $config);
-	// 		$this->upload->initialize($config);
-			 
-	// 		if (! $this->upload->do_upload('foto')) {
-	// 			$this->load->view('errorupload');
-	// 		}else{
-	// 			$foto=$this->upload->data('file_name');
-	// 		}
-	
-		
-	// 	$data = array(
-	// 		'nama_lengkap' => $nama_lengkap,
-	// 		'sekolah_asal' => $sekolah_asal,
-	// 		'nisn' => "0",
-	// 		'alamat' => "",
-	// 		'no_hp' => "",
-	// 		'bukti_tf' => "",
-	// 		'jenis' => $jenis,
-	// 		'foto' => $foto,
-	// 		'username' => $username,
-	// 		'password' => $password,
-	// 		'role' => "1",
-	// 		'approve_formulir' 	=> "Antrian",
-	// 		'approve_lulus' 	=> "Antrian",
-	// 		'approve_daftarulang' => "Antrian",
+    public function index()
+	{
+		$this->load->model('M_ppdb');
+		$sess_data = $this->session->userdata();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebaruser',$sess_data);
+		$this->load->view('homeuser');
+		$this->load->view('template/footer');
 
 
+	}
 
-	// 	);
+    public function isi_formulir($id){
+		$sess_data = $this->session->userdata();
+		$id =    array ('id' => $id);
+		$data['isi_formulir'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebaruser',$sess_data);
+		$this->load->view('isi_formulir',$data);
+		$this->load->view('template/footer');
+	}
 
-	// 	$hitungusername= $this->M_ppdb->tampildatapengguna1($username);
+    public function updateformulir(){
+        $id                = $this->input->post('id');
+        $nama              = $this->input->post('nama');
+        $jenis             = $this->input->post('jenis');
+        $nisn              = $this->input->post('nisn');
+        $alamat            = $this->input->post('alamat');
+        $sekolah_asal      = $this->input->post('sekolah_asal');
+        $no_hp             = $this->input->post('no_hp');
+        $foto             = $this->input->post('foto');
+        $bukti_tf          = $this->input->post('bukti_tf');
+        $bukti_tfbaru      = $_FILES['buktitf_baru']['name'];
+        $username          = $this->input->post('username');
+        $password          = $this->input->post('password');
+        $role              = $this->input->post('role');
+        $approve_formulir       = $this->input->post('approve_formulir');
+        $approve_lulus          = $this->input->post('approve_lulus');
+        $approve_daftarulang    = $this->input->post('approve_daftarulang');
 
-	// 	if ($hitungusername >=1) {
-	// 		$this->load->view('username_gagal');    
-	// 	}else{
-	// 		$this->M_ppdb->tambahuser($data,'pengguna');
-	// 		$this->load->view('status');    
-	// 		// redirect(base_url('home/registrasi'));
-	// 	}
-		
+    
+        $config['upload_path']          = 'asset/buktitf/';
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 10000;
+        $config['max_width']            = 10000;
+        $config['max_height']           = 10000;
+    
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+         
+        if (! $this->upload->do_upload('buktitf_baru')) {
+            $this->load->view('errorformulir');
+        }else{
+            $bukti_tfbaru=$this->upload->data('file_name');
+        }
+    
+        if ($bukti_tfbaru == null) {
+            $bukti_tfbaru = $bukti_tf;
+        }
+    
+        $data = array(
+            'nama_lengkap' => $nama,
+            'jenis' => $jenis,
+            'nisn' => $nisn,
+            'alamat' =>$alamat,
+            'sekolah_asal' =>$sekolah_asal,
+            'no_hp' =>$no_hp,
+            'foto' =>$foto,
+            'alamat' =>$alamat,
+            'bukti_tf' =>$bukti_tfbaru,
+            'username' =>$username,
+            'password' =>$password,
+            'role' =>$role,
+            'approve_formulir' =>$approve_formulir,
+            'approve_lulus' =>$approve_lulus,
+            'approve_daftarulang' =>$approve_daftarulang
+        );
+    
+        $where = array(
+            'id' => $id
+        );
+        $this->M_ppdb->updateformuliruser($where,$data,'pengguna');
+        redirect(base_url('user/isi_formulir/'.$id));    
 
-	// }
+
+    }
+
+    public function cetak_kartu($id){
+		$sess_data = $this->session->userdata();
+		$id =    array ('id' => $id);
+		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$this->load->view('template/header');
+		$this->load->view('template/sidebaruser',$sess_data);
+		$this->load->view('cetak_kartu',$data);
+		$this->load->view('template/footer');
+	}
+
+    
+
 
     public function logout(){
         $this->session->sess_destroy();

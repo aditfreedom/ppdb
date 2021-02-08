@@ -1,7 +1,7 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?php echo base_url()?>dashboard" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="<?php echo base_url()?>logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light"><b>PPDB SSB BIREUEN</b></span>
@@ -25,130 +25,52 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item ">
-            <a href="<?=base_url('home');?>" class="nav-link bg-info">
-              <i class="nav-icon fa fa-tachometer-alt"></i>
+            <a href="<?=base_url('user');?>" class="nav-link bg-info">
+              <i class="nav-icon fa fa-home"></i>
               <p>
-                Dashboard
+                Home
               </p>
             </a>
           </li>
 
 
           <li class="nav-item ">
-            <a href="<?=base_url('home/kuota');?>" class="nav-link">
-              <i class="nav-icon fa fa-tasks"></i>
+            <a href="<?=base_url('user/isi_formulir/'.$id);?>" class="nav-link">
+              <i class="nav-icon fa fa-money-check-alt"></i>
               <p>
-                Kuota Penerimaan
+                Isi Formulir & Pembayaran
               </p>
             </a>
           </li>
 
           <li class="nav-item ">
-            <a href="<?=base_url('home/approve_formulir');?>" class="nav-link">
-              <i class="nav-icon fa fa-clipboard-check"></i>
+            <a href="<?=base_url('user/cetak_kartu/'.$id);?>" class="nav-link">
+              <i class="nav-icon fa fa-id-card-alt"></i>
               <p>
-                Approval Formulir
+                Cetak Kartu Ujian
               </p>
             </a>
           </li>
           <li class="nav-item ">
             <a href="<?=base_url('home/approve_lulus');?>" class="nav-link">
-              <i class="nav-icon fa fa-check"></i>
-              <p>
-                Konfirmasi Kelulusan
-              </p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="<?=base_url('home/approve_daftarulang');?>" class="nav-link">
               <i class="nav-icon fa fa-user-check"></i>
               <p>
-                Konfirmasi Daftar Ulang
-              </p>
-            </a>
-          </li>
-          <li class="nav-item ">
-            <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
-              <i class="nav-icon fa fa-users"></i>
-              <p>
-                Data Pengguna
+                Registrasi Ulang
               </p>
             </a>
           </li>
 
           <li class="nav-item ">
             <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
-              <i class="nav-icon fa fa-download"></i>
+              <i class="nav-icon fa fa-print"></i>
               <p>
-                Alur Pendaftaran
+                Cetak Formulir Daftar Ulang
               </p>
             </a>
           </li>
-          <!-- <li class="nav-item ">
-            <a href="<?=base_url('dashboard/datakonsumen');?>" class="nav-link">
-              <i class="nav-icon fa fa-users"></i>
-              <p>
-                Data Konsumen
-              </p>
-            </a> -->
-          </li>
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-user-graduate"></i>
-              <p>
-                Calon Peserta Didik
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datareservasi');?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Isi Formulir & Pembayaran</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Cetak Kartu</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Registrasi Ulang</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="fa fa-download nav-icon"></i>
-                  <p>Alur Pendaftaran</p>
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="fa fa-download nav-icon"></i>
-                  <p>Download Surat Pernyataan</p>
-                </a>
-              </li>
-
-
-
-              <li class="nav-item">
-                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
-                  <i class="fa fa-download nav-icon"></i>
-                  <p>Download Pakta Integritas</p>
-                </a>
-              </li>
-              </ul>
-              </li>
-          
-
 
           <li class="nav-item">
-            <a href="<?= base_url('home/logout')?>" class="nav-link bg-danger">
+            <a href="<?= base_url('user/logout')?>" class="nav-link bg-danger">
               <i class="nav-icon fa fa-sign-out-alt"></i>
               <p>
                 Logout
