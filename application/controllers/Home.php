@@ -4,8 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 	function __construct(){
         parent::__construct();
-		if (empty($this->session->userdata('login'))) {
+		$role=$this->session->userdata('role');
+
+		if (empty($this->session->userdata('login'))){
 			redirect(base_url('hal/login'));
+		}
+		if ($role==1){
+			redirect(base_url('user'));
 		}
 	}
 
@@ -110,10 +115,11 @@ class Home extends CI_Controller {
 	}
 
 	public function editkuota($id){
+		$sess_data = $this->session->userdata();
 		$id =    array ('id' => $id);
 		$data['kuota'] = $this->M_ppdb->editkuota($id,'kuota')->result();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('editkuota',$data);
 		$this->load->view('template/footer');
 	}
@@ -150,10 +156,11 @@ class Home extends CI_Controller {
 	
 
 	public function editapproval($id){
+		$sess_data = $this->session->userdata();
 		$id =    array ('id' => $id);
 		$data['approval'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('editapproval',$data);
 		$this->load->view('template/footer');
 	}
@@ -243,10 +250,11 @@ class Home extends CI_Controller {
 	}
 
 	public function editlulus($id){
+		$sess_data = $this->session->userdata();
 		$id =    array ('id' => $id);
 		$data['lulus'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('editlulus',$data);
 		$this->load->view('template/footer');
 	}
@@ -334,11 +342,12 @@ class Home extends CI_Controller {
 	}
 
 	public function editdaftarulang($id){
+		$sess_data = $this->session->userdata();
 		$id =    array ('id' => $id);
 		$data['daftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
 		$data2['approval_daftarulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('editdaftarulang',$data);
 		$this->load->view('konfirm_daftarulang',$data2);
 		$this->load->view('template/footer');
@@ -403,7 +412,7 @@ class Home extends CI_Controller {
 		$data['editpengguna'] = $this->M_ppdb->tampilpengguna($id)->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('editpengguna',$data);
 		$this->load->view('template/footer');
 	}

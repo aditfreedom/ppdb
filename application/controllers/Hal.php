@@ -56,20 +56,20 @@ class Hal extends CI_Controller {
                          'login' => 'Berhasil'              
                         );
  
-                 $this->session->set_userdata($sess_data); 
-                 redirect(base_url('home'));
-                //  if ($sess_data['username']=="admin"){
-                //      redirect(base_url('dashboard')); 
-                //  }elseif (($sess_data['username']!="admin")&&($sess_data['status']=="Diterima")){
-                //      redirect(base_url('dashboardrumahmakan')); 
-                //  }elseif($sess_data['status']=="Suspend"){
-                //      $this->load->view('suspend');
-                //  }elseif($sess_data['status']=="Ditolak"){
-                //      $this->load->view('ditolak');
-                //  }
-                //  else{
-                //      $this->load->view('status');
-                //  }
+                //  redirect(base_url('home'));
+
+                 if ($sess_data['role'] == 0){
+                    $this->session->set_userdata($sess_data); 
+                     redirect(base_url('home')); 
+                 }
+
+                 else if ($sess_data['role'] == 1){
+                    $this->session->set_userdata($sess_data); 
+                    redirect(base_url('user')); 
+                 }
+                 else{
+                    $this->load->view('gagallogin');
+                }
                  
              }else{
                  $this->load->view('error');

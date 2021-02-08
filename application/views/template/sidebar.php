@@ -77,13 +77,14 @@
           </li>
 
           <li class="nav-item ">
-            <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
+            <a href="<?=base_url('alur_pendaftaran.JPG');?>" class="nav-link" target="_blank">
               <i class="nav-icon fa fa-download"></i>
               <p>
                 Alur Pendaftaran
               </p>
             </a>
           </li>
+          
           <!-- <li class="nav-item ">
             <a href="<?=base_url('dashboard/datakonsumen');?>" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
