@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Feb 2021 pada 17.43
--- Versi server: 10.4.17-MariaDB
--- Versi PHP: 7.4.14
+-- Waktu pembuatan: 08 Feb 2021 pada 09.41
+-- Versi server: 10.4.14-MariaDB
+-- Versi PHP: 7.2.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -95,7 +95,7 @@ CREATE TABLE `daftarulang` (
 --
 
 INSERT INTO `daftarulang` (`id_daftarulang`, `id`, `tingkat`, `nama_lengkap`, `nama_panggilan`, `nisn`, `tpt_lahir`, `tgl_lahir`, `agama`, `suku`, `jk`, `goldar`, `anak_ke`, `dari_saudara`, `alamat`, `jarak`, `desa`, `kecamatan`, `kabupaten`, `provinsi`, `nama_ayah`, `tptlahir_ayah`, `tgllahir_ayah`, `pendidikan_ayah`, `pekerjaan_ayah`, `penghasilan_ayah`, `alamat_ayah`, `desa_ayah`, `kecamatan_ayah`, `kabupaten_ayah`, `provinsi_ayah`, `hp_ayah`, `nama_ibu`, `tptlahir_ibu`, `tgllahir_ibu`, `pendidikan_ibu`, `pekerjaan_ibu`, `penghasilan_ibu`, `alamat_ibu`, `desa_ibu`, `kecamatan_ibu`, `kabupaten_ibu`, `provinsi_ibu`, `hp_ibu`, `sekolah_asal`, `npsn`, `alamat_sekolah`, `kabupaten_sekolah`, `provinsi_sekolah`, `penyakit`, `olah_raga`, `seni`, `tari`, `lukis`, `drama`, `sastra`, `organisasi`, `prestasi`, `alasan`, `tentang_sekolah`) VALUES
-(1, 6, 'SD', 'MOMO MOLANA', 'MOMO', '12345', 'BIREUEN', '2021-02-01', 'ISLAM', 'ACEH', 'LAKI-LAKI', '0', '3', '4', 'RUMAH CM', '4', 'COT MEURAK', 'JULI', 'BIREUEN', 'ACEH', 'Ayah Momo', 'Tempat Lahir Ayah Momo', '2021-02-01', 'SMA', 'Jaga Momo', '6 Juta', 'Rumah Momo', 'Desa Ayah Momo', 'Juli', 'Bireuen', 'Aceh', '1234567890', 'Mama Momo', 'Cot Meurak', '2021-02-01', 'S1', 'KRT', '0', 'Rumah Mama Momo', 'Desa Mama Momo', 'Juli', 'Bireuen', 'Aceh', '0', 'TK KUCING', '1234', 'ALAMAT TK KUCING', 'BIREUEN', 'ACEH', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-', '-'),
+(1, 6, 'SD', 'MOMO MOLANA', 'MOMO', '12345', 'BIREUEN', '2021-02-01', 'ISLAM', 'ACEH', 'LAKI-LAKI', '0', '3', '4', 'RUMAH CM', '4', 'COT MEURAK', 'JULI', 'BIREUEN', 'ACEH', 'Ayah Momo', 'Tempat Lahir Ayah Momo', '2021-02-01', 'SMA', 'Jaga Momo', '6 Juta', 'Rumah Momo', 'Desa Ayah Momo', 'Juli', 'Bireuen', 'Aceh', '1234567890', 'Mama Momo', 'Cot Meurak', '2021-02-01', 'S1', 'KRT', '0', 'Rumah Mama Momo', 'Desa Mama Momo', 'Juli', 'Bireuen', 'Aceh', '0', 'TK KUCING', '1234', 'ALAMAT TK KUCING', 'BIREUEN', 'ACEH', 'TIDAK ADA', 'YA', 'YA', 'YA', 'YA', 'YA', 'YA', 'YA', 'TIDAK ADA', 'TIDAK ADA', 'ORANG TUA'),
 (8, 3, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
 (9, 4, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
 
@@ -157,7 +157,8 @@ INSERT INTO `pengguna` (`id`, `nama_lengkap`, `nisn`, `alamat`, `sekolah_asal`, 
 (4, 'Fitria Aprianty', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'fitria', 'ADIT', '1', 'Diterima', 'Lulus', 'Ditolak'),
 (5, 'Dieky Zulfikar Md.', '0', '', 'SMP SUKMA BANGSA', '', 'foto22.jpg', '', 'Peserta Didik Baru SMA', 'dieky', 'ADIT', '1', 'Ditolak', 'Antrian', 'Antrian'),
 (6, 'MOMO MOLANA', '0', '', 'TK KUCING', '', 'download.jpg', '', 'Peserta Didik Baru SD', 'momo', 'momo', '1', 'Diterima', 'Lulus', 'Antrian'),
-(8, 'Aditya Aziz Fikhri', '0', '', 'SMP SUKMA BANGSA', '', 'DSC_12931.JPG', '', 'Peserta Didik Baru SD', 'manajemen', '3', '1', 'Antrian', 'Antrian', 'Antrian');
+(8, 'Aditya Aziz Fikhri', '0', '', 'SMP SUKMA BANGSA', '', 'DSC_12931.JPG', '', 'Peserta Didik Baru SD', 'manajemen', '3', '1', 'Antrian', 'Antrian', 'Antrian'),
+(9, 'Izyan Zhafir', '0', '', 'SMPN 1 Bireuen', '', 'Scan2021-01-28_115006.jpg', '', 'Peserta Didik Baru SMA', 'izyan', 'izyan', '1', 'Antrian', 'Antrian', 'Antrian');
 
 --
 -- Indexes for dumped tables
@@ -201,7 +202,7 @@ ALTER TABLE `kuota`
 -- AUTO_INCREMENT untuk tabel `pengguna`
 --
 ALTER TABLE `pengguna`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
