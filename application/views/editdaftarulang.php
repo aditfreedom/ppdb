@@ -330,7 +330,7 @@
     <div class="col">
         <div class="form-group">
         <label for="">Alamat</label>
-        <textarea readonly class="form-control" name="alamat_sekolah" rows="1"><?php echo $data->alamat_sekolah;?></textarea>
+        <input readonly type="text" name="alamat_sekolah" class="form-control" value="<?php echo $data->alamat_sekolah?>">
         </div>
         <div class="row">
         <div class="col">
