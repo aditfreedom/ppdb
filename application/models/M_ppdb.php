@@ -195,5 +195,10 @@ class M_ppdb extends CI_Model{
     {
         return $this->db->get_where('daftarulang',$id);  
     }
+
+
+    function cek_login($where){
+        return $this->db->get_where('pengguna',$where);
+    }
 }
 ?>

@@ -21,7 +21,7 @@
 <div class="container shadow p-3 mb-5 bg-white rounded">
         <img class="img mx-auto d-block" src="<?php echo base_url('logo.png');?>" width="100px">
         <h6 class="text-center font-weight-bold">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
-        <form action="<?php echo base_url('home/login_aksi');?>" method="post">
+        <form action="<?php echo base_url('hal/login_aksi');?>" method="post">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
@@ -35,7 +35,7 @@
                 <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
             <button type="submit" class="btn btn-info btn-block font-weight-bold">LOGIN</button>
-            <div class=" d-flex justify-content-center" style="margin-top:-20px"><strong ><a class="text-info"href="<?php echo base_url('home/registrasi');?>">DAFTAR</a></strong></div>
+            <div class=" d-flex justify-content-center" style="margin-top:-20px"><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">DAFTAR</a></strong></div>
         </form>
     </div>
     <br><br>

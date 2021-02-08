@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
+	function __construct(){
+        parent::__construct();
+		if (empty($this->session->userdata('login'))) {
+			redirect(base_url('hal/login'));
+		}
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -21,6 +27,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->load->model('M_ppdb');
+		$sess_data = $this->session->userdata();
 		$data['pensd'] = $this->M_ppdb->tampilpensd()->result();
 		$data['pensmp'] = $this->M_ppdb->tampilpensmp()->result();
 		$data['pensma'] = $this->M_ppdb->tampilpensma()->result();
@@ -46,23 +53,23 @@ class Home extends CI_Controller {
 		$data['hitungformulirpindahan'] = $this->M_ppdb->hitungformulirpindahan();
 
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('dashboard',$data);
 		$this->load->view('template/footer');
 
 
 	}
 
-	public function registrasi()
-	{
-		$this->load->view('registrasi');
-	}
+	// public function registrasi()
+	// {
+	// 	$this->load->view('registrasi');
+	// }
 
-	public function login()
-	{
-		$this->load->model('M_ppdb');
-		$this->load->view('login');	
-	}
+	// public function login()
+	// {
+	// 	$this->load->model('M_ppdb');
+	// 	$this->load->view('login');	
+	// }
 
 	// public function dashboard()
 	// {
@@ -77,7 +84,7 @@ class Home extends CI_Controller {
 		$data['kuota'] = $this->M_ppdb->tampil_data_kuota()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('kuota',$data);
 		$this->load->view('template/footer');
 	}
@@ -135,70 +142,12 @@ class Home extends CI_Controller {
 		$data['formulir'] = $this->M_ppdb->tampil_approval()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_formulir',$data);
 		$this->load->view('template/footer');
 	}
 
-	public function tambahuser(){
-		$nama_lengkap           	= $this->input->post('nama_lengkap');
-		$sekolah_asal       = $this->input->post('sekolah_asal');
-		$jenis    		    = $this->input->post('jenis');
-		$foto       	    = $_FILES['foto'];
-		$username           = $this->input->post('username');
-		$password           = $this->input->post('password');
-		$status             = $this->input->post('status');
 	
-	
-	
-			$config['upload_path']          = 'asset/foto/';
-			$config['allowed_types']        = 'gif|jpg|png';
-			$config['max_size']             = 10000;
-			$config['max_width']            = 10000;
-			$config['max_height']           = 10000;
-	
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-			 
-			if (! $this->upload->do_upload('foto')) {
-				$this->load->view('errorupload');
-			}else{
-				$foto=$this->upload->data('file_name');
-			}
-	
-		
-		$data = array(
-			'nama_lengkap' => $nama_lengkap,
-			'sekolah_asal' => $sekolah_asal,
-			'nisn' => "0",
-			'alamat' => "",
-			'no_hp' => "",
-			'bukti_tf' => "",
-			'jenis' => $jenis,
-			'foto' => $foto,
-			'username' => $username,
-			'password' => $password,
-			'role' => "1",
-			'approve_formulir' 	=> "Antrian",
-			'approve_lulus' 	=> "Antrian",
-			'approve_daftarulang' => "Antrian",
-
-
-
-		);
-
-		$hitungusername= $this->M_ppdb->tampildatapengguna1($username);
-
-		if ($hitungusername >=1) {
-			$this->load->view('username_gagal');    
-		}else{
-			$this->M_ppdb->tambahuser($data,'pengguna');
-			$this->load->view('status');    
-			// redirect(base_url('home/registrasi'));
-		}
-		
-
-	}
 
 	public function editapproval($id){
 		$id =    array ('id' => $id);
@@ -288,7 +237,7 @@ class Home extends CI_Controller {
 		$data['lulus'] = $this->M_ppdb->tampil_lulus()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_lulus',$data);
 		$this->load->view('template/footer');
 	}
@@ -379,7 +328,7 @@ class Home extends CI_Controller {
 		$data['daftarulang'] = $this->M_ppdb->tampil_daftarulang()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_daftarulang',$data);
 		$this->load->view('template/footer');
 	}
@@ -443,7 +392,7 @@ class Home extends CI_Controller {
 		$data['pengguna'] = $this->M_ppdb->tampildatapengguna()->result();
 		$sess_data = $this->session->userdata();
 		$this->load->view('template/header');
-		$this->load->view('template/sidebar');
+		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('datapengguna',$data);
 		$this->load->view('template/footer');
 	}
@@ -638,8 +587,12 @@ class Home extends CI_Controller {
 			header("Content-disposition: inline; filename=formulir_pendaftaran_ulang.doc");
 			header("Content-length: ".strlen($document));
 			echo $document;
- 
 
+		}
+
+		public function logout(){
+			$this->session->sess_destroy();
+			redirect(base_url());    
 		}
 
 }

@@ -23,7 +23,7 @@
 </div>
 <br>
     <div class="container">
-    <?php echo form_open_multipart('home/tambahuser');?>
+    <?php echo form_open_multipart('hal/tambahuser');?>
     <div class="row">
     <div class="col">
     <div class="form-group">

@@ -91,7 +91,60 @@
                 Data Konsumen
               </p>
             </a> -->
-          </li>         
+          </li>
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-graduate"></i>
+              <p>
+                Calon Peserta Didik
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datareservasi');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Isi Formulir & Pembayaran</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cetak Kartu</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Registrasi Ulang</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Alur Pendaftaran</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Download Surat Pernyataan</p>
+                </a>
+              </li>
+
+
+
+              <li class="nav-item">
+                <a href="<?=base_url('dashboard/datariwayatreservasi');?>" class="nav-link">
+                  <i class="fa fa-download nav-icon"></i>
+                  <p>Download Pakta Integritas</p>
+                </a>
+              </li>
+              </ul>
+              </li>
+          
 
 
           <li class="nav-item">
