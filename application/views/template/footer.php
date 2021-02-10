@@ -1,4 +1,4 @@
-<footer class="main-footer">
+<footer class="main-footer no-print">
     <strong>Copyright &copy; 2021 <a href="#">Sekolah Sukma Bangsa Bireuen</a>.</strong>
     All rights reserved.
   </footer>

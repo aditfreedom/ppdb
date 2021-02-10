@@ -25,6 +25,7 @@
           <thead class="text-center">
             <tr>
               <th scope="col">NO</th>
+              <th scope="col">NO PESERTA</th>
               <th scope="col">NAMA LENGKAP</th>
               <th scope="col">NISN</th>
               <th scope="col">SEKOLAH ASAL</th>
@@ -38,6 +39,7 @@
 	        foreach ($lulus as $data) : ?>
 		<tr class="nomor text-center">
             <th scope="row"><?php echo $i ;?></th>
+            <td><?php echo $data->id;?></td>
             <td><?php echo $data->nama_lengkap;?></td>
             <td><?php echo $data->nisn;?></td>
             <td><?php echo $data->sekolah_asal;?></td>

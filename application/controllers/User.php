@@ -107,23 +107,61 @@ class User extends CI_Controller {
 
     public function cetak_kartu($id){
 		$sess_data = $this->session->userdata();
-        $sess_data1 = $this->session->userdata('approve_formulir');
 		$id =    array ('id' => $id);
 		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
-        
-        if($sess_data1=="Diterima"){
-            $this->load->view('template/header');
-            $this->load->view('template/sidebaruser',$sess_data);
-            $this->load->view('cetak_kartu',$data);
-            // $this->load->view('template/footer');
-        }else{
-            $this->load->view('template/header');
-            $this->load->view('template/sidebaruser',$sess_data);
-            $this->load->view('cetak_kartu_pending',$data);
-            // $this->load->view('template/footer');
+		$data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
+
+        foreach($data2 as $dataku){
+            $dataku22=$dataku->approve_formulir;
         }
 
-	}
+             if($dataku22=="Diterima"){
+                $this->load->view('template/header');
+                $this->load->view('template/sidebaruser',$sess_data);
+                $this->load->view('cetak_kartu',$data);
+                $this->load->view('template/footer');
+             }else{
+                $this->load->view('template/header');
+                $this->load->view('template/sidebaruser',$sess_data);
+                $this->load->view('cetak_kartu_pending',$data);
+                $this->load->view('template/footer');
+             }
+        }
+
+        public function registrasi_ulang($id){
+            $sess_data = $this->session->userdata();
+            $id =    array ('id' => $id);
+            // $data['registrasi_ulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result(); 
+            $data['registrasi_ulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();  
+            $data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
+    
+            foreach($data2 as $dataku){
+                $dataku22=$dataku->approve_lulus;
+                $dataku23=$dataku->approve_formulir;
+            }
+
+
+    
+                 if($dataku22=="Lulus"){
+                    $this->load->view('template/header');
+                    $this->load->view('template/sidebaruser',$sess_data);
+                    $this->load->view('registrasi_ulang',$data);
+                    $this->load->view('template/footer');
+                 }elseif ($dataku22=="Antrian") {
+                    $this->load->view('template/header');
+                    $this->load->view('template/sidebaruser',$sess_data);
+                    $this->load->view('keputusan_lulus');
+                    $this->load->view('template/footer');
+                }
+                 else{
+                    $this->load->view('template/header');
+                    $this->load->view('template/sidebaruser',$sess_data);
+                    $this->load->view('tidak_lulus');
+                    $this->load->view('template/footer');
+                 }
+            }
+        
+	
 
     
 

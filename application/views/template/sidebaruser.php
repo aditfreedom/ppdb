@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="<?=base_url('home/approve_lulus');?>" class="nav-link">
+            <a href="<?=base_url('user/registrasi_ulang/'.$id);?>" class="nav-link">
               <i class="nav-icon fa fa-user-check"></i>
               <p>
                 Registrasi Ulang

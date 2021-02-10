@@ -9,9 +9,8 @@
       </div><!-- /.container-fluid -->
     </div>
     <section class="content">
-      <div class="alert alert-danger" role="alert">
-        Anda Belum Dapat Cetak Kartu Dikarenakan Status Pendaftaran Formulir Belum Diapprove!
-        <br> Silahkan Hubungi Admin Untuk Approval (0813-6205-9403) [WhatsApp]
+      <div class="alert alert-warning" role="alert">
+        Anda <b>Belum Berhak</b> Mendaftar Ulang Untuk Saat Ini!
       </div>
   
     </section>

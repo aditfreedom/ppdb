@@ -60,6 +60,11 @@ class M_ppdb extends CI_Model{
         return $query;
     }
 
+    public function tampilapprovalformulir($id){
+        $query = $this->db->query("SELECT approve_formulir from pengguna where id = '$id' ");
+        return $query;
+    }
+
     public function tampilpengguna($id)
     {
         return $this->db->get_where('pengguna',$id);  

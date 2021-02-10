@@ -10,8 +10,7 @@
     </div>
     <section class="content">
       <div class="alert alert-danger" role="alert">
-        Anda Belum Dapat Cetak Kartu Dikarenakan Status Pendaftaran Formulir Belum Diapprove!
-        <br> Silahkan Hubungi Admin Untuk Approval (0813-6205-9403) [WhatsApp]
+        Anda Tidak Berhak Untuk Mendaftar Ulang Karena Anda Telah Dinyatakan <b>Tidak Lulus!</b>
       </div>
   
     </section>
