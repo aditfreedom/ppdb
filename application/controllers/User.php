@@ -107,12 +107,22 @@ class User extends CI_Controller {
 
     public function cetak_kartu($id){
 		$sess_data = $this->session->userdata();
+        $sess_data1 = $this->session->userdata('approve_formulir');
 		$id =    array ('id' => $id);
-		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
-		$this->load->view('template/header');
-		$this->load->view('template/sidebaruser',$sess_data);
-		$this->load->view('cetak_kartu',$data);
-		$this->load->view('template/footer');
+		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
+        
+        if($sess_data1=="Diterima"){
+            $this->load->view('template/header');
+            $this->load->view('template/sidebaruser',$sess_data);
+            $this->load->view('cetak_kartu',$data);
+            // $this->load->view('template/footer');
+        }else{
+            $this->load->view('template/header');
+            $this->load->view('template/sidebaruser',$sess_data);
+            $this->load->view('cetak_kartu_pending',$data);
+            // $this->load->view('template/footer');
+        }
+
 	}
 
     

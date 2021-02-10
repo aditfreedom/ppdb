@@ -40,6 +40,8 @@ class Hal extends CI_Controller {
                      $nisn = $cek->nisn;
                      $no_hp = $cek->no_hp;
                      $role = $cek->role;
+                     $approve_formulir = $cek->approve_formulir;
+                     $approve_lulus = $cek->approve_lulus;
                      $username = $cek->username;
                      $password = $cek->password;
                     }
@@ -53,6 +55,8 @@ class Hal extends CI_Controller {
                          'nisn' => $nisn,
                          'no_hp' => $no_hp,
                          'role' => $role,
+                         'approve_formulir' => $approve_formulir,
+                         'approve_lulus' => $approve_lulus,
                          'login' => 'Berhasil'              
                         );
  
