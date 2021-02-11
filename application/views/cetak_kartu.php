@@ -4,6 +4,8 @@
         <div class="row mb-2">
         <div class="col-sm-6">
             <h1 class="m-0 text-info text-bold no-print">CETAK KARTU PESERTA UJIAN</h1>
+            <footer class="blockquote-footer"><b>Untuk Print Kartu Peserta Ujian, Klik Cetak Kartu Ujian</b></footer>
+            <hr>
           </div><!-- /.col -->
           
         </div><!-- /.row -->
@@ -18,9 +20,9 @@
       <?php echo form_open_multipart('user/updateformulir');?>
       <label for="">No. Peserta : <?php echo $data->id;?></label>
       <img class="mx-auto d-block" src="<?= base_url();?>/logo.png" width="150" style="margin-bottom:5px;">
-      <h3 class="text-center text-bold">PENERIMAAN PESERTA DIDIK BARU <br>SEKOLAH SUKMA BANGSA BIREUEN<br>TA.2021/2022</h3><br>
+      <h3 class="text-center text-bold">KARTU PESERTA UJIAN<br>PENERIMAAN PESERTA DIDIK BARU <br>SEKOLAH SUKMA BANGSA BIREUEN<br>TA.2021/2022</h3><br>
 
-      <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded mx-auto d-block" width="100px">
+      <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded mx-auto d-block" width="150px">
     <div class="form-group">
         <input type="hidden" name="id" class="form-control" value="<?php echo $data->id;?>">
         </div>

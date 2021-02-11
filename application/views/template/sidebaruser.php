@@ -51,23 +51,30 @@
               </p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a href="<?=base_url('user/registrasi_ulang/'.$id);?>" class="nav-link">
-              <i class="nav-icon fa fa-user-check"></i>
+
+          <li class="nav-item has-treeview menu-close">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-user-check"></i>
               <p>
                 Registrasi Ulang
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-
-          <li class="nav-item ">
-            <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
-              <i class="nav-icon fa fa-print"></i>
-              <p>
-                Cetak Formulir Daftar Ulang
-              </p>
-            </a>
-          </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="<?=base_url('user/registrasi_ulang/'.$id);?>" class="nav-link">
+                  <i class="far fa fa-clipboard-check nav-icon"></i>
+                  <p>Daftar Ulang</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=base_url('user/cetakdaftarulang/'.$id);?>" class="nav-link">
+                  <i class="far fa fa-print nav-icon"></i>
+                  <p>Cetak Formulir Daftar Ulang</p>
+                </a>
+              </li>
+              </ul>
+              </li>       
 
           <li class="nav-item">
             <a href="<?= base_url('user/logout')?>" class="nav-link bg-danger">

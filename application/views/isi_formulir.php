@@ -4,6 +4,8 @@
         <div class="row mb-2">
           <div class="col">
             <h1 class="m-0 text-info text-bold">ISI FORMULIR & UPLOAD BUKTI TRANSFER PEMBAYARAN</h1>
+            <footer class="blockquote-footer"><b>Mohon Diisi Formulir Pendaftaran Dengan Lengkap Dan Benar</b></footer>
+            <hr>
           </div><!-- /.col -->
           
         </div><!-- /.row -->

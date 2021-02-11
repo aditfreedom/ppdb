@@ -3,6 +3,10 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col">
+          <footer class="text-danger"><b>Selamat! Anda Lulus Seleksi PPDB Sekolah Sukma Bangsa Bireuen TA.2021/2022</b></footer>
+          <h1 class="m-0 text-info text-bold no-print">REGISTRASI ULANG PESERTA DIDIK</h1>
+          <footer class="blockquote-footer"><b>Mohon Diisi Formulir Pendaftaran Dengan Lengkap Dan Benar</b></footer>
+            <hr>
           </div><!-- /.col -->
           
         </div><!-- /.row -->
@@ -81,7 +85,7 @@
         <div class="col">
         <div class="form-group">
         <label for="">Jarak Ke Sekolah (KM)</label>
-        <input type="text" name="jk" class="form-control" value="<?php echo $data->jarak;?>">
+        <input type="text" name="jarak" class="form-control" value="<?php echo $data->jarak;?>">
         </div>
     </div>
     </div>
@@ -516,7 +520,7 @@
 
         <div class="form-group">
         <label for="">Apa Yang Anda Ketahui Tentang Sekolah Sukma Bangsa?</label>
-        <textarea class="form-control" name="alasan" rows="2"><?php echo $data->alasan;?></textarea>
+        <textarea class="form-control" name="tentang_sekolah" rows="2"><?php echo $data->tentang_sekolah;?></textarea>
         </div>    
         <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
         </form>
