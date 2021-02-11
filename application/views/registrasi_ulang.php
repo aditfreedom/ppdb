@@ -41,9 +41,14 @@
         </div>
 
 
-    <div class="form-group">
-        <label for="">Tingkat</label>
-        <input type="text" name="tingkat" class="form-control" value="<?php echo $data->tingkat?>">
+        <div class="form-group">
+        <label for="">Daftar Ulang Ke Tingkat</label>
+        <select class="form-control form-control" name="tingkat">
+          <option selected hidden><?php echo $data->tingkat;?></option>
+          <option>SD</option>
+          <option>SMP</option>
+          <option>SMA</option>
+          </select>
         </div>
         <div class="form-group">
         <label for="">NISN</label>
@@ -51,7 +56,13 @@
         </div>
         <div class="form-group">
         <label for="">Golongan Darah</label>
-        <input type="text" name="goldar" class="form-control" value="<?php echo $data->goldar;?>">
+        <select class="form-control form-control" name="goldar">
+          <option selected hidden><?php echo $data->goldar;?></option>
+          <option>A</option>
+          <option>B</option>
+          <option>AB</option>
+          <option>O</option>
+          </select>
         </div>
        
         <div class="row">
@@ -130,9 +141,13 @@
         </div>
     </div>
    
-        <div class="form-group">
+    <div class="form-group">
         <label for="">Jenis Kelamin</label>
-        <input type="text" name="jk" class="form-control" value="<?php echo $data->jk;?>">
+        <select class="form-control form-control" name="jk">
+          <option selected hidden><?php echo $data->jk;?></option>
+          <option>Laki-Laki</option>
+          <option>Perempuan</option>
+          </select>
         </div>
         <div class="form-group">
         <label for="">Alamat</label>
@@ -415,7 +430,11 @@
         <div class="col"> 
         <div class="form-group">
         <label for="">Seni Musik</label>
-        <input type="text" name="seni" class="form-control" value="<?php echo $data->seni;?>">
+        <select class="form-control form-control" name="seni">
+          <option selected hidden><?php echo $data->seni;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         </div>
@@ -428,13 +447,21 @@
         <div class="col">
         <div class="form-group">
         <label for="">Seni Tari</label>
-        <input type="text" name="tari" class="form-control" value="<?php echo $data->tari;?>">
+        <select class="form-control form-control" name="tari">
+          <option selected hidden><?php echo $data->tari;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Seni Lukis</label>
-        <input type="text" name="lukis" class="form-control" value="<?php echo $data->lukis;?>">
+        <select class="form-control form-control" name="lukis">
+          <option selected hidden><?php echo $data->lukis;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         </div>
@@ -443,19 +470,31 @@
         <div class="col">
         <div class="form-group">
         <label for="">Drama</label>
-        <input type="text" name="drama" class="form-control" value="<?php echo $data->drama;?>">
+        <select class="form-control form-control" name="drama">
+          <option selected hidden><?php echo $data->drama;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Sastra</label>
-        <input type="text" name="sastra" class="form-control" value="<?php echo $data->sastra;?>">
+        <select class="form-control form-control" name="sastra">
+          <option selected hidden><?php echo $data->sastra;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Organisasi</label>
-        <input type="text" name="organisasi" class="form-control" value="<?php echo $data->organisasi;?>">
+        <select class="form-control form-control" name="organisasi">
+          <option selected hidden><?php echo $data->organisasi;?></option>
+          <option>Ya</option>
+          <option>Tidak</option>
+          </select>
         </div>
         </div>
         </div>
@@ -479,7 +518,7 @@
         <label for="">Apa Yang Anda Ketahui Tentang Sekolah Sukma Bangsa?</label>
         <textarea class="form-control" name="alasan" rows="2"><?php echo $data->alasan;?></textarea>
         </div>    
-        <!-- <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>          -->
+        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
         </form>
 	<?php endforeach ;?>
 

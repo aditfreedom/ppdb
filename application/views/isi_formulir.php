@@ -52,8 +52,9 @@
         <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
         <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
         </div>
-        <div class="form-group">
-        <label for="">Bukti Transfer</label><br>
+        <br> 
+        <label for="">Struk Pembayaran Formulir</label>
+        <footer class="blockquote-footer">Rek. Bank Aceh : <b>10002240000336</b><br><cite title="Source Title">a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen</cite></footer><br>
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
         <img src="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="border border-dark rounded" width="150px"><br><br>
         <input type="file" name="buktitf_baru" class="form-control">

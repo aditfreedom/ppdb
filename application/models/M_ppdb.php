@@ -186,6 +186,11 @@ class M_ppdb extends CI_Model{
         $this->db->update('pengguna',$data); 
     }
 
+    public function updatedaftarulanguser($where,$data)
+    {   $this->db->where($where);
+        $this->db->update('daftarulang',$data); 
+    }
+
     public function updatedaftarulang($where,$data)
     {   $this->db->where($where);
         $this->db->update('pengguna',$data); 
