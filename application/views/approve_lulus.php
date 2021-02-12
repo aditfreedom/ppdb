@@ -55,7 +55,7 @@
         $class="btn-danger";
       }    
     ?>
-            <td><a class="font-weight-bold text-uppercase <?= $class;?>" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_lulus?>&nbsp&nbsp</a></td>
+            <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_lulus?>&nbsp&nbsp</a></td>
             <td><?php echo anchor('home/editlulus/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
 		</tr>
 		<?php $i++; ?>

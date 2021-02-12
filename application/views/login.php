@@ -14,7 +14,7 @@
     <title>PPDB ONLINE SSB BIREUEN</title>
   </head>
   <div class="limiter">
-  <body class="primcol"  style="background-image: url(<?php echo base_url('background_login.jpg');?>);">
+  <body class="primcol"  style="background-image: url(<?php echo base_url('background_login.jpg');?>);background-size: cover;}">
       <div class="head font-weight-bold">
         <br><br>
   </div>
@@ -35,7 +35,7 @@
                 <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
             <button type="submit" class="btn btn-info btn-block font-weight-bold">LOGIN</button>
-            <div class=" d-flex justify-content-center" style="margin-top:-20px"><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">DAFTAR</a></strong></div>
+            <div class=" d-flex justify-content-center" style="margin-top:-20px"><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div>
         </form>
     </div>
     <br><br>

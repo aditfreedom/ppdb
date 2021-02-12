@@ -53,7 +53,7 @@
         $class="btn-danger";
       }    
     ?>
-            <td><a class="font-weight-bold text-uppercase <?= $class;?>" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_daftarulang?>&nbsp&nbsp</a></td>
+            <td><a class="font-weight-bold text-uppercase rounded-pill <?= $class;?>" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_daftarulang?>&nbsp&nbsp</a></td>
             <td><?php echo anchor('home/editdaftarulang/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
 		</tr>
 		<?php $i++; ?>

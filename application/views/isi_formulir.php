@@ -55,6 +55,7 @@
         <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
         </div>
         <br> 
+        <div class="form-group">
         <label for="">Struk Pembayaran Formulir</label>
         <footer class="blockquote-footer">Rek. Bank Aceh : <b>10002240000336</b><br><cite title="Source Title">a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen</cite></footer><br>
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
@@ -79,7 +80,6 @@
       <div class="form-group">
       <input  type="hidden" name="approve_daftarulang" class="form-control" value="<?php echo $data->approve_daftarulang;?>">
       </div>  
-
         <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
         </form>
 	<?php endforeach ;?>
