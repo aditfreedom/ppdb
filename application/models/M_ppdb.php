@@ -55,6 +55,11 @@ class M_ppdb extends CI_Model{
         return $query;
     }
 
+    public function tampilinfolulus(){
+        $query = $this->db->query("SELECT * from pengguna where approve_lulus = 'Lulus'");
+        return $query;
+    }
+
     public function tampil_lulus(){
         $query = $this->db->query("SELECT * from pengguna where (approve_lulus = 'Antrian' OR approve_lulus = 'Lulus' OR approve_lulus = 'Tidak Lulus') AND approve_formulir = 'Diterima' ");
         return $query;

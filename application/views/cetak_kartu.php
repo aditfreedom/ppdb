@@ -34,6 +34,7 @@
         <label for="" class="font-weight-normal"  style="font-size:20px;">Sekolah Asal :</label>
         <input readonly type="text" name="sekolah_asal" class="form-control text-center text-dark text-bold text-uppercase" style="font-size: 25px;" value="<?php echo $data->sekolah_asal;?>">
         </div>
+        <h6 class="text-danger">*Harap Membawa Masker Saat Tes Berlangsung</h6>
         </form>
 	<?php endforeach ;?> 
   <br>

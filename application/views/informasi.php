@@ -44,6 +44,17 @@
   </div>
 </nav>
 
+<!-- <div class="jumbotron" id="home">
+<div class="container" >
+  <h1 class="display-4 text-white animate__animated animate__bounceInLeft">PENGUMUMAN KELULUSAN<br>PESERTA DIDIK BARU</h1>
+  <h3 class="display-5 animate__animated animate__bounceInLeft text-white">SD - SMP - SMA</h3>
+  <h3 class="display-5 animate__animated animate__bounceInLeft text-info">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
+  <hr class="my-4 animate__animated animate__bounceInLeft">
+  <a class="btn btn-info btn-lg animate__animated animate__bounceInLeft" id="demo3" href="<?=base_url('informasi/kelulusan')?>" role="button"><b>Lihat Sekarang</b></a>
+</div>
+</div> -->
+
+
 <div class="jumbotron" id="home">
 <div class="container" >
   <h1 class="display-4 text-white animate__animated animate__bounceInLeft">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
@@ -61,7 +72,13 @@
 <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN</span></b></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+            <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
+            <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
+            <p>1. Mendaftar Akun Dan Login Pada <a href="<?=base_url()?>" role="button"><b>Link Berikut</b></a></p> 
+            <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
+            <p>1. Mengisi Formulir Pendaftaran Dan Upload Bukti Transfer Ke Rek. Bank Aceh <b>&nbsp&nbsp&nbsp10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
+            <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
+
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
@@ -72,44 +89,73 @@
 
 <div  id="alur" style="height: 680px;padding-top:70px;">
 <div class="container">
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading"><b>ALUR<span class="text-info"> PENDAFTARAN</span></b></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
-          </div>
-        </div>
+          <h2 class="featurette-heading text-center"><b>ALUR PENDAFTARAN<span class="text-info"> PPDB ONLINE TA.2021/2022</span></b></h2>
+          <hr class="my-4" style="border-color: #F05F40;width: 20%;margin-top:0px;border-width: 3px;">
+
 </div>
+<img class="mx-auto d-block" src="<?=base_url()?>/background_login.jpg" height="500px" style="width:100%;">
+
 </div>
 
 <div  id="jadwal" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading"><b>JADWAL<span class="text-info"> PENDAFTARAN</span></b></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+<h2 class="featurette-heading"><b>JADWAL<span class="text-info"> PENDAFTARAN</span></b><br>
+<hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
+</h2>
+
+            <table class="table table-hover" id="example">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">TANGGAL</th>
+              <th scope="col">KEGIATAN</th>
+              <th scope="col">TEMPAT</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+            <td scope="row">1</td>
+            <td>01-31 Maret 2021</td>
+            <td>Pembukaan PPDB Online TA.2021/2022</td>
+            <td>ONLINE</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">2</td>
+            <td>06-07 April 2021</td>
+            <td>Tes Penerimaan Siswa Baru</td>
+            <td>Sekolah Sukma Bangsa Bireuen</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">3</td>
+            <td>12 April 2021</td>
+            <td>Pengumuman Kelulusan PPDB TA.2021/2022</td>
+            <td>ONLINE</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">4</td>
+            <td>13 - 30 April 2021</td>
+            <td>Pendaftaran Ulang Siswa Baru</td>
+            <td>Sekolah Sukma Bangsa Bireuen</td>
+            </tbody>
+            </table>
+            <h6 class="text-danger">*Harap Membawa Masker Dan Patuhi Protokol Kesehatan Saat Tes Berlangsung</h6>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
-          </div>
-        </div>
 </div>
 </div>
 
-<div  id="kontak" style="height: 680px;padding-top:70px;">
+<div  id="kontak" style="height: 550px;padding-top:70px;">
 <div class="container">
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading"><b>KONTAK<span class="text-info"> PANITIA PENDAFTARAN</span></b></h2>
+          <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;">Alamat : </p>
             <p>Jln. Banda Aceh - Medan, Desa Cot Keutapang Kecamatan Jeumpa, Kabupaten Bireuen, 24251 Provinsi Aceh, Indonesia</p>
             
-            <p class="lead" style="margin-bottom:0px;">Telepon : </p>
+            <p class="lead" style="margin-bottom:0px;">Telepon Sekolah: </p>
             <p>(0644) 324985/328996</p>
 
-            <p class="lead" style="margin-bottom:0px;">Admin PPDB : </p>
+            <p class="lead" style="margin-bottom:0px;">Panitia PPDB : </p>
             <p>081362059403 (WhatsApp)</p>
 
             <p class="lead" style="margin-bottom:0px;">E-Mail : </p>
