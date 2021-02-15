@@ -124,7 +124,7 @@ $(document).ready( function () {
             </div>
 
           <div class="col-md-5">
-            <img class=" img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
+            <img class=" img-fluid mx-auto" src="<?=base_url()?>/jadwal.JPG" alt="Generic placeholder image">
           </div>
           <p class="text-danger"><b>Dokumen Tersebut Diatas Dibawa Dan Disatukan Dalam Map Berwarna Merah Saat Pendaftaran Ulang. Harap Membawa Masker Dan Menjaga Protokol Kesehatan Saat Proses Pendaftaran Ulang.</b></p> 
 
@@ -152,8 +152,8 @@ $(document).ready( function () {
             <p>ssb_bireuen@sukmabangsa.sch.id</p>
             
           </div>
-          <div class="col-md-5 order-md-1">
-            <img class=" img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
+          <div class="col-md-4 order-md-1">
+            <img class=" img-fluid mx-auto" src="<?=base_url()?>/kontak.JPG" width="300px" alt="Generic placeholder image">
           </div>
         </div>
 </div>
