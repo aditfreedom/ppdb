@@ -54,8 +54,54 @@
 </div>
 </div> -->
 
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
 
-<div class="jumbotron" id="home">
+  <div class="carousel-inner" id="home">
+  <div class="carousel-caption d-none d-md-block" style="margin-bottom:50px;" >
+        <!-- pengumuman -->
+        <!-- <h1 class="display-4 text-white animate__animated animate__bounceInLeft font-weight-bold" >PENGUMUMAN KELULUSAN<br>PESERTA DIDIK BARU</h1>
+        <h3 class="display-5 animate__animated animate__bounceInLeft text-white">SD - SMP - SMA</h3>
+        <h3 class="display-5 animate__animated animate__bounceInLeft text-info">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
+        <hr class="my-4 animate__animated animate__bounceInLeft">
+        <a class="btn btn-info btn-lg animate__animated animate__bounceInLeft" style="margin-bottom:50px;"  href="<?=base_url('informasi/kelulusan')?>" role="button"><b>Lihat Sekarang</b></a> -->
+
+
+        <!-- pembukaan -->
+        <h1 class="display-4 text-white  font-weight-bold">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
+        <h3 class="display-5  text-white">SD - SMP - SMA</h3>
+        <h3 class="display-5  text-info">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
+        <hr class="my-4 ">
+        <h3 class="display-5 text-white " id="demo2" >Waktu Pendaftaran :</h3>
+        <h1 id="demo" class=" text-danger"></h1><br>
+        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url()?>" role="button"><b>Daftar Sekarang</b></a>
+      </div>
+    <div class="carousel-item active">
+      <img src="<?=base_url('bg1.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg2.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg3.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<!-- <div class="jumbotron" id="home">
 <div class="container" >
   <h1 class="display-4 text-white animate__animated animate__bounceInLeft">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
   <h3 class="display-5 animate__animated animate__bounceInLeft text-white">SD - SMP - SMA</h3>
@@ -65,7 +111,7 @@
   <h1 id="demo" class="animate__animated animate__bounceInLeft text-danger"></h1><br>
   <a class="btn btn-info btn-lg animate__animated animate__bounceInLeft" id="demo3" href="<?=base_url()?>" role="button"><b>Daftar Sekarang</b></a>
 </div>
-</div>
+</div> -->
 
 <div  id="persyaratan" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
@@ -81,7 +127,7 @@
 
           </div>
           <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
+            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/syarat.JPG" alt="Generic placeholder image">
           </div>
         </div>
 </div>
@@ -162,8 +208,8 @@
             <p>ssb_bireuen@sukmabangsa.sch.id</p>
             
           </div>
-          <div class="col-md-5 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/foto.jpg" alt="Generic placeholder image">
+          <div class="col-md-4 order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/kontak.JPG" alt="Generic placeholder image" width="300px">
           </div>
         </div>
 </div>
