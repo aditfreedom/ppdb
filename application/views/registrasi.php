@@ -53,7 +53,7 @@
         </div>
 
         <div class="form-group">
-        <label for="">Foto (Maks. 1MB) </label>
+        <label for="">Pas Foto Layar Merah Uk.3x4 (Maks. 1MB, Format JPEG) </label>
         <input type="file" name="foto" class="form-control" required>
         </div>
         <div class="form-group">

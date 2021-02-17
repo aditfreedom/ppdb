@@ -40,7 +40,7 @@ $(document).ready( function () {
         <a class="nav-link" href="#sd">PENGUMUMAN KELULUSAN</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#jadwal">JADWAL DAFTAR ULANG & PERSYARATAN</a>
+        <a class="nav-link " href="#jadwal">KETENTUAN DAFTAR ULANG</a>
       </li>
       <li class="nav-item">
         <a class="nav-link " href="#kontak">KONTAK</a>
@@ -120,7 +120,7 @@ $(document).ready( function () {
             <ul>
             <li>Login Kembali Pada <a href="<?=base_url('hal/login')?>"><b>Link Berikut</b></a></b>, Lalu Mengisi Form Registrasi Ulang > Daftar Ulang</li>
             <li>Mencetak dokumen Pendaftaran Ulang (Formulir, Surat Pernyataan & Pakta Integritas) Pada Aplikasi PPDB <a href="<?=base_url('hal/login')?>"><b>Link Berikut</b></a></li>
-            <li>Melapor kepada panitia di Ruangan PPDB Sekolah Sukma Bangsa Bireuen dan mengambil Map Pendaftaran Ulang yang berisi list kelengkapan berkas (Map Merah : SD, Map Kuning : SMP, Map Hijau : SMA)</a></li>
+            <li>Melapor kepada panitia di Ruangan PPDB Sekolah Sukma Bangsa Bireuen dengan membawa berkas pendaftaran ulang diisi kedalam map (Map Merah : SD, Map Kuning : SMP, Map Hijau : SMA)</a></li>
             <li>Membayar Lunas Biaya Pendidikan sesuai dengan ketentuan sekolah</li>
             <li>Mengembalikan Map Pendaftaran Ulang kepada Panitia</li>
             </ul><br>
@@ -128,22 +128,21 @@ $(document).ready( function () {
 
             <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Kelengkapan Berkas : </b></p>
             <ul>
-            <li><i>Photocopy</i> Akta Kelahiran 1 Lembar</li> 
-            <li><i>Photocopy</i> Kartu Keluarga (KK) 1 Lembar</li> 
-            <li><i>Photocopy</i> KTP Orang Tua 1 Lembar</li> 
-            <li><i>Photocopy</i> Kartu NISN/ Surat Keterangan NISN 1 Lembar</li> 
-            <li>Pasfoto terbaru ukuran 3x4 cm dan 2x3 cm masing-masing 2 lembar</li> 
-            <li><i>Photocopy</i> Ijazah/Surat Keterangan Lulus 1 lembar</li> 
-            <li>Surat Pernyataan Orang Tua (Tersedia Di Aplikasi PPDB) 1 lembar (materai 6.000 disediakan sendiri oleh ortu)</li>
-            <li>Surat Pakta Integritas (Tersedia Di Aplikasi PPDB) 1 lembar (materai 6.000 disediakan sendiri oleh ortu)</li>
-            <li>Menunjukkan Slip Pembayaran BPP resmi dari TU (Pada Saat Pendaftaran Ulang)</li>
-            <li>Menunjukkan Slip Biaya Perawatan Sekolah resmi dari TU (Pada Saat Pendaftaran Ulang)</li>
-            <li>Menunjukkan Slip Pembayaran Paket Seragam resmi dari Koperasi Sekolah SSB Bireuen (Pada Saat Pendaftaran Ulang)</li>
-            <li>Surat Pindah (bagi siswa pindahan)</li>
-            <li><i>Photocopy</i> Rapor (bagi siswa pindahan)</li> 
-            <li>Surat Pindah (bagi siswa pindahan)</li>
-            <li>Print Dapodik (khusus bagi siswa pindahan) (berisi keterangan bahwa calon siswa tersebut sudah di keluarkan dari dapodik di sekolah asal)</li>
-
+            <li><i>Photocopy</i> Akta Kelahiran <b>1 Lembar</b></li> 
+            <li><i>Photocopy</i> Kartu Keluarga (KK) <b>1 Lembar</b></li> 
+            <li><i>Photocopy</i> KTP Orang Tua <b>1 Lembar</b></li> 
+            <li><i>Photocopy</i> Kartu NISN/ Surat Keterangan NISN <b>1 Lembar</b></li> 
+            <li>Pasfoto terbaru layar merah ukuran 3x4 cm dan 2x3 cm <b>masing-masing 2 lembar</b></li> 
+            <li><i>Photocopy</i> Ijazah/Surat Keterangan Lulus <b>1 lembar</b></li> 
+            <li>Surat Pernyataan Orang Tua (Tersedia Di Aplikasi PPDB) <b>1 lembar (materai 6.000 disediakan sendiri oleh ortu)</b></li>
+            <li>Surat Pakta Integritas (Tersedia Di Aplikasi PPDB) <b>1 lembar (materai 6.000 disediakan sendiri oleh ortu)</b></li>
+            <li>Menunjukkan Slip Pembayaran BPP resmi dari TU <b>(Pada Saat Pendaftaran Ulang)</b></li>
+            <li>Menunjukkan Slip Biaya Perawatan Sekolah resmi dari TU <b>(Pada Saat Pendaftaran Ulang)</b></li>
+            <li>Menunjukkan Slip Pembayaran Paket Seragam resmi dari Koperasi Sekolah SSB Bireuen <b>Pada Saat Pendaftaran Ulang)</b></li>
+            <li>Surat Pindah <b>(bagi siswa pindahan)</b></li>
+            <li><i>Photocopy</i> Rapor <b>(bagi siswa pindahan)</b></li> 
+            <li>Surat Pindah <b>(bagi siswa pindahan)</b></li>
+            <li>Print surat pindah Dapodik yang berisi keterangan bahwa calon siswa tersebut sudah di keluarkan dari dapodik di sekolah asal <b>(bagi siswa pindahan)</b></li>
             </ul>
             </div>
 

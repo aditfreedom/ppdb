@@ -97,11 +97,15 @@ class Home extends CI_Controller {
 	public function tambahkuota(){
 		$jenis           = $this->input->post('jenis');
 		$kuota          = $this->input->post('kuota');
+		$keterangan          = $this->input->post('keterangan');
+
 
 	   
 		$data = array(
 			'jenis' => $jenis,
-			'kuota' => $kuota
+			'kuota' => $kuota,
+			'keterangan' => $keterangan
+
 		);
 	
 		$this->M_ppdb->tambahkuota($data,'kuota');
@@ -128,10 +132,14 @@ class Home extends CI_Controller {
 		$id       = $this->input->post('id');
 		$jenis       = $this->input->post('jenis');
 		$kuota        = $this->input->post('kuota');
+		$keterangan        = $this->input->post('keterangan');
+
 	
 		$data = array(
 			'jenis' => $jenis,
-			'kuota' => $kuota
+			'kuota' => $kuota,
+			'keterangan' => $keterangan
+
 		);
 	
 		$where = array(
@@ -166,39 +174,51 @@ class Home extends CI_Controller {
 	}
 
 	public function updateapproval(){
-		$id              = $this->input->post('id');
-		$nama            = $this->input->post('nama');
-		$jenis      	 = $this->input->post('jenis');
-		$nisn	         = $this->input->post('nisn');
-		$alamat	         = $this->input->post('alamat');
-		$sekolah_asal    = $this->input->post('sekolah_asal');
-		$no_hp           = $this->input->post('no_hp');
-		$foto            = $this->input->post('foto');
-		$bukti_tf        = $this->input->post('bukti_tf');
-		$username        = $this->input->post('username');
-		$password        = $this->input->post('password');
-		$role            = $this->input->post('role');
-		$approve_formulir    = $this->input->post('approve_formulir');
-		$approve_lulus       = $this->input->post('approve_lulus');
-		$approve_daftarulang = $this->input->post('approve_daftarulang');
+		$id                = $this->input->post('id');
+        $nama              = $this->input->post('nama');
+        $tptlahir              = $this->input->post('tptlahir');
+        $tgllahir              = $this->input->post('tgllahir');
+        $jenis             = $this->input->post('jenis');
+        $nisn              = $this->input->post('nisn');
+        $alamat            = $this->input->post('alamat');
+        $sekolah_asal      = $this->input->post('sekolah_asal');
+        $namaayah              = $this->input->post('namaayah');
+        $namaibu              = $this->input->post('namaibu');
+        $no_wa              = $this->input->post('no_wa');
+        $akte          = $this->input->post('akte');
+        $no_hp             = $this->input->post('no_hp');
+        $foto             = $this->input->post('foto');
+        $bukti_tf          = $this->input->post('bukti_tf');
+        $username          = $this->input->post('username');
+        $password          = $this->input->post('password');
+        $role              = $this->input->post('role');
+        $approve_formulir       = $this->input->post('approve_formulir');
+        $approve_lulus          = $this->input->post('approve_lulus');
+        $approve_daftarulang    = $this->input->post('approve_daftarulang');
 
 
 	
 		$data = array(
 			'nama_lengkap' => $nama,
-			'jenis' => $jenis,
-			'nisn' => $nisn,
-			'alamat' =>$alamat,
-			'sekolah_asal' => $sekolah_asal,
-			'no_hp' => $no_hp,
-			'foto' => $foto,
-			'bukti_tf' => $bukti_tf,
-			'username' => $username,
-			'password' => $password,
-			'role' => $role,
-			'approve_formulir' => $approve_formulir,
-			'approve_lulus' => $approve_lulus,
-			'approve_daftarulang' => $approve_daftarulang
+            'tptlahir' => $tptlahir,
+            'tgllahir' => $tgllahir,
+            'namaayah' => $namaayah,
+            'namaibu' => $namaibu,
+            'no_wa' => $no_wa,
+            'akte' => $akte,
+            'jenis' => $jenis,
+            'nisn' => $nisn,
+            'alamat' =>$alamat,
+            'sekolah_asal' =>$sekolah_asal,
+            'no_hp' =>$no_hp,
+            'foto' =>$foto,
+            'bukti_tf' =>$bukti_tf,
+            'username' =>$username,
+            'password' =>$password,
+            'role' =>$role,
+            'approve_formulir' =>$approve_formulir,
+            'approve_lulus' =>$approve_lulus,
+            'approve_daftarulang' =>$approve_daftarulang
 		);
 	
 		$where = array(
@@ -260,38 +280,51 @@ class Home extends CI_Controller {
 	}
 
 	public function updatelulus(){
-		$id              = $this->input->post('id');
-		$nama            = $this->input->post('nama');
-		$jenis      	 = $this->input->post('jenis');
-		$nisn	         = $this->input->post('nisn');
-		$alamat	         = $this->input->post('alamat');
-		$sekolah_asal    = $this->input->post('sekolah_asal');
-		$no_hp           = $this->input->post('no_hp');
-		$foto            = $this->input->post('foto');
-		$bukti_tf        = $this->input->post('bukti_tf');
-		$username        = $this->input->post('username');
-		$password        = $this->input->post('password');
-		$role            = $this->input->post('role');
-		$approve_formulir    = $this->input->post('approve_formulir');
-		$approve_lulus       = $this->input->post('approve_lulus');
-		$approve_daftarulang = $this->input->post('approve_daftarulang');
+		$id                = $this->input->post('id');
+        $nama              = $this->input->post('nama');
+        $tptlahir              = $this->input->post('tptlahir');
+        $tgllahir              = $this->input->post('tgllahir');
+        $jenis             = $this->input->post('jenis');
+        $nisn              = $this->input->post('nisn');
+        $alamat            = $this->input->post('alamat');
+        $sekolah_asal      = $this->input->post('sekolah_asal');
+        $namaayah              = $this->input->post('namaayah');
+        $namaibu              = $this->input->post('namaibu');
+        $no_wa              = $this->input->post('no_wa');
+        $akte          = $this->input->post('akte');
+        $no_hp             = $this->input->post('no_hp');
+        $foto             = $this->input->post('foto');
+        $bukti_tf          = $this->input->post('bukti_tf');
+        $username          = $this->input->post('username');
+        $password          = $this->input->post('password');
+        $role              = $this->input->post('role');
+        $approve_formulir       = $this->input->post('approve_formulir');
+        $approve_lulus          = $this->input->post('approve_lulus');
+        $approve_daftarulang    = $this->input->post('approve_daftarulang');
+
 
 	
 		$data = array(
 			'nama_lengkap' => $nama,
-			'jenis' => $jenis,
-			'nisn' => $nisn,
-			'alamat' =>$alamat,
-			'sekolah_asal' => $sekolah_asal,
-			'no_hp' => $no_hp,
-			'foto' => $foto,
-			'bukti_tf' => $bukti_tf,
-			'username' => $username,
-			'password' => $password,
-			'role' => $role,
-			'approve_formulir' => $approve_formulir,
-			'approve_lulus' => $approve_lulus,
-			'approve_daftarulang' => $approve_daftarulang
+            'tptlahir' => $tptlahir,
+            'tgllahir' => $tgllahir,
+            'namaayah' => $namaayah,
+            'namaibu' => $namaibu,
+            'no_wa' => $no_wa,
+            'akte' => $akte,
+            'jenis' => $jenis,
+            'nisn' => $nisn,
+            'alamat' =>$alamat,
+            'sekolah_asal' =>$sekolah_asal,
+            'no_hp' =>$no_hp,
+            'foto' =>$foto,
+            'bukti_tf' =>$bukti_tf,
+            'username' =>$username,
+            'password' =>$password,
+            'role' =>$role,
+            'approve_formulir' =>$approve_formulir,
+            'approve_lulus' =>$approve_lulus,
+            'approve_daftarulang' =>$approve_daftarulang
 		);
 
 		$where = array(

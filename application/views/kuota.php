@@ -27,6 +27,7 @@
               <th scope="col">NO</th>
               <th scope="col">JENIS PENERIMAAN</th>
               <th scope="col">KUOTA</th>
+              <th scope="col">KETERANGAN</th>
               <th scope="col">AKSI</th>
             </tr>
           </thead>
@@ -37,6 +38,7 @@
             <th scope="row"><?php echo $i ;?></th>
             <td><?php echo $data->jenis;?></td>
             <td><?php echo $data->kuota;?></td>
+            <td><?php echo $data->keterangan;?></td>
             <td><?php echo anchor('home/editkuota/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?> </td>	
 		</tr>
 		<?php $i++; ?>
@@ -77,6 +79,10 @@
         <div class="form-group">
         <label for="">Kuota Penerimaan</label>
         <input type="text" name="kuota" class="form-control">
+        </div>
+        <div class="form-group">
+        <label for="">Keterangan</label>
+        <input type="text" name="keterangan" class="form-control">
         </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
       </div>

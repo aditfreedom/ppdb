@@ -28,6 +28,10 @@
         <label for="">Kuota Penerimaan</label>
         <input type="text" name="kuota" class="form-control" value="<?php echo $data->kuota;?>">
         </div>
+        <div class="form-group">
+        <label for="">Keterangan</label>
+        <input type="text" name="keterangan" class="form-control" value="<?php echo $data->keterangan;?>">
+        </div>
         <button type="submit" class="btn btn-primary">Simpan</button>
       </div>
         </form>

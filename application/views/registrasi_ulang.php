@@ -154,7 +154,7 @@
           </select>
         </div>
         <div class="form-group">
-        <label for="">Alamat</label>
+        <label for="">Alamat Lengkap</label>
         <textarea class="form-control" name="alamat" rows="1"><?php echo $data->alamat;?></textarea>
         </div>
         <div class="row">
@@ -245,7 +245,7 @@
         <input type="text" name="pekerjaan_ayah" class="form-control" value="<?php echo $data->pekerjaan_ayah;?>">
         </div>
         <div class="form-group">
-        <label for="">Alamat</label>
+        <label for="">Alamat Lengkap</label>
         <textarea class="form-control" name="alamat_ayah" rows="1"><?php echo $data->alamat_ayah;?></textarea>
         </div>
         <div class="row">
@@ -340,7 +340,7 @@
         <input type="text" name="pekerjaan_ibu" class="form-control" value="<?php echo $data->pekerjaan_ibu;?>">
         </div>
         <div class="form-group">
-        <label for="">Alamat</label>
+        <label for="">Alamat Lengkap</label>
         <textarea class="form-control" name="alamat_ibu" rows="1"><?php echo $data->alamat_ibu;?></textarea>
         </div>
         <div class="row">
@@ -378,7 +378,7 @@
         </div>
 
     <div class="form-group">
-        <label for="">NPSN</label>
+        <label for="">NPSN Sekolah</label>
         <input type="text" name="npsn" class="form-control" value="<?php echo $data->npsn?>">
         </div>
     </div>
@@ -387,7 +387,7 @@
     <div class="row">
     <div class="col">
         <div class="form-group">
-        <label for="">Alamat</label>
+        <label for="">Alamat Sekolah</label>
         <textarea class="form-control" name="alamat_sekolah" rows="1"><?php echo $data->alamat_sekolah;?></textarea>
         </div>
         <div class="row">

@@ -43,10 +43,17 @@ class User extends CI_Controller {
     public function updateformulir(){
         $id                = $this->input->post('id');
         $nama              = $this->input->post('nama');
+        $tptlahir              = $this->input->post('tptlahir');
+        $tgllahir              = $this->input->post('tgllahir');
         $jenis             = $this->input->post('jenis');
         $nisn              = $this->input->post('nisn');
         $alamat            = $this->input->post('alamat');
         $sekolah_asal      = $this->input->post('sekolah_asal');
+        $namaayah              = $this->input->post('namaayah');
+        $namaibu              = $this->input->post('namaibu');
+        $no_wa              = $this->input->post('no_wa');
+        $akte          = $this->input->post('akte');
+        $akte_baru      = $_FILES['akte_baru']['name'];
         $no_hp             = $this->input->post('no_hp');
         $foto             = $this->input->post('foto');
         $bukti_tf          = $this->input->post('bukti_tf');
@@ -77,16 +84,40 @@ class User extends CI_Controller {
         if ($bukti_tfbaru == null) {
             $bukti_tfbaru = $bukti_tf;
         }
+
+        $config2['upload_path']          = 'asset/akte/';
+        $config2['allowed_types']        = 'gif|jpg|png';
+        $config2['max_size']             = 10000;
+        $config2['max_width']            = 10000;
+        $config2['max_height']           = 10000;
+    
+        $this->load->library('upload', $config2);
+        $this->upload->initialize($config2);
+         
+        if (! $this->upload->do_upload('akte_baru')) {
+            $this->load->view('errorformulir');
+        }else{
+            $akte_baru=$this->upload->data('file_name');
+        }
+    
+        if ($akte_baru == null) {
+            $akte_baru = $akte;
+        }
     
         $data = array(
             'nama_lengkap' => $nama,
+            'tptlahir' => $tptlahir,
+            'tgllahir' => $tgllahir,
+            'namaayah' => $namaayah,
+            'namaibu' => $namaibu,
+            'no_wa' => $no_wa,
+            'akte' => $akte_baru,
             'jenis' => $jenis,
             'nisn' => $nisn,
             'alamat' =>$alamat,
             'sekolah_asal' =>$sekolah_asal,
             'no_hp' =>$no_hp,
             'foto' =>$foto,
-            'alamat' =>$alamat,
             'bukti_tf' =>$bukti_tfbaru,
             'username' =>$username,
             'password' =>$password,

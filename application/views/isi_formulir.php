@@ -18,9 +18,20 @@
         <input type="hidden" name="id" class="form-control" value="<?php echo $data->id;?>">
         </div>
         <div class="form-group">
-        <label for="">Nama Lengkap</label>
+        <label for="">Nama Lengkap Calon Peserta Didik</label>
         <input  type="text" name="nama" class="form-control" value="<?php echo $data->nama_lengkap;?>">
         </div>
+
+        <div class="form-group">
+        <label for="">Tempat Lahir Calon Peserta Didik</label>
+        <input  type="text" name="tptlahir" class="form-control" value="<?php echo $data->tptlahir;?>">
+        </div>
+
+        <div class="form-group">
+        <label for="">Tanggal Lahir Calon Peserta Didik</label>
+        <input  type="date" name="tgllahir" class="form-control"value="<?php echo $data->tgllahir;?>">
+        </div>
+
     <div  class="form-group">
         <label for="">Jenis Penerimaan</label>
         <select class="form-control form-control" name="jenis">
@@ -38,7 +49,7 @@
         <input  type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
         </div>
         <div class="form-group">
-        <label for="">Alamat</label>
+        <label for="">Alamat Lengkap</label>
         <input  type="text" name="alamat" class="form-control" value="<?php echo $data->alamat;?>">
         </div>
         <div class="form-group">
@@ -46,8 +57,20 @@
         <input  type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
         </div>
         <div class="form-group">
-        <label for="">No HP</label>
+        <label for="">Nama Ayah</label>
+        <input  type="text" name="namaayah" class="form-control" value="<?php echo $data->namaayah;?>" >
+        </div>
+        <div class="form-group">
+        <label for="">Nama Ibu</label>
+        <input  type="text" name="namaibu" class="form-control" value="<?php echo $data->namaibu;?>">
+        </div>
+        <div class="form-group">
+        <label for="">No HP Orang Tua</label>
         <input  type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        </div>
+        <div class="form-group">
+        <label for="">No WA Aktif Orang Tua</label>
+        <input  type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
         </div>
         <div class="form-group">
         <label for="">Foto</label><br>
@@ -56,7 +79,14 @@
         </div>
         <br> 
         <div class="form-group">
-        <label for="">Struk Pembayaran Formulir</label>
+        <label for="">UPLOAD AKTE KELAHIRAN</label><br>
+        <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
+        <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px"><br><br>
+        <input type="file" name="akte_baru" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label for="">UPLOAD SLIP SETORAN BANK BUKTI PEMBAYARAN FORMULIR <b class="text-danger">(Tidak Melalui Transfer ATM)</b></label>
         <footer class="blockquote-footer">Rek. Bank Aceh : <b>10002240000336</b><br><cite title="Source Title">a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen</cite></footer><br>
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
         <img src="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="border border-dark rounded" width="150px"><br><br>

@@ -24,6 +24,17 @@
         <label for="">Nama Lengkap</label>
         <input readonly type="text" name="nama" class="form-control" value="<?php echo $data->nama_lengkap;?>">
         </div>
+
+        <div hidden class="form-group">
+        <label for="">Tempat Lahir</label>
+        <input readonly type="text" name="tptlahir" class="form-control" value="<?php echo $data->tptlahir;?>">
+        </div>
+
+        <div hidden class="form-group">
+        <label for="">Tanggal Lahir</label>
+        <input readonly type="text" name="tgllahir" class="form-control" value="<?php echo $data->tgllahir;?>">
+        </div>
+
     <div class="form-group">
         <label for="">Jenis Penerimaan</label>
         <select readonly class="form-control form-control" name="jenis">
@@ -49,13 +60,30 @@
         <input readonly type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
         </div>
         <div hidden class="form-group">
-        <label for="">No HP</label>
+        <label for="">Nama Ayah</label>
+        <input readonly type="text" name="namaayah" class="form-control" value="<?php echo $data->namaayah;?>">
+        </div>
+        <div hidden class="form-group">
+        <label for="">Nama Ibu</label>
+        <input readonly type="text" name="namaibu" class="form-control" value="<?php echo $data->namaibu;?>">
+        </div>
+        <div class="form-group">
+        <label for="">No HP Orang Tua</label>
         <input readonly type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        </div>
+        <div class="form-group">
+        <label for="">No WA Aktif</label>
+        <input readonly type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
         </div>
         <div hidden class="form-group">
         <label for="">Foto</label><br>
         <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
         <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
+        </div>
+        <div hidden class="form-group">
+        <label for="">Akte Kelahiran</label><br>
+        <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
+        <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px">
         </div>
         <div hidden class="form-group">
         <label for="">Bukti Transfer</label><br>
