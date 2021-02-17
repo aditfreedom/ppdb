@@ -27,6 +27,9 @@
       <li class="nav-item ">
         <a class="nav-link" href="#home">Home</a>
       </li>
+      <li class="nav-item ">
+        <a class="nav-link" href="#rincian">Rincian Biaya Pendidikan</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link " href="#persyaratan">Persyaratan</a>
       </li>
@@ -78,7 +81,7 @@
         <hr class="my-4 ">
         <h3 class="display-5 text-white " id="demo2" >Waktu Pendaftaran :</h3>
         <h1 id="demo" class=" text-danger"></h1><br>
-        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url()?>" role="button"><b>Daftar Sekarang</b></a>
+        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" role="button"><b>Daftar Sekarang</b></a>
       </div>
     <div class="carousel-item active">
       <img src="<?=base_url('bg1.JPG')?>" class="d-block w-100" alt="...">
@@ -113,6 +116,58 @@
 </div>
 </div> -->
 
+<div  id="rincian" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div class="container">
+<div class="row featurette">
+<h2 class="featurette-heading"><b>RINCIAN BIAYA<span class="text-info"> PENDIDIKAN</span></b><br>
+<hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
+</h2>
+
+            <table class="table table-bordered" id="example">
+          <thead class="text-center">
+            <tr>
+              <th scope="col" rowspan="2">NO</th>
+              <th scope="col" rowspan="2">LEVEL</th>
+              <th scope="col" rowspan="2">BIAYA PERAWATAN SEKOLAH (BPS)<br>*Dibayarkan Sekali Diawal Pendaftaran Ulang</th>
+              <th scope="col" rowspan="2">BIAYA PARTISIPASI PENDIDIKAN (BPP)<br>*dibayarkan per bulan (Untuk daftar ulang BPP Juli)</th>
+              <th scope="col" colspan="2">Biaya Paket Bakal Kain Seragam Sekolah + Kartu Tanda Siswa (KTS)</th>            
+            </tr>
+            <tr>
+            <th>Putra</th>
+            <th>Putri</th>
+            </tr>
+            
+          </thead>
+          <tbody class="text-center">
+            <td scope="row">1</td>
+            <td>SD</td>
+            <td>Rp. 3.000.000</td>
+            <td>Rp. 300.000</td>
+            <td>Rp.  640.000</td>
+            <td>Rp.  790.000</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">2</td>
+            <td>SMP</td>
+            <td>Rp. 3.000.000</td>
+            <td>Rp. 370.000</td>
+            <td>Rp.  720.000</td>
+            <td>Rp.  840.000</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">3</td>
+            <td>SMA</td>
+            <td>Rp. 3.000.000</td>
+            <td>Rp. 430.000</td>
+            <td>Rp.   720.000</td>
+            <td>Rp.  840.000</td>
+            </tbody>
+            </tbody>
+            </table>
+          </div>
+</div>
+</div>
+
 <div  id="persyaratan" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
@@ -120,9 +175,9 @@
             <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
-            <p>1. Mendaftar Akun Dan Login Pada <a href="<?=base_url()?>" role="button"><b>Link Berikut</b></a></p> 
+            <p>1. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
-            <p>1. Mengisi Formulir Pendaftaran Dan Upload Bukti Transfer Ke Rek. Bank Aceh <b>&nbsp&nbsp&nbsp10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
+            <p>1. Mengisi Formulir Pendaftaran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
 
           </div>
@@ -167,19 +222,25 @@
             </tbody>
             <tbody class="text-center">
             <td scope="row">2</td>
-            <td>06-07 April 2021</td>
-            <td>Tes Penerimaan Siswa Baru</td>
+            <td>05-06 April 2021</td>
+            <td>Tes SD</td>
             <td>Sekolah Sukma Bangsa Bireuen</td>
             </tbody>
             <tbody class="text-center">
             <td scope="row">3</td>
+            <td>07-08 April 2021</td>
+            <td>Tes SMP & SMA</td>
+            <td>Sekolah Sukma Bangsa Bireuen</td>
+            </tbody>
+            <tbody class="text-center">
+            <td scope="row">4</td>
             <td>12 April 2021</td>
             <td>Pengumuman Kelulusan PPDB TA.2021/2022</td>
             <td>ONLINE</td>
             </tbody>
             <tbody class="text-center">
-            <td scope="row">4</td>
-            <td>13 - 30 April 2021</td>
+            <td scope="row">5</td>
+            <td>24 Mei - 15 Juni 2021</td>
             <td>Pendaftaran Ulang Siswa Baru</td>
             <td>Sekolah Sukma Bangsa Bireuen</td>
             </tbody>
@@ -202,10 +263,11 @@
             <p>(0644) 324985/328996</p>
 
             <p class="lead" style="margin-bottom:0px;">Panitia PPDB : </p>
-            <p>081362059403 (WhatsApp)</p>
+            <p style="margin-bottom:0px;">085377137849 - Helmiati (WhatsApp)</p>
+            <p>085206743404 - Amrul Hakim (WhatsApp)</p>
 
             <p class="lead" style="margin-bottom:0px;">E-Mail : </p>
-            <p>ssb_bireuen@sukmabangsa.sch.id</p>
+            <p>suk_ma2012@yahoo.com</p>
             
           </div>
           <div class="col-md-4 order-md-1">

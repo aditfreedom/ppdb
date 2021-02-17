@@ -102,25 +102,49 @@ $(document).ready( function () {
 </div>
 </div>
 
-<div  id="jadwal" style="height: 950px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="jadwal" style="height: 1200px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><b>JADWAL DAN SYARAT<span class="text-info"> DAFTAR ULANG</span></b></h2>
+            <h2 class="featurette-heading"><b>KETENTUAN<span class="text-info"> DAFTAR ULANG</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
-            <p class="lead" style="margin-bottom:0px;"><b>Jadwal Pendaftaran Ulang : </b></p>
-            <li>13 - 30 April 2021, Di Sekolah Sukma Bangsa Bireuen</a></li> <br><br>
-            <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran Ulang : </b></p>
-            <p>1. Login Kembali Pada <a href="<?=base_url()?>"><b>Link Berikut</b></a></b>, Lalu Mengisi Form Registrasi Ulang > Daftar Ulang</p> 
-            <p>2. Mencetak dokumen Pendaftaran Ulang (Formulir, Surat Pernyataan & Pakta Integritas) Pada Aplikasi PPDB <a href="<?=base_url()?>"><b>Link Berikut</b></a></p> 
-            <p>3. <i>Photocopy</i> Akta Kelahiran</p> 
-            <p>4. <i>Photocopy</i> Kartu Keluarga (KK)</p> 
-            <p>5. <i>Photocopy</i> Kartu Identitas Orang Tua</p> 
-            <p>6. <i>Photocopy</i> Kartu NISN/ Surat Keterangan NISN (bagi siswa pindahan dan calon siswa SMP/SMA)</p> 
-            <p>7. <i>Photocopy</i> Rapor (bagi siswa pindahan)</p> 
-            <p>8. Pasfoto ukuran 3x4 cm dan 2x3 cm masing-masing 2 lembar</p> 
-            <p>9. Surat Bebas Narkoba (khusus calon siswa SMA)</p> 
-            <p>10. Surat Pindah (bagi siswa pindahan)</p><br>
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Jadwal Pendaftaran Ulang : </b></p>
+            <ul>
+            <li>24 Mei - 15 Juni 2021, Di Sekolah Sukma Bangsa Bireuen</li>
+                <li>Senin-Kamis : 08.00-15.30 WIB</li>
+                <li>Jumat-Sabtu : 08.00- 11.30 WIB</li> <br>
+
+            </ul>
+       
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Cara Pendaftaran Ulang : </b></p>
+            <ul>
+            <li>Login Kembali Pada <a href="<?=base_url('hal/login')?>"><b>Link Berikut</b></a></b>, Lalu Mengisi Form Registrasi Ulang > Daftar Ulang</li>
+            <li>Mencetak dokumen Pendaftaran Ulang (Formulir, Surat Pernyataan & Pakta Integritas) Pada Aplikasi PPDB <a href="<?=base_url('hal/login')?>"><b>Link Berikut</b></a></li>
+            <li>Melapor kepada panitia di Ruangan PPDB Sekolah Sukma Bangsa Bireuen dan mengambil Map Pendaftaran Ulang yang berisi list kelengkapan berkas (Map Merah : SD, Map Kuning : SMP, Map Hijau : SMA)</a></li>
+            <li>Membayar Lunas Biaya Pendidikan sesuai dengan ketentuan sekolah</li>
+            <li>Mengembalikan Map Pendaftaran Ulang kepada Panitia</li>
+            </ul><br>
+
+
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Kelengkapan Berkas : </b></p>
+            <ul>
+            <li><i>Photocopy</i> Akta Kelahiran 1 Lembar</li> 
+            <li><i>Photocopy</i> Kartu Keluarga (KK) 1 Lembar</li> 
+            <li><i>Photocopy</i> KTP Orang Tua 1 Lembar</li> 
+            <li><i>Photocopy</i> Kartu NISN/ Surat Keterangan NISN 1 Lembar</li> 
+            <li>Pasfoto terbaru ukuran 3x4 cm dan 2x3 cm masing-masing 2 lembar</li> 
+            <li><i>Photocopy</i> Ijazah/Surat Keterangan Lulus 1 lembar</li> 
+            <li>Surat Pernyataan Orang Tua (Tersedia Di Aplikasi PPDB) 1 lembar (materai 6.000 disediakan sendiri oleh ortu)</li>
+            <li>Surat Pakta Integritas (Tersedia Di Aplikasi PPDB) 1 lembar (materai 6.000 disediakan sendiri oleh ortu)</li>
+            <li>Menunjukkan Slip Pembayaran BPP resmi dari TU (Pada Saat Pendaftaran Ulang)</li>
+            <li>Menunjukkan Slip Biaya Perawatan Sekolah resmi dari TU (Pada Saat Pendaftaran Ulang)</li>
+            <li>Menunjukkan Slip Pembayaran Paket Seragam resmi dari Koperasi Sekolah SSB Bireuen (Pada Saat Pendaftaran Ulang)</li>
+            <li>Surat Pindah (bagi siswa pindahan)</li>
+            <li><i>Photocopy</i> Rapor (bagi siswa pindahan)</li> 
+            <li>Surat Pindah (bagi siswa pindahan)</li>
+            <li>Print Dapodik (khusus bagi siswa pindahan) (berisi keterangan bahwa calon siswa tersebut sudah di keluarkan dari dapodik di sekolah asal)</li>
+
+            </ul>
             </div>
 
           <div class="col-md-5">
@@ -145,11 +169,12 @@ $(document).ready( function () {
             <p class="lead" style="margin-bottom:0px;">Telepon : </p>
             <p>(0644) 324985/328996</p>
 
-            <p class="lead" style="margin-bottom:0px;">Admin PPDB : </p>
-            <p>081362059403 (WhatsApp)</p>
+            <p class="lead" style="margin-bottom:0px;">Panitia PPDB : </p>
+            <p style="margin-bottom:0px;">085377137849 - Helmiati (WhatsApp)</p>
+            <p>085206743404 - Amrul Hakim (WhatsApp)</p>
 
             <p class="lead" style="margin-bottom:0px;">E-Mail : </p>
-            <p>ssb_bireuen@sukmabangsa.sch.id</p>
+            <p>suk_ma2012@yahoo.com</p>
             
           </div>
           <div class="col-md-4 order-md-1">
