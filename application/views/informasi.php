@@ -92,6 +92,24 @@
     <div class="carousel-item">
       <img src="<?=base_url('bg3.JPG')?>" class="d-block w-100" alt="...">
     </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg4.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg5.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg6.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg7.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg8.JPG')?>" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="<?=base_url('bg9.JPG')?>" class="d-block w-100" alt="...">
+    </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -177,7 +195,7 @@
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
             <p>1. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
-            <p>1. Mengisi Formulir Pendaftaran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
+            <p>1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
 
           </div>
