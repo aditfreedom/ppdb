@@ -83,7 +83,7 @@
         <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
         <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px"><br><br>
         <input type="file" name="akte_baru" class="form-control">
-        </div>
+        </div> <br><br>
 
         <div class="form-group">
         <label for="">UPLOAD SLIP SETORAN BANK BUKTI PEMBAYARAN FORMULIR <b class="text-danger">(Tidak Melalui Transfer ATM)</b></label>

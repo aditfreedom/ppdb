@@ -17,7 +17,7 @@
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-  <img src="<?=base_url()?>/logo.png" type="image/png" alt="" width="40px"><a class="navbar-brand text-info" href="#"> <b>&nbspPPDB SSB BIREUEN</b></a></img>
+  <img src="<?=base_url()?>/logo.png" type="image/png" alt="" width="40px"><a class="navbar-brand text-info" href="#"> <b style="color:#00acac;">&nbspPPDB SSB BIREUEN</b></a></img>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -77,11 +77,11 @@
         <!-- pembukaan -->
         <h1 class="display-4 text-white  font-weight-bold">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
         <h3 class="display-5  text-white">SD - SMP - SMA</h3>
-        <h3 class="display-5  text-info">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
+        <h3 class="display-5" style="color:#00acac;">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
         <hr class="my-4 ">
         <h3 class="display-5 text-white " id="demo2" >Waktu Pendaftaran :</h3>
         <h1 id="demo" class=" text-danger"></h1><br>
-        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" role="button"><b>Daftar Sekarang</b></a>
+        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" style="background-color:#00acac;" role="button"><b>Daftar Sekarang</b></a>
       </div>
     <div class="carousel-item active">
       <img src="<?=base_url('bg1.JPG')?>" class="d-block w-100" alt="...">
