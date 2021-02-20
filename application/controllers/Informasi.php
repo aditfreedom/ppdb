@@ -6,8 +6,9 @@ class Informasi extends CI_Controller {
 
     public function index()
 	{
+		$data['kuota'] = $this->M_ppdb->tampil_data_kuota()->result();
 		$this->load->view('info_landscape');
-		$this->load->view('informasi');
+		$this->load->view('informasi',$data);
 
 
 	}

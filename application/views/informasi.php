@@ -28,6 +28,9 @@
         <a class="nav-link" href="#home">Home</a>
       </li>
       <li class="nav-item ">
+        <a class="nav-link" href="#kuota">Kuota Penerimaan</a>
+      </li>
+      <li class="nav-item ">
         <a class="nav-link" href="#rincian">Rincian Biaya Pendidikan</a>
       </li>
       <li class="nav-item">
@@ -133,6 +136,39 @@
   <a class="btn btn-info btn-lg animate__animated animate__bounceInLeft" id="demo3" href="<?=base_url()?>" role="button"><b>Daftar Sekarang</b></a>
 </div>
 </div> -->
+
+<div  id="kuota" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div class="container">
+<div class="row featurette">
+<h2 class="featurette-heading"><b>KUOTA<span class="text-info"> PENERIMAAN</span></b><br>
+<hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
+</h2>
+
+            <table class="table table-hover" id="example">
+          <thead class="text-center">
+            <tr>
+              <th scope="col">NO</th>
+              <th scope="col">JENIS PENERIMAAN</th>
+              <th scope="col">KUOTA PENERIMAAN</th>
+              <th scope="col">KETERANGAN</th>
+            </tr>
+          </thead>
+          <tbody class="text-center">
+          <?php $i = 1; 
+	        foreach ($kuota as $data) : ?>
+		      <tr class="nomor text-center">
+            <th scope="row"><?php echo $i ;?></th>
+            <td><?php echo $data->jenis;?></td>
+            <td><?php echo $data->kuota;?></td>
+            <td><?php echo $data->keterangan;?></td>
+		      </tr>
+		      <?php $i++; ?>
+	        <?php endforeach ;?>
+            </tbody>
+            </table>
+          </div>
+</div>
+</div>
 
 <div  id="rincian" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
