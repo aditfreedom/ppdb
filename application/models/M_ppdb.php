@@ -7,7 +7,7 @@ class M_ppdb extends CI_Model{
      }
 
      public function tampildatapengguna(){
-        return $this->db->query("SELECT * FROM pengguna WHERE NOT username='Admin' ");
+        return $this->db->query("SELECT * FROM pengguna WHERE NOT role='0' ");
      }
 
      public function tampildatapengguna1($username){

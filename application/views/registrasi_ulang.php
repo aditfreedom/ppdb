@@ -528,7 +528,15 @@
 
 
 
-
+  <br>
+  <div class="row no-print">
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user/cetak_kartu/'.$id)?>" style="width:50%;" role="button"><i class="fa fa-arrow-left"></i> Sebelumnya</a></p>     
+  </div>
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user/cetakdaftarulang/'.$id)?>" style="width:50%;" role="button">Selanjutnya <i class="fa fa-arrow-right"></i></a></p>
+  </div>
+  </div>
     </section>
 </div>
 <br>

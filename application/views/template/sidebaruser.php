@@ -25,7 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                <li class="nav-item ">
-            <a href="<?=base_url('user');?>" class="nav-link bg-info">
+            <a href="<?=base_url('user');?>" class="nav-link">
               <i class="nav-icon fa fa-home"></i>
               <p>
                 Home

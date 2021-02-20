@@ -113,7 +113,15 @@
         <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
         </form>
 	<?php endforeach ;?>
-
+  <br>
+  <div class="row">
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user')?>" style="width:50%;" role="button"><i class="fa fa-arrow-left"></i> Sebelumnya</a></p>     
+  </div>
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user/cetak_kartu/'.$id)?>" style="width:50%;" role="button">Selanjutnya <i class="fa fa-arrow-right"></i></a></p>
+  </div>
+  </div>
 
 
     </section>
