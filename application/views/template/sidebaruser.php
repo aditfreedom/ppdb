@@ -15,7 +15,7 @@
           <img src="<?php echo base_url()?>asset/dist/img/adit.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Halo, <?php echo $username;?>!</a>
+          <a href="#" class="d-block">Halo, <?php echo $nama_lengkap;?>!</a>
         </div>
       </div>
 

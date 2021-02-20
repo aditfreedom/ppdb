@@ -77,7 +77,7 @@
           </li>
 
           <li class="nav-item ">
-            <a href="<?=base_url('alur_pendaftaran.JPG');?>" class="nav-link" target="_blank">
+            <a href="<?=base_url('alur.jpg');?>" class="nav-link" target="_blank">
               <i class="nav-icon fa fa-download"></i>
               <p>
                 Alur Pendaftaran

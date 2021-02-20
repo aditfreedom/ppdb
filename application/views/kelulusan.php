@@ -90,7 +90,7 @@ $(document).ready( function () {
         $class="btn-danger";
       }    
     ?>
-            <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_lulus?>&nbsp&nbsp</a></td>
+            <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" style="width:60px;text-decoration:none;">&nbsp&nbsp<?php echo $data->approve_lulus?>&nbsp&nbsp</a></td>
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>

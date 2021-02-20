@@ -229,10 +229,13 @@
             <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
-            <p>1. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
+            <p style="margin-bottom:0px;">1. Minimal Usia 6 Tahun Per Bulan September 2021</p> 
+            <p >2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
             <p>1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
+            <p>3. Membawa Surat Keterangan Aktif Pada Saat Tes Berlangsung</p> 
+
 
           </div>
           <div class="col-md-5">
@@ -248,7 +251,7 @@
           <hr class="my-4" style="border-color: #F05F40;width: 20%;margin-top:0px;border-width: 3px;">
 
 </div>
-<img class="mx-auto d-block" src="<?=base_url()?>/background_login.jpg" height="500px" style="width:100%;">
+<img class="mx-auto d-block" src="<?=base_url()?>/alur.jpg" height="500px" style="width:100%;">
 
 </div>
 
