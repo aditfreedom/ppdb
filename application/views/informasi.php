@@ -226,7 +226,7 @@
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN</span></b></h2>
+            <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN DAN TES</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
             <p style="margin-bottom:0px;">1. Minimal Usia 6 Tahun Per Bulan September 2021</p> 
@@ -302,7 +302,7 @@
             <td>Sekolah Sukma Bangsa Bireuen</td>
             </tbody>
             </table>
-            <h6 class="text-danger">*Harap Membawa Masker Dan Patuhi Protokol Kesehatan Saat Tes Berlangsung</h6>
+            <h6 class="text-danger">*Harap Memakai Masker Dan Patuhi Protokol Kesehatan Saat Tes Berlangsung</h6>
           </div>
 </div>
 </div>

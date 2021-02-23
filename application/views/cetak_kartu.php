@@ -19,7 +19,7 @@
       <?php echo form_open_multipart('user/updateformulir');?>
       <label for="">No. Peserta : <?php echo $data->id;?></label>
       <img class="mx-auto d-block" src="<?= base_url();?>/logo.png" width="150" style="margin-bottom:5px;">
-      <h3 class="text-center text-bold">KARTU PESERTA UJIAN<br>PENERIMAAN PESERTA DIDIK BARU <br>SEKOLAH SUKMA BANGSA BIREUEN<br>TA.2021/2022</h3><br>
+      <h3 class="text-center text-bold">KARTU PESERTA UJIAN<br>PENERIMAAN PESERTA DIDIK BARU <br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP.2021/2022</h3><br>
 
       <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded mx-auto d-block" width="150px">
     <div class="form-group">
@@ -33,7 +33,11 @@
         <label for="" class="font-weight-normal"  style="font-size:20px;">Sekolah Asal :</label>
         <input readonly type="text" name="sekolah_asal" class="form-control text-center text-dark text-bold text-uppercase" style="font-size: 25px;" value="<?php echo $data->sekolah_asal;?>">
         </div>
-        <h6 class="text-danger" style="font-size:12px;"><b>*Harap Membawa Masker & Surat Aktif Sekolah Saat Tes Berlangsung</b></h6>
+        <div class="form-group">
+        <label for="" class="font-weight-normal"  style="font-size:20px;">Jenis Penerimaan :</label>
+        <input readonly type="text" name="jenis" class="form-control text-center text-dark text-bold text-uppercase" style="font-size: 25px;" value="<?php echo $data->jenis;?>">
+        </div>
+        <h6 class="text-danger" style="font-size:12px;"><b>*Harap Memakai Masker & Membawa Surat Aktif Sekolah Saat Tes Berlangsung</b></h6>
         </form>
 	<?php endforeach ;?> 
   <br>
