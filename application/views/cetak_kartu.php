@@ -12,7 +12,6 @@
       </div><!-- /.container-fluid -->
     </div>
     <section class="content">
-    <p align="right"><button type="button" onclick="window.print();" class="btn btn-success no-print"><i class="fa fa-print"></i> Cetak Kartu Ujian</button></button></p>
     <div class="container">
     <table border="1" width="500" style="margin-right:20px;background:white;">
     <td style="padding:15px;">
@@ -34,7 +33,7 @@
         <label for="" class="font-weight-normal"  style="font-size:20px;">Sekolah Asal :</label>
         <input readonly type="text" name="sekolah_asal" class="form-control text-center text-dark text-bold text-uppercase" style="font-size: 25px;" value="<?php echo $data->sekolah_asal;?>">
         </div>
-        <h6 class="text-danger">*Harap Membawa Masker Saat Tes Berlangsung</h6>
+        <h6 class="text-danger" style="font-size:12px;"><b>*Harap Membawa Masker & Surat Aktif Sekolah Saat Tes Berlangsung</b></h6>
         </form>
 	<?php endforeach ;?> 
   <br>
@@ -42,6 +41,7 @@
   </table>
   <br>
     </div>
+    <p align="center"><button style="width:100%;" type="button" onclick="window.print();" class="btn btn-primary no-print"><i class="fa fa-print"></i> Cetak Kartu Ujian</button></button></p>
 
     <br>
   <div class="row no-print">

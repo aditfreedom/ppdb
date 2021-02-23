@@ -234,7 +234,7 @@
             <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
             <p>1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
-            <p>3. Membawa Surat Keterangan Aktif Pada Saat Tes Berlangsung</p> 
+            <p>3. Membawa Surat Keterangan Aktif Yang Ditandatangani Kepala Sekolah Asal Pada Saat Tes Berlangsung</p> 
 
 
           </div>

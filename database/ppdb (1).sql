@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Feb 2021 pada 08.54
+-- Waktu pembuatan: 23 Feb 2021 pada 02.21
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.2.34
 
@@ -118,12 +118,12 @@ CREATE TABLE `kuota` (
 --
 
 INSERT INTO `kuota` (`id`, `jenis`, `kuota`, `keterangan`) VALUES
-(3, 'Peserta Didik Baru SD', 100, 'Hanya Kelas 1'),
-(5, 'Peserta Didik Baru SMP', 65, ''),
-(6, 'Peserta Didik Baru SMA', 60, ''),
-(7, 'Pindahan SD', 5, ''),
-(8, 'Pindahan SMP', 5, ''),
-(9, 'Pindahan SMA', 5, '');
+(3, 'Peserta Didik Baru SD', 56, 'Peserta Didik Baru Kelas I SD'),
+(5, 'Peserta Didik Baru SMP', 50, 'Peserta Didik Baru Kelas VI SMP'),
+(6, 'Peserta Didik Baru SMA', 56, 'Peserta Didik Baru Kelas X SMA'),
+(7, 'Pindahan SD', 5, 'Hanya Kelas II SD'),
+(8, 'Pindahan SMP', 5, 'Hanya Kelas IX'),
+(9, 'Pindahan SMA', 5, 'Kelas XI dan XII');
 
 -- --------------------------------------------------------
 
@@ -161,12 +161,12 @@ CREATE TABLE `pengguna` (
 
 INSERT INTO `pengguna` (`id`, `nama_lengkap`, `tptlahir`, `tgllahir`, `nisn`, `alamat`, `sekolah_asal`, `namaayah`, `namaibu`, `no_hp`, `no_wa`, `foto`, `akte`, `bukti_tf`, `jenis`, `username`, `password`, `role`, `approve_formulir`, `approve_lulus`, `approve_daftarulang`) VALUES
 (1, 'admin', '', '', 'admin', 'admin', 'admin', '', '', 'admin', '', 'admin', '', 'admin', 'admin', 'admin', 'admin', '0', 'admin', 'admin', 'admin'),
-(3, 'Aditya Aziz Fikhri', '', '', '1457301021', 'Desa Juli Cot Meurak, Kec. Juli Kab. Bireuen', 'SMP SUKMA BANGSA', '', '', '0811362059403', '', 'foto22.jpg', '', 'struk1.jpg', 'Peserta Didik Baru SMA', 'adit', 'adit1', '1', 'Ditolak', 'Tidak Lulus', 'Diterima'),
-(4, 'Fitria Aprianty', '', '', '0', '', 'SMP SUKMA BANGSA', '', '', '', '', 'foto22.jpg', '', '', 'Peserta Didik Baru SMA', 'fitria', 'ADIT', '1', 'Diterima', 'Lulus', 'Ditolak'),
+(3, 'Aditya Aziz Fikhri', '', '', '1457301021', 'Desa Juli Cot Meurak, Kec. Juli Kab. Bireuen', 'SMP SUKMA BANGSA', '', '', '0811362059403', '', 'foto22.jpg', '', 'struk1.jpg', 'Peserta Didik Baru SMA', 'adit', 'adit1', '1', 'Diterima', 'Lulus', 'Diterima'),
+(4, 'Fitria Aprianty', '', '', '0', '', 'SMP SUKMA BANGSA', '', '', '', '', 'foto22.jpg', '', '', 'Peserta Didik Baru SMA', 'fitria', 'ADIT', '1', 'Diterima', 'Lulus', 'Diterima'),
 (5, 'Dieky Zulfikar Md.', '', '', '0', '', 'SMP SUKMA BANGSA', '', '', '', '', 'foto22.jpg', '', '', 'Peserta Didik Baru SMA', 'dieky', 'ADIT', '1', 'Ditolak', 'Antrian', 'Antrian'),
 (6, 'MOMO MOLANA', '', '', '0', '', 'TK KUCING', '', '', '', '', 'download.jpg', '', '', 'Peserta Didik Baru SD', 'momo', 'momo', '1', 'Diterima', 'Lulus', 'Antrian'),
 (8, 'Aditya Aziz Fikhri', '', '', '0', '', 'SMP SUKMA BANGSA', '', '', '', '', 'DSC_12931.JPG', '', '', 'Peserta Didik Baru SD', 'manajemen', '3', '1', 'Antrian', 'Antrian', 'Antrian'),
-(9, 'Izyan Zhafir', 'Bireuen', '2014-01-02', '1457301021', 'Cot Meurak', 'SMPN 1 Bireuen', 'Adit', 'Fitri', '081362059403', '0813620594031', 'Scan2021-01-28_115006.jpg', 'Contoh-Slip-Setoran-BCA.jpg', 'contoh_akta_kelahiran.png', 'Peserta Didik Baru SMA', 'izyan', 'izyan', '1', 'Diterima', 'Antrian', 'Antrian'),
+(9, 'Izyan Zhafir', 'Bireuen', '2014-01-02', '1457301021', 'Cot Meurak', 'SMPN 1 Bireuen', 'Adit', 'Fitri', '081362059403', '0813620594031', 'Scan2021-01-28_115006.jpg', 'Contoh-Slip-Setoran-BCA.jpg', 'contoh_akta_kelahiran.png', 'Peserta Didik Baru SMA', 'izyan', 'izyan', '1', 'Antrian', 'Antrian', 'Antrian'),
 (10, 'Aditya Aziz Fikhri', '', '', '1457301021', 'Cot Meurak', 'SMP SUKMA BANGSA BIREUEN', '', '', '081362059403', '', 'Pas_Foto_Warna_085706067282.jpg', '', 'Scan2021-01-28_115006.jpg', 'Peserta Didik Baru SMA', 'aaf', 'aaf', '1', 'Diterima', 'Lulus', 'Antrian'),
 (11, 'superadmin', '', '', 'superadmin', 'superadmin', 'superadmin', '', '', 'superadmin', '', 'superadmin', '', 'superadmin', 'superadmin', 'superadmin', 'superadmin', '0', 'superadmin', 'superadmin', 'superadmin');
 
