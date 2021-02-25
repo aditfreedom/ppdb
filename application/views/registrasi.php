@@ -19,7 +19,7 @@
     <div class="container text-center">
     <br>
     <img src="<?php echo base_url()?>logo.png" width="200px">
-<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK<br>SEKOLAH SUKMA BANGSA BIREUEN TA.2021-2022</h1>
+<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN TP.2021-2022</h1>
 </div>
 <br>
     <div class="container">

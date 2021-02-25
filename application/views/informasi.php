@@ -138,7 +138,7 @@
 </div>
 </div> -->
 
-<div  id="kuota" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="kuota" style="height: 550px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
 <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>KUOTA<span class="text-info"> PENERIMAAN</span></b><br>
@@ -171,7 +171,7 @@
 </div>
 </div>
 
-<div  id="rincian" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="rincian" style="height: 550px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
 <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>RINCIAN BIAYA<span class="text-info"> PENDIDIKAN</span></b><br>
@@ -229,7 +229,7 @@
             <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>SYARAT<span class="text-info"> PENDAFTARAN DAN TES</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;"style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Pendaftaran : </b></p>
-            <p style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Minimal Usia 6 Tahun Per Bulan September 2021</p> 
+            <p style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Minimal Usia 6 Tahun Di Bulan September 2021</p> 
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
             <p class="lead" style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Mengikuti Tes : </b></p>
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
@@ -255,7 +255,7 @@
 
 </div>
 
-<div  id="jadwal" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="jadwal" style="height: 1200px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
 <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>JADWAL<span class="text-info"> PENDAFTARAN</span></b><br>
@@ -304,6 +304,40 @@
             </table>
             <h6 class="text-danger">*Harap Memakai Masker Dan Patuhi Protokol Kesehatan Saat Tes Berlangsung</h6>
           </div>
+          <br>
+          <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;margin-bottom:0px;margin-top:50px;"><b>MATERI<span class="text-info"> SELEKSI</span></b><br>
+          <hr class="my-4" style="border-color: #F05F40;width: 13%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
+
+          <p class="lead" style="margin-bottom:0px;"><b class="font-weight-bold">SD :</b></p>
+          <ul style="font-size:20px;">
+          <li>Video Profil Diri Dan Minat Bakat Calon Siswa</li>
+          <li>Tes Kesiapan Belajar Calon Siswa</li>
+          <li>Wawancara Orang Tua Calon Siswa</li>
+          </ul>
+
+          <p class="lead" style="margin-bottom:0px;"><b class="font-weight-bold">SMP :</b></p>
+          <ul style="font-size:20px;">
+          <li>Video Profil Diri Dan Minat Bakat Calon Siswa</li>
+          <li>Tes Tulis Calon Siswa (Matematika, Bahasa Indonesia dan Bahasa Inggris)</li>
+          <li>Tes Baca Qur'an Calon Siswa dan Wawancara Orang Tua</li>
+          </ul>
+
+          <p class="lead" style="margin-bottom:0px;"><b class="font-weight-bold">SMA :</b></p>
+          <ul style="font-size:20px;">
+          <li>Video Profil Diri Dan Minat Bakat Calon Siswa</li>
+          <li>Tes Tulis Calon Siswa (Matematika, Bahasa Indonesia dan Bahasa Inggris)</li>
+          <li>Tes Baca Qur'an Calon Siswa dan Wawancara Orang Tua</li>
+          </ul>
+          
+
+          <p class="lead text-danger" style="margin-bottom:0px;"><b class="font-weight-bold">Catatan Khusus :</b></p>
+          <ul style="font-size:20px;" class="text-danger">
+          <li>Video memuat profil diri lengkap calon siswa dan unjuk minat bakat yang dimiliki.</li>
+          <li>Durasi maksimum 3 Menit.</li>
+          <li>Video dibawa pada hari pertama tes seleksi.</li>
+          </ul>
+
+
 </div>
 </div>
 
@@ -320,7 +354,7 @@
             <p>(0644) 324985/328996</p>
 
             <p class="lead" style="margin-bottom:0px;">Panitia PPDB : </p>
-            <p style="margin-bottom:0px;">085377137849 - Helmiati (WhatsApp)</p>
+            <p style="margin-bottom:0px;">085377137849 - Helmiati Budiman (WhatsApp)</p>
             <p>085206743404 - Amrul Hakim (WhatsApp)</p>
 
             <p class="lead" style="margin-bottom:0px;">E-Mail : </p>
