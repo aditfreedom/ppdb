@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Share+Tech+Mono&family=Varela+Round&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -20,7 +21,7 @@
   </div>
 <div class="container shadow p-3 mb-5 bg-white rounded">
         <img class="img mx-auto d-block" src="<?php echo base_url('logo.png');?>" width="100px">
-        <h6 class="text-center font-weight-bold">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
+        <h6 class="text-center font-weight-bold" style="font-family: 'Share Tech Mono', monospace;">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
         <form action="<?php echo base_url('hal/login_aksi');?>" method="post">
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -34,8 +35,8 @@
                 </div>
                 <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
-            <button type="submit" class="btn btn-info btn-block font-weight-bold">LOGIN</button>
-            <div class=" d-flex justify-content-center" style="margin-top:-20px"><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div>
+            <button type="submit" class="btn btn-info btn-block font-weight-bold" style="font-family: 'Varela Round', sans-serif;">LOGIN</button>
+            <div class=" d-flex justify-content-center" style="margin-top:-20px;font-family: 'Varela Round', sans-serif;" ><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div>
         </form>
     </div>
     <br><br>

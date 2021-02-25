@@ -5,9 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Share+Tech+Mono&family=Varela+Round&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
@@ -17,7 +18,7 @@
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-  <img src="<?=base_url()?>/logo.png" type="image/png" alt="" width="40px"><a class="navbar-brand text-info" href="#"> <b style="color:#00acac;">&nbspPPDB SSB BIREUEN</b></a></img>
+  <img src="<?=base_url()?>/logo.png" type="image/png" alt="" width="40px"><a class="navbar-brand text-info" href="#"> <b style="color:#00acac;font-family: 'Varela Round', sans-serif;">&nbspPPDB SSB BIREUEN</b></a></img>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -25,25 +26,25 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="#home" style="font-family: 'Share Tech Mono', monospace;">Home</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#kuota">Kuota Penerimaan</a>
+        <a class="nav-link" href="#kuota" style="font-family: 'Share Tech Mono', monospace;">Kuota</a>
       </li>
       <li class="nav-item ">
-        <a class="nav-link" href="#rincian">Rincian Biaya Pendidikan</a>
+        <a class="nav-link" href="#rincian" style="font-family: 'Share Tech Mono', monospace;">Rincian Biaya</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#persyaratan">Persyaratan</a>
+        <a class="nav-link " href="#persyaratan" style="font-family: 'Share Tech Mono', monospace;">Persyaratan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#alur">Alur Pendaftaran</a>
+        <a class="nav-link " href="#alur" style="font-family: 'Share Tech Mono', monospace;">Alur</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#jadwal">Jadwal</a>
+        <a class="nav-link " href="#jadwal" style="font-family: 'Share Tech Mono', monospace;">Jadwal & Seleksi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#kontak">Kontak</a>
+        <a class="nav-link " href="#kontak" style="font-family: 'Share Tech Mono', monospace;">Kontak</a>
       </li>
     </ul>
   </div>
@@ -78,13 +79,13 @@
 
 
         <!-- pembukaan -->
-        <h1 class="display-4 text-white  font-weight-bold">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
-        <h3 class="display-5  text-white">SD - SMP - SMA</h3>
-        <h3 class="display-5" style="color:#00acac;">SEKOLAH SUKMA BANGSA BIREUEN <span class="font-weight-bold">TA.2021/2022</span></h3>
+        <h1 class="display-4 text-white  font-weight-bold" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">PENERIMAAN<br>PESERTA DIDIK BARU</h1>
+        <h3 class="display-5  text-white" style="font-family: 'Share Tech Mono', monospace;">SD - SMP - SMA</h3>
+        <h3 class="display-5" style="color:#00acac;" style="font-family: 'Share Tech Mono', monospace;">SEKOLAH SUKMA BANGSA BIREUEN TP. 2021/2022</h3>
         <hr class="my-4 ">
-        <h3 class="display-5 text-white " id="demo2" >Waktu Pendaftaran :</h3>
-        <h1 id="demo" class=" text-danger"></h1><br>
-        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" style="background-color:#00acac;" role="button"><b>Daftar Sekarang</b></a>
+        <h3 class="display-5 text-white " id="demo2" style="font-family: 'Share Tech Mono', monospace;">Waktu Pendaftaran :</h3>
+        <h1 id="demo"  style="color:#FF0000;font-size:30px;font-family: 'RocknRoll One', sans-serif;"></h1><br>
+        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" style="background-color:#00acac; font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;" role="button"><b>Daftar Sekarang</b></a>
       </div>
     <div class="carousel-item active">
       <img src="<?=base_url('bg1.JPG')?>" class="d-block w-100" alt="...">
@@ -140,11 +141,11 @@
 <div  id="kuota" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
-<h2 class="featurette-heading"><b>KUOTA<span class="text-info"> PENERIMAAN</span></b><br>
+<h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>KUOTA<span class="text-info"> PENERIMAAN</span></b><br>
 <hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
 </h2>
 
-            <table class="table table-hover" id="example">
+            <table class="table table-hover" id="example" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">
           <thead class="text-center">
             <tr>
               <th scope="col">NO</th>
@@ -173,22 +174,19 @@
 <div  id="rincian" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
-<h2 class="featurette-heading"><b>RINCIAN BIAYA<span class="text-info"> PENDIDIKAN</span></b><br>
+<h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>RINCIAN BIAYA<span class="text-info"> PENDIDIKAN</span></b><br>
 <hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
 </h2>
 
-            <table class="table table-bordered" id="example">
-          <thead class="text-center">
+            <table class="table table-bordered" id="example" style="font-family: 'Varela Round', sans-serif;">
+          <thead class="text-center" >
             <tr>
-              <th scope="col" rowspan="2">NO</th>
-              <th scope="col" rowspan="2">LEVEL</th>
-              <th scope="col" rowspan="2">BIAYA PERAWATAN SEKOLAH (BPS)<br>*Dibayarkan Sekali Diawal Pendaftaran Ulang</th>
-              <th scope="col" rowspan="2">BIAYA PARTISIPASI PENDIDIKAN (BPP)<br>*dibayarkan per bulan (Untuk daftar ulang BPP Juli)</th>
-              <th scope="col" colspan="2">Biaya Paket Bakal Kain Seragam Sekolah + Kartu Tanda Siswa (KTS)</th>            
-            </tr>
-            <tr>
-            <th>Putra</th>
-            <th>Putri</th>
+              <th scope="col" >NO</th>
+              <th scope="col" >LEVEL</th>
+              <th scope="col" width="250px">BIAYA PERAWATAN SEKOLAH (BPS)<br>*Dibayarkan Sekali Diawal Pendaftaran Ulang</th>
+              <th scope="col"  width="250px">BIAYA PARTISIPASI PENDIDIKAN (BPP)<br>*dibayarkan per bulan (Untuk daftar ulang BPP Juli)</th>
+              <th scope="col"  width="250px">Biaya Paket Bakal Kain Seragam Sekolah<br>+ Kartu Tanda Siswa (KTS)</th>          
+              <th scope="col"  width="250px">Total Biaya</th>            
             </tr>
             
           </thead>
@@ -197,24 +195,26 @@
             <td>SD</td>
             <td>Rp. 3.000.000</td>
             <td>Rp. 300.000</td>
-            <td>Rp.  640.000</td>
-            <td>Rp.  790.000</td>
+            <td>Rp.  800.000</td>
+            <td><b>Rp.  4.100.000</b></td>
             </tbody>
             <tbody class="text-center">
             <td scope="row">2</td>
             <td>SMP</td>
             <td>Rp. 3.000.000</td>
             <td>Rp. 370.000</td>
-            <td>Rp.  720.000</td>
-            <td>Rp.  840.000</td>
+            <td>Rp.  850.000</td>
+            <td><b>Rp.  4.220.000</b></td>
+
             </tbody>
             <tbody class="text-center">
             <td scope="row">3</td>
             <td>SMA</td>
             <td>Rp. 3.000.000</td>
             <td>Rp. 430.000</td>
-            <td>Rp.   720.000</td>
-            <td>Rp.  840.000</td>
+            <td>Rp.  850.000</td>
+            <td><b>Rp.  4.280.000</b></td>
+
             </tbody>
             </tbody>
             </table>
@@ -226,15 +226,15 @@
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
-            <h2 class="featurette-heading"><b>SYARAT<span class="text-info"> PENDAFTARAN DAN TES</span></b></h2>
+            <h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>SYARAT<span class="text-info"> PENDAFTARAN DAN TES</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
-            <p class="lead" style="margin-bottom:0px;"><b>Syarat Pendaftaran : </b></p>
-            <p style="margin-bottom:0px;">1. Minimal Usia 6 Tahun Per Bulan September 2021</p> 
-            <p >2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
-            <p class="lead" style="margin-bottom:0px;"><b>Syarat Mengikuti Tes : </b></p>
-            <p>1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
-            <p>2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
-            <p>3. Membawa Surat Keterangan Aktif Yang Ditandatangani Kepala Sekolah Asal Pada Saat Tes Berlangsung</p> 
+            <p class="lead" style="margin-bottom:0px;"style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Pendaftaran : </b></p>
+            <p style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Minimal Usia 6 Tahun Per Bulan September 2021</p> 
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
+            <p class="lead" style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Mengikuti Tes : </b></p>
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">3. Membawa Surat Keterangan Aktif Yang Ditandatangani Kepala Sekolah Asal Pada Saat Tes Berlangsung</p> 
 
 
           </div>
@@ -247,7 +247,7 @@
 
 <div  id="alur" style="height: 680px;padding-top:70px;">
 <div class="container">
-          <h2 class="featurette-heading text-center"><b>ALUR PENDAFTARAN<span class="text-info"> PPDB ONLINE TA.2021/2022</span></b></h2>
+          <h2 class="featurette-heading text-center" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>ALUR PENDAFTARAN<span class="text-info"> PPDB ONLINE TA.2021/2022</span></b></h2>
           <hr class="my-4" style="border-color: #F05F40;width: 20%;margin-top:0px;border-width: 3px;">
 
 </div>
@@ -258,11 +258,11 @@
 <div  id="jadwal" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
-<h2 class="featurette-heading"><b>JADWAL<span class="text-info"> PENDAFTARAN</span></b><br>
+<h2 class="featurette-heading" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b>JADWAL<span class="text-info"> PENDAFTARAN</span></b><br>
 <hr class="my-4" style="border-color: #F05F40;width: 50%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
 </h2>
 
-            <table class="table table-hover" id="example">
+            <table class="table table-hover" id="example" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">
           <thead class="text-center">
             <tr>
               <th scope="col">NO</th>
@@ -310,8 +310,8 @@
 <div  id="kontak" style="height: 550px;padding-top:70px;">
 <div class="container">
         <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-          <h2 class="featurette-heading"><b>KONTAK<span class="text-info"> PANITIA PENDAFTARAN</span></b></h2>
+          <div class="col-md-7 order-md-2" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">
+          <h2 class="featurette-heading"><b>KONTAK<span class="text-info"> PANITIA</span></b></h2>
           <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;">Alamat : </p>
             <p>Jln. Banda Aceh - Medan, Desa Cot Keutapang Kecamatan Jeumpa, Kabupaten Bireuen, 24251 Provinsi Aceh, Indonesia</p>
@@ -328,7 +328,7 @@
             
           </div>
           <div class="col-md-4 order-md-1">
-            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/kontak.JPG" alt="Generic placeholder image" width="300px">
+            <img class="featurette-image img-fluid mx-auto" src="<?=base_url()?>/kontak.jpeg" alt="Generic placeholder image" width="300px">
           </div>
         </div>
 </div>

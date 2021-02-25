@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
   <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Share+Tech+Mono&family=Varela+Round&display=swap" rel="stylesheet">    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
 
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 
@@ -25,7 +27,7 @@ $(document).ready( function () {
 </script>
     <title>PPDB SEKOLAH SUKMA BANGSA BIREUEN</title>
   </head>
-  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <body data-spy="scroll" data-target=".navbar" data-offset="50" style="font-family: 'Varela Round', sans-serif;">
   
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
@@ -37,13 +39,13 @@ $(document).ready( function () {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="#sd">PENGUMUMAN KELULUSAN</a>
+        <a class="nav-link" href="#sd" style="font-family: 'Share Tech Mono', monospace;">PENGUMUMAN KELULUSAN</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#jadwal">KETENTUAN DAFTAR ULANG</a>
+        <a class="nav-link " href="#jadwal" style="font-family: 'Share Tech Mono', monospace;">KETENTUAN DAFTAR ULANG</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link " href="#kontak">KONTAK</a>
+        <a class="nav-link " href="#kontak" style="font-family: 'Share Tech Mono', monospace;">KONTAK</a>
       </li>
     </ul>
   </div>
@@ -51,11 +53,11 @@ $(document).ready( function () {
 </nav>
 
 
-<div  id="sd" style="height: 750px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="sd" style="height: 1000px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="text-center">
           <div>
-            <h2 class="featurette-heading"><b>PENGUMUMAN KELULUSAN PPDB<br><span class="text-info"> SEKOLAH SUKMA BANGSA BIREUEN TA.2021/2022</span></b>
+            <h2 class="featurette-heading"><b>PENGUMUMAN KELULUSAN PPDB<br><span class="text-info"> SEKOLAH SUKMA BANGSA BIREUEN TP. 2021/2022</span></b>
             <hr class="my-4" style="border-color: #F05F40;width: 20%;margin-top:0px;border-width: 3px;">
           </h2><br>
 
@@ -102,7 +104,7 @@ $(document).ready( function () {
 </div>
 </div>
 
-<div  id="jadwal" style="height: 1200px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="jadwal" style="height: 1500px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
@@ -149,7 +151,7 @@ $(document).ready( function () {
           <div class="col-md-5">
             <img class=" img-fluid mx-auto" src="<?=base_url()?>/jadwal.JPG" alt="Generic placeholder image">
           </div>
-          <p class="text-danger"><b>Dokumen Tersebut Diatas Dibawa Dan Disatukan Dalam Map Berwarna Merah Saat Pendaftaran Ulang. Harap Membawa Masker Dan Menjaga Protokol Kesehatan Saat Proses Pendaftaran Ulang.</b></p> 
+          <p class="text-danger" style="font-size:12px;"><b>Dokumen Tersebut Diatas Dibawa Dan Disatukan Dalam Map Berwarna Merah Saat Pendaftaran Ulang. Harap Memakai Masker Dan Menjaga Protokol Kesehatan Saat Proses Pendaftaran Ulang.</b></p> 
 
 
         </div>
@@ -177,7 +179,7 @@ $(document).ready( function () {
             
           </div>
           <div class="col-md-4 order-md-1">
-            <img class=" img-fluid mx-auto" src="<?=base_url()?>/kontak.JPG" width="300px" alt="Generic placeholder image">
+            <img class=" img-fluid mx-auto" src="<?=base_url()?>/kontak.jpeg" width="300px" alt="Generic placeholder image">
           </div>
         </div>
 </div>
@@ -221,6 +223,7 @@ $(document).ready( function () {
 $(document).ready(function() {
     $('#example').DataTable( {
       "lengthChange": false,
+      "pageLength": 5 ,
       "oLanguage": {
       "sSearch": "Cari Nama : ",
       "scrollX": true
