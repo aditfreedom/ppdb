@@ -15,7 +15,7 @@
     <title>PPDB ONLINE SSB BIREUEN</title>
   </head>
   <div class="limiter">
-  <body class="primcol"  style="background-image: url(<?php echo base_url('background_login.jpg');?>);background-size: cover;}">
+  <body class="primcol"  style="background-image: url(<?php echo base_url('background_login.JPG');?>);background-size: cover;}">
       <div class="head font-weight-bold">
         <br><br>
   </div>
