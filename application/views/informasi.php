@@ -195,8 +195,8 @@
             <td>SD</td>
             <td>Rp. 3.000.000</td>
             <td>Rp. 300.000</td>
-            <td>Rp.  800.000</td>
-            <td><b>Rp.  4.100.000</b></td>
+            <td>Rp.  670.000</td>
+            <td><b>Rp.  3.970.000</b></td>
             </tbody>
             <tbody class="text-center">
             <td scope="row">2</td>

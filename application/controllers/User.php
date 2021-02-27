@@ -67,7 +67,7 @@ class User extends CI_Controller {
 
     
         $config['upload_path']          = 'asset/buktitf/';
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
         $config['max_size']             = 10000;
         $config['max_width']            = 10000;
         $config['max_height']           = 10000;
@@ -86,7 +86,7 @@ class User extends CI_Controller {
         }
 
         $config2['upload_path']          = 'asset/akte/';
-        $config2['allowed_types']        = 'gif|jpg|png';
+        $config2['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';;
         $config2['max_size']             = 10000;
         $config2['max_width']            = 10000;
         $config2['max_height']           = 10000;

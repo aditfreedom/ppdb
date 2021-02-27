@@ -94,7 +94,7 @@ class Hal extends CI_Controller {
 		$nama_lengkap       = $this->input->post('nama_lengkap');
 		$sekolah_asal       = $this->input->post('sekolah_asal');
 		$jenis    		    = $this->input->post('jenis');
-		$foto       	    = $_FILES['foto'];
+		$foto       	    = $_FILES['foto']['name'];
 		$username           = $this->input->post('username');
 		$password           = $this->input->post('password');
 		$status             = $this->input->post('status');
@@ -102,10 +102,10 @@ class Hal extends CI_Controller {
 	
 	
 			$config['upload_path']          = 'asset/foto/';
-			$config['allowed_types']        = 'gif|jpg|png';
-			$config['max_size']             = 10000;
-			$config['max_width']            = 10000;
-			$config['max_height']           = 10000;
+			$config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
+			$config['max_size']             = 100000;
+			$config['max_width']            = 100000;
+			$config['max_height']           = 100000;
 	
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
@@ -126,6 +126,13 @@ class Hal extends CI_Controller {
 			'bukti_tf' => "",
 			'jenis' => $jenis,
 			'foto' => $foto,
+            'bukti_tf' => "",
+            'tptlahir' => "",
+            'tgllahir' => "",
+            'namaayah' => "",
+            'namaibu' => "",
+            'no_wa' => "",
+            'akte' => "",
 			'username' => $username,
 			'password' => $password,
 			'role' => "1",
