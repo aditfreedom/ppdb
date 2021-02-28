@@ -6,7 +6,8 @@ class Home extends CI_Controller {
         parent::__construct();
 		$role=$this->session->userdata('role');
 
-		if (empty($this->session->userdata('login'))){
+		$datauser = $this->session->userdata('login'); 
+		if (empty($datauser)){
 			redirect(base_url('hal/login'));
 		}
 		if ($role==1){

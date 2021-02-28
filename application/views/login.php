@@ -22,7 +22,8 @@
 <div class="container shadow p-3 mb-5 bg-white rounded">
         <img class="img mx-auto d-block" src="<?php echo base_url('logo.png');?>" width="100px">
         <h6 class="text-center font-weight-bold" style="font-family: 'Share Tech Mono', monospace;">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
-        <form action="<?php echo base_url('hal/login_aksi');?>" method="post">
+
+        <?php echo form_open('hal/login_aksi');?>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
@@ -37,7 +38,7 @@
             </div>
             <button type="submit" class="btn btn-info btn-block font-weight-bold" style="font-family: 'Varela Round', sans-serif;">LOGIN</button>
             <div class=" d-flex justify-content-center" style="margin-top:-20px;font-family: 'Varela Round', sans-serif;" ><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div>
-        </form>
+            <?php echo form_close();?>
     </div>
     <br><br>
 </div>

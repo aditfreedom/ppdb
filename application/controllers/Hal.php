@@ -6,7 +6,8 @@ class Hal extends CI_Controller {
 
     function __construct(){
         parent::__construct();
-		if (!empty($this->session->userdata('login'))) {
+        $datauser = $this->session->userdata('login'); 
+		if (!empty($datauser)) {
 			redirect(base_url('home'));
 		}
     }
@@ -94,7 +95,7 @@ class Hal extends CI_Controller {
 		$nama_lengkap       = $this->input->post('nama_lengkap');
 		$sekolah_asal       = $this->input->post('sekolah_asal');
 		$jenis    		    = $this->input->post('jenis');
-		$foto       	    = $_FILES['foto']['name'];
+		$foto       	    = $_FILES['foto'];
 		$username           = $this->input->post('username');
 		$password           = $this->input->post('password');
 		$status             = $this->input->post('status');
@@ -103,9 +104,9 @@ class Hal extends CI_Controller {
 	
 			$config['upload_path']          = 'asset/foto/';
 			$config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
-			$config['max_size']             = 100000;
-			$config['max_width']            = 100000;
-			$config['max_height']           = 100000;
+			$config['max_size']             = 1000000;
+			$config['max_width']            = 1000000;
+			$config['max_height']           = 1000000;
 	
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
