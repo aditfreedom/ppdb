@@ -36,7 +36,7 @@
         </div>
         <div class="form-group">
         <label for="">Username</label>
-        <input type="text" name="username" class="form-control" required>
+        <input type="text" name="username" class="form-control" placeholder="Contoh : No HP" required>
         </div>
     </div>
     <div class="col">

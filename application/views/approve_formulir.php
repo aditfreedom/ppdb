@@ -31,7 +31,7 @@
               <th scope="col">ALAMAT</th>
               <th scope="col">JENIS PENERIMAAN</th>
               <th scope="col">APPROVAL FORMULIR</th>
-              <th scope="col">AKSI</th>
+              <th scope="col" colspan="2">AKSI</th>
             </tr>
           </thead>
           <tbody>
@@ -57,6 +57,8 @@
     ?>
             <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir?>&nbsp&nbsp</a></td>
             <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
+            <td><?php echo anchor('home/cetak_kartu/'.$data->id,'<div class="btn btn-success btn-sm"><i class="fa fa-print"></i></div>')?></td>	
+
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>

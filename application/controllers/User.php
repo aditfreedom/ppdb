@@ -69,9 +69,9 @@ class User extends CI_Controller {
     
         $config['upload_path']          = 'asset/buktitf/';
         $config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
-        $config['max_size']             = 1000000;
-        $config['max_width']            = 1000000;
-        $config['max_height']           = 1000000;
+        $config['max_size']             = 0;
+        $config['max_width']            = 0;
+        $config['max_height']           = 0;
     
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
@@ -88,9 +88,9 @@ class User extends CI_Controller {
 
         $config2['upload_path']          = 'asset/akte/';
         $config2['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';;
-        $config2['max_size']             = 1000000;
-        $config2['max_width']            = 1000000;
-        $config2['max_height']           = 1000000;
+        $config2['max_size']             = 0;
+        $config2['max_width']            = 0;
+        $config2['max_height']           = 0;
     
         $this->load->library('upload', $config2);
         $this->upload->initialize($config2);

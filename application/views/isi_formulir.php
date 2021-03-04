@@ -45,8 +45,8 @@
           </select>
       </div>
         <div class="form-group">
-        <label for="">NISN</label>
-        <input  type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
+        <label for="">NISN (Nomor Induk Sekolah Nasional)</label>
+        <input  type="text" name="nisn" placeholder="Nomor Induk Sekolah Nasional" class="form-control" value="<?php echo $data->nisn;?>">
         </div>
         <div class="form-group">
         <label for="">Alamat Lengkap</label>
@@ -66,11 +66,11 @@
         </div>
         <div class="form-group">
         <label for="">No HP Orang Tua</label>
-        <input  type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        <input  type="text" name="no_hp" class="form-control" placeholder="Hanya salah satu saja" maxlength="15" value="<?php echo $data->no_hp;?>">
         </div>
         <div class="form-group">
         <label for="">No WA Aktif Orang Tua</label>
-        <input  type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
+        <input  type="text" name="no_wa" class="form-control" placeholder="Hanya salah satu saja" maxlength="15" value="<?php echo $data->no_wa;?>">
         </div>
         <div class="form-group">
         <label for="">Foto</label><br>
@@ -79,7 +79,7 @@
         </div>
         <br> 
         <div class="form-group">
-        <label for="">UPLOAD AKTE KELAHIRAN</label><br>
+        <label for="">UPLOAD AKTE KELAHIRAN (Wajib Bagi Calon Peserta Didik Baru SD)</label><br>
         <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
         <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px"><br><br>
         <input type="file" name="akte_baru" class="form-control">

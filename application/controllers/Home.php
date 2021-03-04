@@ -162,6 +162,19 @@ class Home extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
+	public function cetak_kartu($id){
+		$sess_data = $this->session->userdata();
+		$id =    array ('id' => $id);
+		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
+		$data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
+
+                $this->load->view('template/header');
+                $this->load->view('template/sidebar',$sess_data);
+                $this->load->view('cetak_kartu2',$data);
+                $this->load->view('template/footer');
+
+        }
+
 	
 
 	public function editapproval($id){

@@ -222,7 +222,7 @@
 </div>
 </div>
 
-<div  id="persyaratan" style="height: 680px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="persyaratan" style="height: 800px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
@@ -235,6 +235,10 @@
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">3. Membawa Surat Keterangan Aktif Yang Ditandatangani Kepala Sekolah Asal Pada Saat Tes Berlangsung</p> 
+
+            <p class="lead" style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Khusus Jalur Prestasi: </b></p>
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">Membawa surat keterangan dari kepala sekolah bahwa benar mendapatkan rangking 3 besar pada 3 semester terakhir dan fotocopy sertifikat yang sah bagi juara I-III lomba minimal tingkat kabupaten tahun 2018-2020. Berkas dibawa langsung kepada panitia pada saat pendaftaran</p> 
+
 
 
           </div>
