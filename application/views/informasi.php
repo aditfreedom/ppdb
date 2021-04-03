@@ -85,7 +85,9 @@
         <hr class="my-4 ">
         <h3 class="display-5 text-white " id="demo2" style="font-family: 'Share Tech Mono', monospace;">Waktu Pendaftaran :</h3>
         <h1 id="demo"  style="color:#FF0000;font-size:30px;font-family: 'RocknRoll One', sans-serif;"></h1><br>
-        <a class="btn btn-info btn-lg " id="demo3" href="<?=base_url('hal/login')?>" style="background-color:#00acac; font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;" role="button"><b>Daftar Sekarang</b></a>
+        <a class="" id="demo3" href="#" ></a>
+        <a class="btn btn-info btn-lg " href="<?=base_url('hal/login')?>" style="background-color:#00acac; font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;" role="button"><b>LOGIN DISINI</b></a>
+
       </div>
     <div class="carousel-item active">
       <img src="<?=base_url('bg1.JPG')?>" class="d-block w-100" alt="...">
@@ -230,7 +232,7 @@
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
             <p class="lead" style="margin-bottom:0px;"style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Pendaftaran : </b></p>
             <p style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Minimal Usia 6 Tahun Di Bulan September 2021</p> 
-            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/registrasi')?>" role="button"><b>Link Berikut</b></a></p> 
+            <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mendaftar Akun Dan Login Pada <a href="<?=base_url('hal/login')?>" role="button"><b>Link Berikut</b></a></p> 
             <p class="lead" style="margin-bottom:0px;" style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;"><b class="font-weight-bold">Syarat Mengikuti Tes : </b></p>
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">1. Mengisi Formulir Pendaftaran, Upload Akte Kelahiran Dan Upload Bukti Setor Bank (<b>Tidak Transfer Melalui ATM</b>) Ke Rek. Bank Aceh <b>10002240000336</b> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen Sebesar <b>Rp.100.000</b></p> 
             <p style="font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;">2. Mencetak Dan Membawa Kartu Peserta Ujian Tes Masuk Pada Saat Tes Berlangsung</p> 
@@ -289,22 +291,28 @@
             </tbody>
             <tbody class="text-center">
             <td scope="row">3</td>
-            <td>07-08 April 2021</td>
-            <td>Tes SMP & SMA</td>
+            <td>08-10 April 2021</td>
+            <td>Tes SMP</td>
             <td>Sekolah Sukma Bangsa Bireuen</td>
             </tbody>
             <tbody class="text-center">
             <td scope="row">4</td>
+            <td>15-17 April 2021</td>
+            <td>Tes SMA</td>
+            <td>Sekolah Sukma Bangsa Bireuen</td>
+            </tbody>
+            <!-- <tbody class="text-center">
+            <td scope="row">5</td>
             <td>12 April 2021</td>
             <td>Pengumuman Kelulusan PPDB TA.2021/2022</td>
             <td>ONLINE</td>
             </tbody>
             <tbody class="text-center">
-            <td scope="row">5</td>
+            <td scope="row">6</td>
             <td>24 Mei - 15 Juni 2021</td>
             <td>Pendaftaran Ulang Siswa Baru</td>
             <td>Sekolah Sukma Bangsa Bireuen</td>
-            </tbody>
+            </tbody> -->
             </table>
             <h6 class="text-danger">*Harap Memakai Masker Dan Patuhi Protokol Kesehatan Saat Tes Berlangsung</h6>
           </div>

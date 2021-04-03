@@ -37,7 +37,7 @@
                 <input type="password" class="form-control" placeholder="Password" name="password" required>
             </div>
             <button type="submit" class="btn btn-info btn-block font-weight-bold" style="font-family: 'Varela Round', sans-serif;">LOGIN</button>
-            <div class=" d-flex justify-content-center" style="margin-top:-20px;font-family: 'Varela Round', sans-serif;" ><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div>
+            <!-- <div class=" d-flex justify-content-center" style="margin-top:-20px;font-family: 'Varela Round', sans-serif;" ><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div> -->
             <?php echo form_close();?>
     </div>
     <br><br>

@@ -33,13 +33,13 @@
     <div class="col">
     <div class="form-group">
         <label for="">Nama Lengkap</label>
-        <input type="text" name="nama_lengkap" class="form-control" value="<?php echo $data->nama_lengkap;?>">
+        <input type="text" name="nama_lengkap" class="form-control" value="<?php echo $data->nama_lengkap;?>" required>
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Nama Panggilan</label>
-        <input type="text" name="nama_panggilan" class="form-control" value="<?php echo $data->nama_panggilan;?>">
+        <input type="text" name="nama_panggilan" class="form-control" value="<?php echo $data->nama_panggilan;?>"required>
         </div>
         </div>
         </div>
@@ -47,7 +47,7 @@
 
         <div class="form-group">
         <label for="">Daftar Ulang Ke Tingkat</label>
-        <select class="form-control form-control" name="tingkat">
+        <select class="form-control form-control" name="tingkat" required>
           <option selected hidden><?php echo $data->tingkat;?></option>
           <option>SD</option>
           <option>SMP</option>
@@ -56,11 +56,11 @@
         </div>
         <div class="form-group">
         <label for="">NISN</label>
-        <input type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">
+        <input type="text" name="nisn" class="form-control" maxlength="15" value="<?php echo $data->nisn;?>" required>
         </div>
         <div class="form-group">
         <label for="">Golongan Darah</label>
-        <select class="form-control form-control" name="goldar">
+        <select class="form-control form-control" name="goldar" required>
           <option selected hidden><?php echo $data->goldar;?></option>
           <option>A</option>
           <option>B</option>
@@ -73,19 +73,19 @@
         <div class="col">
         <div class="form-group">
         <label for="">Anak Ke</label>
-        <input type="text" name="anak_ke" class="form-control" value="<?php echo $data->anak_ke;?>">
+        <input type="text" name="anak_ke" class="form-control" maxlength="2" value="<?php echo $data->anak_ke;?>" required>
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Dari Bersaudara</label>
-        <input type="text" name="dari_saudara" class="form-control" value="<?php echo $data->dari_saudara;?>">
+        <input type="text" name="dari_saudara" class="form-control" maxlength="2" value="<?php echo $data->dari_saudara;?>" >
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Jarak Ke Sekolah (KM)</label>
-        <input type="text" name="jarak" class="form-control" value="<?php echo $data->jarak;?>">
+        <input type="text" name="jarak" class="form-control" maxlength="5" value="<?php echo $data->jarak;?>" required>
         </div>
     </div>
     </div>
@@ -98,14 +98,14 @@
 
     <div class="form-group">
         <label for="">Tempat Lahir</label>
-        <input type="text" name="tpt_lahir" class="form-control" value="<?php echo $data->tpt_lahir;?>">
+        <input type="text" name="tpt_lahir" class="form-control" value="<?php echo $data->tpt_lahir;?>" required>
         </div>
         </div>
 
         <div class="col">
         <div class="form-group">
         <label for="">Tanggal Lahir</label>
-        <input type="date" name="tgl_lahir" class="form-control" value="<?php echo $data->tgl_lahir;?>">
+        <input type="date" name="tgl_lahir" class="form-control" value="<?php echo $data->tgl_lahir;?>" required>
         </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
 
     <div class="form-group">
         <label for="">Agama</label>
-        <select class="form-control form-control" name="agama">
+        <select class="form-control form-control" name="agama" required>
           <option selected hidden><?php echo $data->agama;?></option>
           <option>Islam</option>
           <option>Kristen</option>
@@ -130,7 +130,7 @@
         <div class="col">
         <div class="form-group">
         <label for="">Suku</label>
-        <select class="form-control form-control" name="suku">
+        <select class="form-control form-control" name="suku" required>
           <option selected hidden><?php echo $data->suku;?></option>
           <option>Aceh</option>
           <option>Batak</option>
@@ -147,7 +147,7 @@
    
     <div class="form-group">
         <label for="">Jenis Kelamin</label>
-        <select class="form-control form-control" name="jk">
+        <select class="form-control form-control" name="jk" required>
           <option selected hidden><?php echo $data->jk;?></option>
           <option>Laki-Laki</option>
           <option>Perempuan</option>
@@ -155,25 +155,25 @@
         </div>
         <div class="form-group">
         <label for="">Alamat Lengkap</label>
-        <textarea class="form-control" name="alamat" rows="1"><?php echo $data->alamat;?></textarea>
+        <textarea class="form-control" name="alamat" rows="1" maxlength="500" required><?php echo $data->alamat;?></textarea>
         </div>
         <div class="row">
         <div class="col">
         <div class="form-group">
         <label for="">Desa/Kelurahan</label>
-        <input type="text" name="desa" class="form-control" value="<?php echo $data->desa;?>">
+        <input type="text" name="desa" class="form-control" maxlength="300" value="<?php echo $data->desa;?>" required>
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Kabupaten</label>
-        <input type="text" name="kabupaten" class="form-control" value="<?php echo $data->kabupaten;?>">
+        <input type="text" name="kabupaten" class="form-control" maxlength="100" value="<?php echo $data->kabupaten;?>" required>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Provinsi</label>
-        <input type="text" name="provinsi" class="form-control" value="<?php echo $data->provinsi;?>">
+        <input type="text" name="provinsi" class="form-control" maxlength="100" value="<?php echo $data->provinsi;?>" required>
         </div>
         </div>
         </div>
@@ -188,12 +188,12 @@
     <div class="col">
     <div class="form-group">
         <label for="">Nama Lengkap Ayah</label>
-        <input type="text" name="nama_ayah" class="form-control" value="<?php echo $data->nama_ayah;?>">
+        <input type="text" name="nama_ayah" class="form-control" value="<?php echo $data->nama_ayah;?>" required>
         </div>
 
         <div class="form-group">
         <label for="">Pendidikan Terakhir</label>
-        <select class="form-control form-control" name="pendidikan_ayah">
+        <select class="form-control form-control" name="pendidikan_ayah" required>
           <option selected hidden><?php echo $data->pendidikan_ayah;?></option>
           <option>SD</option>
           <option>SMP</option>
@@ -206,7 +206,7 @@
        
         <div class="form-group">
         <label for="">Penghasilan Per Bulan</label>
-        <select class="form-control form-control" name="penghasilan_ayah">
+        <select class="form-control form-control" name="penghasilan_ayah" required>
           <option selected hidden><?php echo $data->penghasilan_ayah;?></option>
           <option>< Rp. 1.000.000</option>
           <option>Rp. 1.000.000 s/d Rp. 2.500.000</option>
@@ -217,7 +217,7 @@
 
         <div class="form-group">
         <label for="">No Telp/HP Ayah</label>
-        <input type="text" name="hp_ayah" class="form-control" value="<?php echo $data->hp_ayah;?>">
+        <input type="text" name="hp_ayah" class="form-control" maxlength="14" value="<?php echo $data->hp_ayah;?>" required>
         </div>
     </div>
     
@@ -227,14 +227,14 @@
 
     <div class="form-group">
         <label for="">Tempat Lahir Ayah</label>
-        <input type="text" name="tptlahir_ayah" class="form-control" value="<?php echo $data->tptlahir_ayah;?>">
+        <input type="text" name="tptlahir_ayah" class="form-control" value="<?php echo $data->tptlahir_ayah;?>" required>
         </div>
         </div>
 
         <div class="col">
         <div class="form-group">
         <label for="">Tanggal Lahir Ayah</label>
-        <input type="date" name="tgllahir_ayah" class="form-control" value="<?php echo $data->tgllahir_ayah;?>">
+        <input type="date" name="tgllahir_ayah" class="form-control" value="<?php echo $data->tgllahir_ayah;?>" required>
         </div>
         </div>
     </div>
@@ -242,29 +242,29 @@
        
         <div class="form-group">
         <label for="">Pekerjaan Ayah</label>
-        <input type="text" name="pekerjaan_ayah" class="form-control" value="<?php echo $data->pekerjaan_ayah;?>">
+        <input type="text" name="pekerjaan_ayah" class="form-control" value="<?php echo $data->pekerjaan_ayah;?>" required>
         </div>
         <div class="form-group">
         <label for="">Alamat Lengkap</label>
-        <textarea class="form-control" name="alamat_ayah" rows="1"><?php echo $data->alamat_ayah;?></textarea>
+        <textarea class="form-control" name="alamat_ayah" rows="1" maxlength="500" required><?php echo $data->alamat_ayah;?></textarea>
         </div>
         <div class="row">
         <div class="col">
         <div class="form-group">
         <label for="">Desa/Kelurahan</label>
-        <input type="text" name="desa_ayah" class="form-control" value="<?php echo $data->desa_ayah;?>">
+        <input type="text" name="desa_ayah" class="form-control" maxlength="300" value="<?php echo $data->desa_ayah;?>" required>
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Kabupaten</label>
-        <input type="text" name="kabupaten_ayah" class="form-control" value="<?php echo $data->kabupaten_ayah;?>">
+        <input type="text" name="kabupaten_ayah" class="form-control" maxlength="100" value="<?php echo $data->kabupaten_ayah;?>" required>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Provinsi</label>
-        <input type="text" name="provinsi_ayah" class="form-control" value="<?php echo $data->provinsi_ayah;?>">
+        <input type="text" name="provinsi_ayah" class="form-control" maxlength="100" value="<?php echo $data->provinsi_ayah;?>" required>
         </div>
         </div>
         </div>
@@ -280,12 +280,12 @@
     <div class="col">
     <div class="form-group">
         <label for="">Nama Lengkap Ibu</label>
-        <input type="text" name="nama_ibu" class="form-control" value="<?php echo $data->nama_ibu;?>">
+        <input type="text" name="nama_ibu" class="form-control" value="<?php echo $data->nama_ibu;?>" required>
         </div>
 
         <div class="form-group">
         <label for="">Pendidikan Terakhir</label>
-        <select class="form-control form-control" name="pendidikan_ibu">
+        <select class="form-control form-control" name="pendidikan_ibu" required>
           <option selected hidden><?php echo $data->pendidikan_ibu;?></option>
           <option>SD</option>
           <option>SMP</option>
@@ -298,7 +298,7 @@
        
         <div class="form-group">
         <label for="">Penghasilan Per Bulan</label>
-        <select class="form-control form-control" name="penghasilan_ibu">
+        <select class="form-control form-control" name="penghasilan_ibu" required>
           <option selected hidden><?php echo $data->penghasilan_ibu;?></option>
           <option>< Rp. 1.000.000</option>
           <option>Rp. 1.000.000 s/d Rp. 2.500.000</option>
@@ -309,7 +309,7 @@
 
         <div class="form-group">
         <label for="">No Telp/HP Ibu</label>
-        <input type="text" name="hp_ibu" class="form-control" value="<?php echo $data->hp_ibu;?>">
+        <input type="text" name="hp_ibu" class="form-control" maxlength="14" value="<?php echo $data->hp_ibu;?>" required>
         </div>
        
        
@@ -322,14 +322,14 @@
 
     <div class="form-group">
         <label for="">Tempat Lahir Ibu</label>
-        <input type="text" name="tptlahir_ibu" class="form-control" value="<?php echo $data->tptlahir_ibu;?>">
+        <input type="text" name="tptlahir_ibu" class="form-control" value="<?php echo $data->tptlahir_ibu;?>" required>
         </div>
         </div>
 
         <div class="col">
         <div class="form-group">
         <label for="">Tanggal Lahir Ibu</label>
-        <input type="date" name="tgllahir_ibu" class="form-control" value="<?php echo $data->tgllahir_ibu;?>">
+        <input type="date" name="tgllahir_ibu" class="form-control" value="<?php echo $data->tgllahir_ibu;?>" required>
         </div>
         </div>
     </div>
@@ -337,29 +337,29 @@
        
         <div class="form-group">
         <label for="">Pekerjaan Ibu</label>
-        <input type="text" name="pekerjaan_ibu" class="form-control" value="<?php echo $data->pekerjaan_ibu;?>">
+        <input type="text" name="pekerjaan_ibu" class="form-control" value="<?php echo $data->pekerjaan_ibu;?>" required>
         </div>
         <div class="form-group">
         <label for="">Alamat Lengkap</label>
-        <textarea class="form-control" name="alamat_ibu" rows="1"><?php echo $data->alamat_ibu;?></textarea>
+        <textarea class="form-control" name="alamat_ibu" rows="1" maxlength="500" required><?php echo $data->alamat_ibu;?></textarea>
         </div>
         <div class="row">
         <div class="col">
         <div class="form-group">
         <label for="">Desa/Kelurahan</label>
-        <input type="text" name="desa_ibu" class="form-control" value="<?php echo $data->desa_ibu;?>">
+        <input type="text" name="desa_ibu" class="form-control" maxlength="300" value="<?php echo $data->desa_ibu;?>" required>
         </div>
         </div>
         <div class="col">
         <div class="form-group">
         <label for="">Kabupaten</label>
-        <input type="text" name="kabupaten_ibu" class="form-control" value="<?php echo $data->kabupaten_ibu;?>">
+        <input type="text" name="kabupaten_ibu" class="form-control" maxlength="100" value="<?php echo $data->kabupaten_ibu;?>" required>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Provinsi</label>
-        <input type="text" name="provinsi_ibu" class="form-control" value="<?php echo $data->provinsi_ibu;?>">
+        <input type="text" name="provinsi_ibu" class="form-control" maxlength="100" value="<?php echo $data->provinsi_ibu;?>" required>
         </div>
         </div>
         </div>
@@ -374,7 +374,7 @@
     <div class="col">
     <div class="form-group">
         <label for="">Sekolah Asal</label>
-        <input type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>">
+        <input type="text" name="sekolah_asal" class="form-control" value="<?php echo $data->sekolah_asal;?>" required>
         </div>
 
     <div class="form-group">
@@ -388,19 +388,19 @@
     <div class="col">
         <div class="form-group">
         <label for="">Alamat Sekolah</label>
-        <textarea class="form-control" name="alamat_sekolah" rows="1"><?php echo $data->alamat_sekolah;?></textarea>
+        <textarea class="form-control" name="alamat_sekolah" rows="1" maxlength="500" required><?php echo $data->alamat_sekolah;?></textarea>
         </div>
         <div class="row">
         <div class="col">
         <div class="form-group">
         <label for="">Kabupaten</label>
-        <input type="text" name="kabupaten_sekolah" class="form-control" value="<?php echo $data->kabupaten_sekolah;?>">
+        <input type="text" name="kabupaten_sekolah" class="form-control" maxlength="300" value="<?php echo $data->kabupaten_sekolah;?>" required>
         </div>
         </div>
         <div class="col"> 
         <div class="form-group">
         <label for="">Provinsi</label>
-        <input type="text" name="provinsi_sekolah" class="form-control" value="<?php echo $data->provinsi_sekolah;?>">
+        <input type="text" name="provinsi_sekolah" class="form-control" maxlength="100" value="<?php echo $data->provinsi_sekolah;?>" required>
         </div>
         </div>
         </div>
@@ -417,14 +417,14 @@
     <div class="col">
     <div class="form-group">
         <label for="">Penyakit Serius Yang Pernah Diderita</label>
-        <input type="text" name="penyakit" class="form-control" value="<?php echo $data->penyakit;?>">
+        <input type="text" name="penyakit" class="form-control" value="<?php echo $data->penyakit;?>" required>
         </div>
 
         <div class="row">
         <div class="col">
         <div class="form-group">
         <label for="">Olahraga</label>
-        <select class="form-control form-control" name="olah_raga">
+        <select class="form-control form-control" name="olah_raga" required>
           <option selected hidden><?php echo $data->olah_raga;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -434,7 +434,7 @@
         <div class="col"> 
         <div class="form-group">
         <label for="">Seni Musik</label>
-        <select class="form-control form-control" name="seni">
+        <select class="form-control form-control" name="seni" required>
           <option selected hidden><?php echo $data->seni;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -451,7 +451,7 @@
         <div class="col">
         <div class="form-group">
         <label for="">Seni Tari</label>
-        <select class="form-control form-control" name="tari">
+        <select class="form-control form-control" name="tari" required>
           <option selected hidden><?php echo $data->tari;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -461,7 +461,7 @@
         <div class="col"> 
         <div class="form-group">
         <label for="">Seni Lukis</label>
-        <select class="form-control form-control" name="lukis">
+        <select class="form-control form-control" name="lukis" required>
           <option selected hidden><?php echo $data->lukis;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -474,7 +474,7 @@
         <div class="col">
         <div class="form-group">
         <label for="">Drama</label>
-        <select class="form-control form-control" name="drama">
+        <select class="form-control form-control" name="drama" required>
           <option selected hidden><?php echo $data->drama;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -484,7 +484,7 @@
         <div class="col"> 
         <div class="form-group">
         <label for="">Sastra</label>
-        <select class="form-control form-control" name="sastra">
+        <select class="form-control form-control" name="sastra" required>
           <option selected hidden><?php echo $data->sastra;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -494,7 +494,7 @@
         <div class="col"> 
         <div class="form-group">
         <label for="">Organisasi</label>
-        <select class="form-control form-control" name="organisasi">
+        <select class="form-control form-control" name="organisasi" required>
           <option selected hidden><?php echo $data->organisasi;?></option>
           <option>Ya</option>
           <option>Tidak</option>
@@ -506,7 +506,7 @@
         </div>
         <div class="form-group">
         <label for="">Prestasi Yang Pernah Diraih</label>
-        <textarea class="form-control" name="prestasi" rows="2"><?php echo $data->prestasi;?></textarea>
+        <textarea class="form-control" name="prestasi" rows="2" required><?php echo $data->prestasi;?></textarea>
         </div>    
         <br><br>
 
@@ -515,12 +515,12 @@
     
         <div class="form-group">
         <label for="">Alasan Anda Ingin Bersekolah Di Sekolah Sukma Bangsa</label>
-        <textarea class="form-control" name="alasan" rows="2"><?php echo $data->alasan;?></textarea>
+        <textarea class="form-control" name="alasan" rows="2" maxlength="100" required><?php echo $data->alasan;?></textarea>
         </div>  
 
         <div class="form-group">
         <label for="">Apa Yang Anda Ketahui Tentang Sekolah Sukma Bangsa?</label>
-        <textarea class="form-control" name="tentang_sekolah" rows="2"><?php echo $data->tentang_sekolah;?></textarea>
+        <textarea class="form-control" name="tentang_sekolah" rows="2" maxlength="100" required><?php echo $data->tentang_sekolah;?></textarea>
         </div>    
         <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
         </form>

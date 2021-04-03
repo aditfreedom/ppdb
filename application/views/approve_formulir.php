@@ -29,6 +29,7 @@
               <th scope="col">NISN</th>
               <th scope="col">SEKOLAH ASAL</th>
               <th scope="col">ALAMAT</th>
+              <th scope="col">NO WA</th>
               <th scope="col">JENIS PENERIMAAN</th>
               <th scope="col">APPROVAL FORMULIR</th>
               <th scope="col" >AKSI</th>
@@ -43,6 +44,7 @@
             <td><?php echo $data->nisn;?></td>
             <td><?php echo $data->sekolah_asal;?></td>
             <td><?php echo $data->alamat;?></td>
+            <td><?php echo $data->no_wa;?></td>
             <td><?php echo $data->jenis;?></td>
     <?php
     $approval= $data->approve_formulir;
