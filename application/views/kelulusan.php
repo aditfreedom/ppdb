@@ -104,15 +104,24 @@ $(document).ready( function () {
 </div>
 </div>
 
-<div  id="jadwal" style="height: 1500px;padding-top:70px;background-color:#f5f8fd;">
+<div  id="jadwal" style="height: 1700px;padding-top:70px;background-color:#f5f8fd;">
 <div class="container">
 <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading"><b>KETENTUAN<span class="text-info"> DAFTAR ULANG</span></b></h2>
             <hr class="my-4" style="border-color: #F05F40;width: 35%;text-align: left;margin-left: 0;margin-top:0px;border-width: 3px;">
-            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Jadwal Pendaftaran Ulang : </b></p>
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>Jadwal Pendaftaran Ulang : </b></p><br>
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>TAHAP I </b></p>
             <ul>
-            <li>24 Mei - 15 Juni 2021, Di Sekolah Sukma Bangsa Bireuen</li>
+            <li>20 April - 30 April 2021, Di Sekolah Sukma Bangsa Bireuen</li>
+                <li>Senin-Kamis : 08.00-13.00 WIB</li>
+                <li>Jumat-Sabtu : 08.00- 11.30 WIB</li> <br>
+
+            </ul>
+
+            <p class="lead font-weight-bold" style="margin-bottom:0px;"><b>TAHAP II </b></p>
+            <ul>
+            <li>24 Mei - 05 Juni 2021, Di Sekolah Sukma Bangsa Bireuen</li>
                 <li>Senin-Kamis : 08.00-15.30 WIB</li>
                 <li>Jumat-Sabtu : 08.00- 11.30 WIB</li> <br>
 
@@ -140,11 +149,8 @@ $(document).ready( function () {
             <li>Surat Pakta Integritas (Tersedia Di Aplikasi PPDB) <b>1 lembar (materai 6.000 disediakan sendiri oleh ortu)</b></li>
             <li>Menunjukkan Slip Pembayaran BPP resmi dari TU <b>(Pada Saat Pendaftaran Ulang)</b></li>
             <li>Menunjukkan Slip Biaya Perawatan Sekolah resmi dari TU <b>(Pada Saat Pendaftaran Ulang)</b></li>
-            <li>Menunjukkan Slip Pembayaran Paket Seragam resmi dari Koperasi Sekolah SSB Bireuen <b>Pada Saat Pendaftaran Ulang)</b></li>
-            <li>Surat Pindah <b>(bagi siswa pindahan)</b></li>
-            <li><i>Photocopy</i> Rapor <b>(bagi siswa pindahan)</b></li> 
-            <li>Surat Pindah <b>(bagi siswa pindahan)</b></li>
-            <li>Print surat pindah Dapodik yang berisi keterangan bahwa calon siswa tersebut sudah di keluarkan dari dapodik di sekolah asal <b>(bagi siswa pindahan)</b></li>
+            <li>Menunjukkan Slip Pembayaran Paket Seragam resmi dari Koperasi Sekolah SSB Bireuen <b>(Pada Saat Pendaftaran Ulang)</b></li>
+            <li><i>Photocopy</i> Rapor dan Sertifikat Prestasi <b>(Jalur alumni dan prestasi)</b></li> 
             </ul>
             </div>
 

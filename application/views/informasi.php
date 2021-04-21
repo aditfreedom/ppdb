@@ -83,9 +83,10 @@
         <h3 class="display-5  text-white" style="font-family: 'Share Tech Mono', monospace;">SD - SMP - SMA</h3>
         <h3 class="display-5" style="color:#00acac;" style="font-family: 'Share Tech Mono', monospace;">SEKOLAH SUKMA BANGSA BIREUEN TP. 2021/2022</h3>
         <hr class="my-4 ">
-        <h3 class="display-5 text-white " id="demo2" style="font-family: 'Share Tech Mono', monospace;">Waktu Pendaftaran :</h3>
+        <h3 class="display-5 text-white " id="demo2" style="font-family: 'Share Tech Mono', monospace;">Pengumuman Kelulusan :</h3>
         <h1 id="demo"  style="color:#FF0000;font-size:30px;font-family: 'RocknRoll One', sans-serif;"></h1><br>
         <a class="" id="demo3" href="#" ></a>
+        <a class="btn btn-primary btn-lg " id="demo5" href="<?=base_url('informasi/kelulusan')?>" style=" font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;" role="button"><b>LIHAT PENGUMUMAN DISINI</b></a>
         <a class="btn btn-info btn-lg " href="<?=base_url('hal/login')?>" style="background-color:#00acac; font-family: 'Share Tech Mono', monospace; font-family: 'Varela Round', sans-serif;" role="button"><b>LOGIN DISINI</b></a>
 
       </div>
@@ -402,7 +403,7 @@
     -->
     <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Mar 31, 2021 23:59:00").getTime();
+var countDownDate = new Date("Apr 19, 2021 12:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -423,14 +424,17 @@ var x = setInterval(function() {
   document.getElementById("demo").innerHTML = days + " Hari " + hours + " Jam "
   + minutes + " Menit " + seconds + " Detik ";
   var x = document.getElementById("demo2");
+  var z = document.getElementById("demo5");
   var y = document.getElementById("demo3");
+  z.style.display = "none";
 
 
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "PENDAFTARAN TELAH DITUTUP";
+    document.getElementById("demo").innerHTML = "PENGUMUMAN KELULUSAN :";
+    z.style.display = "inline";
     x.style.display = "none";
     y.style.display = "none";
 
