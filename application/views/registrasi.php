@@ -10,39 +10,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <title>Registrasi Pengguna</title>
+    <title>Daftar Akun Pengguna PPDB</title>
   </head>
-  <body  >
-  <nav class="navbar navbar-expand-lg navbar-light bg-info" style="height:50px">
- 
-    </nav>
-    <div class="container text-center">
-    <br>
-    <img src="<?php echo base_url()?>logo.png" width="200px">
-<h1 class="text-dark" style="margin-top:10px;">REGISTRASI PENGGUNA<br>CALON PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN TP.2021-2022</h1>
+  <body  style="background-image: url(<?php echo base_url('assets22/img/bg_regist.JPG');?>);background-size: cover;}">
+     <div class="container text-center">
+<h2 class="text-light font-weight-bold" style="margin-top:10px;">DAFTAR AKUN PENGGUNA<br>CALON PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2022-2023</h2>
 </div>
 <br>
     <div class="container">
     <?php echo form_open_multipart('hal/tambahuser');?>
-    <div class="row">
-    <div class="col">
     <div class="form-group">
-        <label for="">Nama Lengkap</label>
-        <input type="text" name="nama_lengkap" class="form-control" required>
-        </div>
-        <div class="form-group">
-        <label for="">Sekolah Asal</label>
-        <input type="text" name="sekolah_asal" class="form-control" required>
-        </div>
-        <div class="form-group">
-        <label for="">Username</label>
-        <input type="text" name="username" class="form-control" placeholder="Contoh : No HP" required>
-        </div>
-    </div>
-    <div class="col">
-        <div class="form-group">
-        <label for="">Jenis Pendaftaran</label>
-        <select class="form-control form-control" name="jenis">
+        <label class="text-light font-weight-bold" for="">Jenis Pendaftaran</label>
+        <select class="form-control form-control" name="jenis" style="height: 50px;">
           <option>Peserta Didik Baru SD</option>
           <option>Peserta Didik Baru SMP</option>
           <option>Peserta Didik Baru SMA</option>
@@ -51,18 +30,27 @@
           <option>Pindahan SMA</option>
           </select>
         </div>
-
-        <div class="form-group">
-        <label for="">Pas Foto Layar Merah Uk.3x4 (Maks. 1MB, Format JPEG) </label>
-        <input type="file" name="foto" class="form-control" required>
+    <div class="form-group">
+        <label class="text-light font-weight-bold" for="">Nama Lengkap</label>
+        <input type="text" name="nama_lengkap" class="form-control" style="height: 50px;" required>
         </div>
         <div class="form-group">
-        <label for="">Password</label>
-        <input type="password" name="password" class="form-control" required>
+        <label class="text-light font-weight-bold" for="">Tempat Lahir</label>
+        <input type="text" name="tptlahir" class="form-control" style="height: 50px;" required>
         </div>
-    </div>
-  </div>
-        <button type="submit" class="btn btn-info font-weight-bold" style="width:100%;">DAFTAR</button>
+        <div class="form-group">
+        <label class="text-light font-weight-bold" for="">Tanggal Lahir</label>
+        <input type="date" name="tgllahir" class="form-control" style="height: 50px;" required>
+        </div>
+        <div class="form-group">
+        <label class="text-light font-weight-bold" for="">Sekolah Asal</label>
+        <input type="text" name="sekolah_asal" class="form-control" style="height: 50px;" required>
+        </div>
+        <div class="form-group">
+        <label class="text-light font-weight-bold" for="">No WhatsApp</label>
+        <input type="number" name="no_wa" class="form-control" placeholder="Contoh yang benar : 6281325241234" style="height: 50px;" required>
+        </div>       
+        <button type="submit" class="btn btn-primary font-weight-bold shadow-lg" style="width:100%;height: 50px;">DAFTAR AKUN</button>
       </div>
         </form>
 

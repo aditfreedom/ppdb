@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-  <link rel="icon" href="<?=base_url()?>/logo.png" type="image/png">
+  <link href="<?=base_url()?>assets22/img/favicon.png" rel="icon">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,42 +12,57 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url().'login.css';?>">
     <script src="https://kit.fontawesome.com/2d7830743a.js" crossorigin="anonymous"></script>
 
-    <title>PPDB ONLINE SSB BIREUEN</title>
+    <title>LOGIN PPDB SSB BIREUEN</title>
   </head>
   <div class="limiter">
-  <body class="primcol"  style="background-image: url(<?php echo base_url('background_login.JPG');?>);background-size: cover;}">
-      <div class="head font-weight-bold">
-        <br><br>
-  </div>
-<div class="container shadow p-3 mb-5 bg-white rounded">
-        <img class="img mx-auto d-block" src="<?php echo base_url('logo.png');?>" width="100px">
-        <h6 class="text-center font-weight-bold" style="font-family: 'Share Tech Mono', monospace;">PPDB ONLINE TA.2021/2022<br>SEKOLAH SUKMA BANGSA<br>BIREUEN</h6>
+  <body style="background-image: url(<?php echo base_url('assets22/img/background_login.JPG');?>);background-size: cover;}">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <img src="<?=base_url()?>assets22/img/favicon.png" class="mx-auto d-block" width="100px">
+            <h6 class="text-center" style="margin-top:5px;"><b>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2022-2023</b></h6><br>
+            <h5 class="text-center"><b>LOGIN PENGGUNA</b></h5>
 
-        <?php echo form_open('hal/login_aksi');?>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                </div>
-                <input type="text" class="form-control" placeholder="Username" name="username" required>
+            <?php echo form_open('hal/login_aksi');?>
+              <div class="form-label-group">
+                <input  name="no_wa" id="inputEmail" class="form-control"  required autofocus>
+                <label for="inputEmail">NO HP/WA</label>
+              </div>
+
+              <div class="form-label-group">
+                <input name="tgllahir" type="date" id="inputPassword" class="form-control" required>
+                <label for="inputPassword">TANGGAL LAHIR</label>
+              </div>
+              <button class="btn btn-lg text-light btn-block text-uppercase font-weight-bold rounded-pill btn-info" type="submit"><b>Login</b></button>
+              <div class=" d-flex justify-content-center" style="margin-top:20px; font-family: 'Varela Round', sans-serif;" ><strong >BELUM PUNYA AKUN? <a class="text-info"href="<?php echo base_url('hal/registrasi');?>">DAFTAR DISINI</a></strong></div>
+              <div class=" d-flex justify-content-center" style="margin-top:20px; font-family: 'Varela Round', sans-serif;" ><strong >ADMIN AREA <a class="text-info"href="<?php echo base_url('hal/login_admin');?>">DISINI</a></strong></div>
+              <?php echo form_close();?>
+              <!-- <div class="text-center mt-3 font-weight-bold">
+              <a class="text-decoration-none" href="<?=base_url()?>">KEMBALI KE HALAMAN UTAMA</a>
+              </div> -->
             </div>
-            <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-key"></i></span>
-                </div>
-                <input type="password" class="form-control" placeholder="Password" name="password" required>
-            </div>
-            <button type="submit" class="btn btn-info btn-block font-weight-bold" style="font-family: 'Varela Round', sans-serif;">LOGIN</button>
-            <!-- <div class=" d-flex justify-content-center" style="margin-top:-20px;font-family: 'Varela Round', sans-serif;" ><strong ><a class="text-info"href="<?php echo base_url('hal/registrasi');?>">REGISTRASI AKUN</a></strong></div> -->
-            <?php echo form_close();?>
+        </div>
+      </div>
     </div>
-    <br><br>
-</div>
-</div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+    <script>
+    function myFunction() {
+  var x = document.getElementById("inputPassword");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+    </script>
   </body>
 </html>

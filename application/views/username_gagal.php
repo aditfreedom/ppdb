@@ -1,6 +1,6 @@
 <script type="text/javascript">
 function jsFunction(){
-alert('Username Sudah Ada, Silahkan Isi Dengan Username Lain.');
+alert('Nomor WA dan Tanggal Lahir Sudah Terdaftar, Silahkan Ganti Dengan Yang Lain');
 window.location.href = "./registrasi";
 }
 </script>

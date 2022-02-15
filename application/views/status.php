@@ -1,6 +1,6 @@
 <script type="text/javascript">
 function jsFunction(){
-alert('Pendaftaran Sukses Silahkan Login');
+alert('Pendaftaran Sukses Silahkan Login Untuk Melengkapi Biodata');
 window.location.href = "./login";
 }
 </script>

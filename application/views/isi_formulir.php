@@ -45,7 +45,7 @@
           </select>
       </div>
         <div class="form-group">
-        <label for="">NISN (Nomor Induk Sekolah Nasional)</label>
+        <label for="">NISN (Nomor Induk Siswa Nasional)</label>
         <input  type="text" name="nisn" placeholder="Nomor Induk Sekolah Nasional" class="form-control" value="<?php echo $data->nisn;?>">
         </div>
         <div class="form-group">

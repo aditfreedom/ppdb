@@ -54,7 +54,8 @@
       }    
     ?>
             <td><a class="font-weight-bold text-uppercase rounded-pill <?= $class;?>" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_daftarulang?>&nbsp&nbsp</a></td>
-            <td><?php echo anchor('home/editdaftarulang/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
+            <td><?php echo anchor('home/editdaftarulang/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?>
+            <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b><i class="fab fa-whatsapp"></i></u></a></td>	
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>

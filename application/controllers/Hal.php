@@ -18,18 +18,25 @@ class Hal extends CI_Controller {
 		$this->load->view('login');	
 	}
 
+    public function login_admin()
+	{
+		$this->load->model('M_ppdb');
+		$this->load->view('login-lama');	
+	}
+
+
 
     public function login_aksi(){
-        $username = $this->input->post('username',true);
-        $password = $this->input->post('password',true);
+        $username = $this->input->post('no_wa',true);
+        $password = $this->input->post('tgllahir',true);
  
-        $this->form_validation->set_rules('username','Username','required');
-        $this->form_validation->set_rules('password','Password','required');
+        $this->form_validation->set_rules('no_wa','Username','required');
+        $this->form_validation->set_rules('tgllahir','Password','required');
  
         if($this->form_validation->run() != FALSE){
              $where = array(
-                 'username' => $username,
-                 'password' => $password,
+                 'no_wa' => $username,
+                 'tgllahir' => $password,
              );
  
              $ceklogin = $this->M_ppdb->cek_login($where)->num_rows();
@@ -39,7 +46,8 @@ class Hal extends CI_Controller {
                      $id = $cek->id;
                      $nama_lengkap = $cek->nama_lengkap;
                      $nisn = $cek->nisn;
-                     $no_hp = $cek->no_hp;
+                     $no_wa = $cek->no_wa;
+                     $tgllahir = $cek->tgllahir;
                      $role = $cek->role;
                      $approve_formulir = $cek->approve_formulir;
                      $approve_lulus = $cek->approve_lulus;
@@ -54,6 +62,8 @@ class Hal extends CI_Controller {
                          'id' => $id,
                          'nama_lengkap' => $nama_lengkap,
                          'nisn' => $nisn,
+                         'no_wa' => $no_wa,
+                         'tgllahir' => $tgllahir,
                          'no_hp' => $no_hp,
                          'role' => $role,
                          'approve_formulir' => $approve_formulir,
@@ -86,56 +96,95 @@ class Hal extends CI_Controller {
         }
      }
 
+     public function login_admin_aksi(){
+        $username = $this->input->post('username',true);
+        $password = $this->input->post('password',true);
+ 
+        $this->form_validation->set_rules('username','Username','required');
+        $this->form_validation->set_rules('password','Password','required');
+ 
+        if($this->form_validation->run() != FALSE){
+             $where = array(
+                 'username' => $username,
+                 'password' => $password,
+             );
+ 
+             $ceklogin = $this->M_ppdb->cek_login($where)->num_rows();
+             $cekloginid = $this->M_ppdb->cek_login($where)->result();
+             if ($ceklogin > 0) {
+                 foreach ($cekloginid as $cek) {
+                     $id = $cek->id;
+                     $nama_lengkap = $cek->nama_lengkap;
+                     $nisn = $cek->nisn;
+                     $no_wa = $cek->no_wa;
+                     $tgllahir = $cek->tgllahir;
+                     $role = $cek->role;
+                     $approve_formulir = $cek->approve_formulir;
+                     $approve_lulus = $cek->approve_lulus;
+                     $username = $cek->username;
+                     $password = $cek->password;
+                    }
+ 
+                     
+                     $sess_data =  array(
+                         'username' => $username,
+                         'password' => $password,
+                         'id' => $id,
+                         'nama_lengkap' => $nama_lengkap,
+                         'nisn' => $nisn,
+                         'no_wa' => $no_wa,
+                         'tgllahir' => $tgllahir,
+                         'role' => $role,
+                         'approve_formulir' => $approve_formulir,
+                         'approve_lulus' => $approve_lulus,
+                         'login' => 'Berhasil'              
+                        );
+ 
+                //  redirect(base_url('home'));
+
+                 if ($sess_data['role'] == 0){
+                    $this->session->set_userdata($sess_data); 
+                     redirect(base_url('home')); 
+                 }
+                 else{
+                    $this->load->view('gagallogin_admin');
+                }
+                 
+             }else{
+                 $this->load->view('error');
+             }
+ 
+        }else{
+         $this->load->view('error');
+ 
+        }
+     }
+
      public function registrasi()
 	{
 		$this->load->view('registrasi');
 	}
 
     public function tambahuser(){
-		$nama_lengkap       = $this->input->post('nama_lengkap');
-		$sekolah_asal       = $this->input->post('sekolah_asal');
-		$jenis    		    = $this->input->post('jenis');
-		$foto       	    = $_FILES['foto'];
-		$username           = $this->input->post('username');
-		$password           = $this->input->post('password');
-		$status             = $this->input->post('status');
-	
-	
-	
-			$config['upload_path']          = 'asset/foto/';
-			$config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
-			$config['max_size']             = 0;
-			$config['max_width']            = 0;
-			$config['max_height']           = 0;
-	
-			$this->load->library('upload', $config);
-			$this->upload->initialize($config);
-			 
-			if (! $this->upload->do_upload('foto')) {
-				$this->load->view('errorupload');
-			}else{
-				$foto=$this->upload->data('file_name');
-			}
-	
 		
 		$data = array(
-			'nama_lengkap' => $nama_lengkap,
-			'sekolah_asal' => $sekolah_asal,
+			'nama_lengkap' => $this->input->post('nama_lengkap'),
+			'sekolah_asal' => $this->input->post('sekolah_asal'),
 			'nisn' => "0",
 			'alamat' => "",
 			'no_hp' => "",
 			'bukti_tf' => "",
-			'jenis' => $jenis,
-			'foto' => $foto,
+			'jenis' => $this->input->post('jenis'),
+			'foto' => "",
             'bukti_tf' => "",
-            'tptlahir' => "",
-            'tgllahir' => "",
+            'tptlahir' => $this->input->post('tptlahir'),
+            'tgllahir' => $this->input->post('tgllahir'),
             'namaayah' => "",
             'namaibu' => "",
-            'no_wa' => "",
+            'no_wa' => $this->input->post('no_wa'),
             'akte' => "",
-			'username' => $username,
-			'password' => $password,
+			'username' => "",
+			'password' => "",
 			'role' => "1",
 			'approve_formulir' 	=> "Antrian",
 			'approve_lulus' 	=> "Antrian",
@@ -145,7 +194,11 @@ class Hal extends CI_Controller {
 
 		);
 
-		$hitungusername= $this->M_ppdb->tampildatapengguna1($username);
+        $no_wa = $this->input->post('no_wa');
+        $tgllahir = $this->input->post('tgllahir');
+
+
+		$hitungusername= $this->M_ppdb->tampildatapengguna1($no_wa,$tgllahir);
 
 		if ($hitungusername >=1) {
 			$this->load->view('username_gagal');    

@@ -56,7 +56,8 @@
       }    
     ?>
             <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button" style="width:60px;">&nbsp&nbsp<?php echo $data->approve_lulus?>&nbsp&nbsp</a></td>
-            <td><?php echo anchor('home/editlulus/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?></td>	
+            <td><a href="<?=base_url('home/editlulus/').$data->id?>" class="btn btn-sm btn-primary"><b><i class="fa fa-edit"></i></u></a> 
+            <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b><i class="fab fa-whatsapp"></i></u></a></td>
 		</tr>
 		<?php $i++; ?>
 	<?php endforeach ;?>
