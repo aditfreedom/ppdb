@@ -15,7 +15,7 @@
           <img src="<?php echo base_url()?>asset/dist/img/adit.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Halo, <?php echo $nama_lengkap;?>!</a>
+          <a href="#" class="d-block">Halo, <b><?php echo $nama_lengkap;?>!</b></a>
         </div>
       </div>
 
@@ -47,7 +47,7 @@
             <a href="<?=base_url('user/cetak_kartu/'.$id);?>" class="nav-link">
               <i class="nav-icon fa fa-id-card-alt"></i>
               <p>
-                Cetak Kartu Ujian
+                Cetak Resi & Kartu Peserta
               </p>
             </a>
           </li>

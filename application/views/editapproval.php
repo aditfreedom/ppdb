@@ -148,8 +148,9 @@
       <input  type="hidden" name="approve_daftarulang" class="form-control" value="<?php echo $data->approve_daftarulang;?>">
       </div>  
 
-        <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>         
-        </form>
+      <div class="form-group">
+        <button type="submit" class="form-control btn btn-primary font-weight-bold">SIMPAN DATA</button>
+        </div>        </form>
 	<?php endforeach ;?>
 
 

@@ -16,6 +16,11 @@ class M_ppdb extends CI_Model{
 
      }
 
+     public function cetak_resi($id){
+        $result = $this->db->query("SELECT * FROM pengguna WHERE id='$id'");
+        return $result;
+     }
+
     public function tambahkuota($data)
     {
         $this->db->insert('kuota',$data);

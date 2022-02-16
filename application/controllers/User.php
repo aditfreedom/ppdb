@@ -57,6 +57,7 @@ class User extends CI_Controller {
         $akte_baru      = $_FILES['akte_baru']['name'];
         $no_hp             = $this->input->post('no_hp');
         $foto             = $this->input->post('foto');
+        $foto_baru             = $this->input->post('foto_baru');
         $bukti_tf          = $this->input->post('bukti_tf');
         $bukti_tfbaru      = $_FILES['buktitf_baru']['name'];
         $username          = $this->input->post('username');
@@ -67,6 +68,7 @@ class User extends CI_Controller {
         $approve_daftarulang    = $this->input->post('approve_daftarulang');
 
     
+        ///upload bukti transfer
         $config['upload_path']          = 'asset/buktitf/';
         $config['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
         $config['max_size']             = 0;
@@ -77,7 +79,7 @@ class User extends CI_Controller {
         $this->upload->initialize($config);
          
         if (! $this->upload->do_upload('buktitf_baru')) {
-            $this->load->view('errorformulir');
+            $this->load->view('gagalformulir');
         }else{
             $bukti_tfbaru=$this->upload->data('file_name');
         }
@@ -86,8 +88,10 @@ class User extends CI_Controller {
             $bukti_tfbaru = $bukti_tf;
         }
 
+
+        ///upload akte
         $config2['upload_path']          = 'asset/akte/';
-        $config2['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';;
+        $config2['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
         $config2['max_size']             = 0;
         $config2['max_width']            = 0;
         $config2['max_height']           = 0;
@@ -96,7 +100,7 @@ class User extends CI_Controller {
         $this->upload->initialize($config2);
          
         if (! $this->upload->do_upload('akte_baru')) {
-            $this->load->view('errorformulir');
+            $this->load->view('gagalformulir');
         }else{
             $akte_baru=$this->upload->data('file_name');
         }
@@ -104,6 +108,28 @@ class User extends CI_Controller {
         if ($akte_baru == null) {
             $akte_baru = $akte;
         }
+
+
+        ///upload foto
+        $config3['upload_path']          = 'asset/foto/';
+        $config3['allowed_types']        = 'gif|jpg|jpeg|png|JPG|JPEG';
+        $config3['max_size']             = 0;
+        $config3['max_width']            = 0;
+        $config3['max_height']           = 0;
+    
+        $this->load->library('upload', $config3);
+        $this->upload->initialize($config3);
+         
+        if (! $this->upload->do_upload('foto_baru')) {
+            $this->load->view('gagalformulir');
+        }else{
+            $foto_baru=$this->upload->data('file_name');
+        }
+    
+        if ($foto_baru == null) {
+            $foto_baru = $foto;
+        }
+    
     
         $data = array(
             'nama_lengkap' => $nama,
@@ -118,7 +144,7 @@ class User extends CI_Controller {
             'alamat' =>$alamat,
             'sekolah_asal' =>$sekolah_asal,
             'no_hp' =>$no_hp,
-            'foto' =>$foto,
+            'foto' =>$foto_baru,
             'bukti_tf' =>$bukti_tfbaru,
             'username' =>$username,
             'password' =>$password,
@@ -131,10 +157,8 @@ class User extends CI_Controller {
         $where = array(
             'id' => $id
         );
-        $this->M_ppdb->updateformuliruser($where,$data,'pengguna');
-        redirect(base_url('user/isi_formulir/'.$id));    
-
-
+        $this->M_ppdb->updateformuliruser($where,$data);
+        $this->load->view('berhasil_update_biodata_formulir');
     }
 
     public function cetak_kartu($id){
@@ -159,6 +183,21 @@ class User extends CI_Controller {
                 $this->load->view('template/footer');
              }
         }
+
+        public function cetak_resi($id){
+            $sess_data = $this->session->userdata();
+            $data['cetak_resi'] = $this->M_ppdb->cetak_resi($id)->result();
+            // $this->load->view('cetak_resi',$data);
+                    $this->load->library('dompdf_gen');            
+                    $this->load->view('cetak_resi',$data);
+                    $paper_size = 'A4';
+                    $orientation = 'portrait';
+                    $html = $this->output->get_output();
+                    $this->dompdf->set_paper($paper_size,$orientation);
+                    $this->dompdf->load_html($html);
+                    $this->dompdf->render();
+                    $this->dompdf->stream("Resi Pendaftaran PPDB ".$id, array('Attachment' =>0));
+            }
 
         public function registrasi_ulang($id){
             $sess_data = $this->session->userdata();

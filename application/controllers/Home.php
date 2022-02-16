@@ -239,8 +239,9 @@ class Home extends CI_Controller {
 			'id' => $id
 		);
 		$this->M_ppdb->updateformulir($where,$data,'pengguna');
-		$this->load->view('berhasil_ubah_formulir');
-		$this->load->view('approve_formulir');	}
+        $this->load->view('berhasil_update_approval_formulir');
+
+	}
 
 		
 		public function cetakformulir(){

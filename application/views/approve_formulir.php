@@ -58,8 +58,8 @@
       }    
     ?>
             <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir?>&nbsp&nbsp</a> </td>
-            <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>')?> <?php echo anchor('home/cetak_kartu/'.$data->id,'<div class="btn btn-success btn-sm"><i class="fa fa-print"></i></div>')?> 
-            <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b><i class="fab fa-whatsapp"></i></u></a></td>	            
+            <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><b>EDIT DATA</b></div>')?> <br><br><?php echo anchor('home/cetak_kartu/'.$data->id,'<div class="btn btn-danger btn-sm"><b>CETAK RESI</b></i></div>')?> <br><br>
+            <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a></td>	            
 
 
 		</tr>
@@ -102,7 +102,9 @@
         <label for="">Kuota Penerimaan</label>
         <input type="text" name="kuota" class="form-control">
         </div>
-        <button type="submit" class="btn btn-primary">Simpan</button>
+        <div class="form-group">
+        <button type="submit" class="form-control btn btn-primary">Simpan</button>
+        </div>
       </div>
         </form>
     </div>
