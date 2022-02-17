@@ -62,7 +62,7 @@
       <div hidden class="form-group">
       <input  type="text" name="approve_lulus" class="form-control" value="<?php echo $data->approve_lulus;?>">
       </div>  
-        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
+        <button type="submit" class="btn btn-primary font-weight-bold" style="width:100%;"><i class="fa fa-save"></i> SIMPAN DATA</button>         
         </form>
 	<?php endforeach ;?>
 

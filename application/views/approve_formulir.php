@@ -25,8 +25,10 @@
           <thead class="text-center">
             <tr>
               <th scope="col">NO</th>
-              <th scope="col">NAMA LENGKAP</th>
+              <th scope="col">NO RESI</th>
               <th scope="col">NISN</th>
+              <th scope="col">NAMA LENGKAP</th>
+              <th scope="col">TEMPAT, TANGGAL LAHIR</th>
               <th scope="col">SEKOLAH ASAL</th>
               <th scope="col">ALAMAT</th>
               <th scope="col">NO WA</th>
@@ -40,8 +42,10 @@
 	        foreach ($formulir as $data) : ?>
 		<tr class="nomor text-center">
             <th scope="row"><?php echo $i ;?></th>
-            <td><?php echo $data->nama_lengkap;?></td>
+            <td><b><?php echo $data->id;?>/PPDB-BRN/2022</b></td>
             <td><?php echo $data->nisn;?></td>
+            <td><?php echo $data->nama_lengkap;?></td>
+            <td><?php echo $data->tptlahir;?>, <?=$data->tgllahir;?></td>
             <td><?php echo $data->sekolah_asal;?></td>
             <td><?php echo $data->alamat;?></td>
             <td><?php echo $data->no_wa;?></td>
@@ -58,7 +62,7 @@
       }    
     ?>
             <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir?>&nbsp&nbsp</a> </td>
-            <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><b>EDIT DATA</b></div>')?> <br><br><?php echo anchor('home/cetak_kartu/'.$data->id,'<div class="btn btn-danger btn-sm"><b>CETAK RESI</b></i></div>')?> <br><br>
+            <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><b>EDIT DATA</b></div>')?> <br><br><?php echo anchor('user/cetak_resi/'.$data->id,'<div class="btn btn-danger btn-sm"><b>CETAK RESI</b></i></div>')?> <br><br>
             <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a></td>	            
 
 

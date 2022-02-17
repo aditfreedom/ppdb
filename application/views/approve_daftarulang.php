@@ -24,23 +24,31 @@
     <table class="table table-hover" id="example">
           <thead class="text-center">
             <tr>
-              <th scope="col">NO</th>
-              <th scope="col">NAMA LENGKAP</th>
+            <th scope="col">NO</th>
+              <th scope="col">NO RESI</th>
               <th scope="col">NISN</th>
+              <th scope="col">NAMA LENGKAP</th>
+              <th scope="col">TEMPAT, TANGGAL LAHIR</th>
               <th scope="col">SEKOLAH ASAL</th>
+              <th scope="col">ALAMAT</th>
+              <th scope="col">NO WA</th>
               <th scope="col">JENIS PENERIMAAN</th>
-              <th scope="col">APPROVAL</th>
-              <th scope="col">AKSI</th>
+              <th scope="col">APPROVAL FORMULIR</th>
+              <th scope="col" >AKSI</th>
             </tr>
           </thead>
           <tbody>
           <?php $i = 1; 
 	        foreach ($daftarulang as $data) : ?>
 		<tr class="nomor text-center">
-            <th scope="row"><?php echo $i ;?></th>
-            <td><?php echo $data->nama_lengkap;?></td>
+    <th scope="row"><?php echo $i ;?></th>
+            <td><b><?php echo $data->id;?>/PPDB-BRN/2022</b></td>
             <td><?php echo $data->nisn;?></td>
+            <td><?php echo $data->nama_lengkap;?></td>
+            <td><?php echo $data->tptlahir;?>, <?=$data->tgllahir;?></td>
             <td><?php echo $data->sekolah_asal;?></td>
+            <td><?php echo $data->alamat;?></td>
+            <td><?php echo $data->no_wa;?></td>
             <td><?php echo $data->jenis;?></td>
     <?php
     $approval= $data->approve_daftarulang;

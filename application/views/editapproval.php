@@ -1,3 +1,4 @@
+
 <div class="content-wrapper">
 <div class="content-header">
       <div class="container-fluid">
@@ -44,7 +45,7 @@
         <input hidden type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
         </div>
 
-        <p align="right"><button type="submit" class="btn btn-success"><i class="fa fa-print"></i> Cetak</button></p>         
+        <p align="right"><button type="submit" class="btn btn-success"><i class="fa fa-print"></i> <b>CETAK COVER FORMULIR PENDAFTARAN</b></button></p>         
         </form>
 	<?php endforeach ;?>
 
@@ -65,20 +66,12 @@
 
         <div class="form-group">
         <label for="">Tanggal Lahir</label>
-        <input readonly type="text" name="tgllahir" class="form-control" value="<?php echo $data->tgllahir;?>">
+        <input readonly type="text" name="tgllahir" class="form-control" value="<?=$data->tgllahir;?>">
         </div>
 
     <div class="form-group">
         <label for="">Jenis Penerimaan</label>
-        <select readonly class="form-control form-control" name="jenis">
-          <option selected hidden><?php echo $data->jenis;?></option>
-          <option>Peserta Didik Baru SD</option>
-          <option>Peserta Didik Baru SMP</option>
-          <option>Peserta Didik Baru SMA</option>
-          <option>Pindahan SD</option>
-          <option>Pindahan SMP</option>
-          <option>Pindahan SMA</option>
-          </select>
+        <input readonly type="text" name="jenis" class="form-control" value="<?=$data->jenis;?>">
       </div>
         <div class="form-group">
         <label for="">NISN</label>
@@ -112,16 +105,19 @@
         <label for="">Foto</label><br>
         <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
         <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
+        <a href="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT FOTO</b></a>
         </div>
         <div class="form-group">
         <label for="">Akte Kelahiran</label><br>
         <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
         <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px">
+        <a href="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT AKTE</b></a>
         </div>
         <div class="form-group">
         <label for="">Bukti Transfer</label><br>
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
         <img src="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="border border-dark rounded" width="150px">
+        <a href="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT BUKTI PEMBAYARAN</b></a>
         </div>
         <div class="form-group">
         <input type="hidden" name="username" class="form-control" value="<?php echo $data->username;?>">

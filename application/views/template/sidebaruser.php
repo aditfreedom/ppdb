@@ -70,7 +70,7 @@
               <li class="nav-item">
                 <a href="<?=base_url('user/cetakdaftarulang/'.$id);?>" class="nav-link">
                   <i class="far fa fa-print nav-icon"></i>
-                  <p>Cetak Formulir Daftar Ulang</p>
+                  <p>Cetak Berkas Daftar Ulang</p>
                 </a>
               </li>
               </ul>

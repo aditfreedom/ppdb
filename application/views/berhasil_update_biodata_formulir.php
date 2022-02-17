@@ -13,7 +13,7 @@
 function jsFunction(){
     Swal.fire(
         'Berhasil!',
-        'Sukses Perbaharui Data Formulir',
+        'Sukses Perbaharui Data Formulir, Harap Menunggu Approval Formulir Atau Hubungi Admin Untuk Proses Approval',
         'success'
 ).then(function() {
     window.history.back();

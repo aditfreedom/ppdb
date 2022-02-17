@@ -162,7 +162,7 @@
                 <br>
 
 
-                <table border="1">
+                <table border="1" width="500px">
                 <tr>
                 <td class="text-center" style="width: 120px"><img src="<?=base_url()?>assets22/img/favicon.png" width="80px"></td>
                 <td class="text-center font-weight-bold" style="width: 300px">KARTU PESERTA TES<br>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP.2022-2023</td>
@@ -178,7 +178,7 @@
                   <br><br>    
                   <h4 class="text-danger font-weight-bold" style="font-size:17px;"><b>Note :</b></h4>
                   <h4 class="text-danger font-weight-bold" style="font-size:14px;"><b>*Kartu Peserta Tes Ini Harap Digunting dan Wajib Dibawa Saat Pelaksanaan Tes</b></h4>
-                  <h4 class="text-danger font-weight-bold" style="font-size:14px;"><b>*Harap Memakai Masker & Membawa Surat Aktif Sekolah Saat Tes Berlangsung</b></h4>
+                  <h4 class="text-danger font-weight-bold" style="font-size:14px;"><b>*Harap Memakai Masker dan Mematuhi Protokol Kesehatan Saat Tes Berlangsung</b></h4>
                         <?php endforeach; ?>
       </div>
 

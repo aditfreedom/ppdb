@@ -17,6 +17,14 @@
       <?php endforeach;?>
     </p> 
       </div>
+      <div class="row">
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user/isi_formulir/'.$id)?>" style="width:50%;" role="button"><i class="fa fa-arrow-left"></i> Sebelumnya</a></p>     
+  </div>
+  <div class="col">
+  <p align="center"><a class="btn btn-success" href="<?=base_url('user/registrasi_ulang/'.$id)?>" style="width:50%;" role="button">Selanjutnya <i class="fa fa-arrow-right"></i></a></p>
+  </div>
+  </div>
   
     </section>
 </div>

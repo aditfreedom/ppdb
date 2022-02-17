@@ -6,6 +6,7 @@
             <h1 class="m-0 text-info text-bold">ISI FORMULIR & UPLOAD BUKTI TRANSFER PEMBAYARAN</h1>
             <footer class="blockquote-footer"><b>Mohon Diisi Formulir Pendaftaran Dengan Lengkap Dan Benar</b></footer>
             <footer class="blockquote-footer">Rek. Bank Aceh : <b>10002240000336</b><cite title="Source Title"> a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen (Rp.150.000)</cite></footer>
+            <footer class="blockquote-footer">Apabila Sudah Melengkapi Isian, Mohon Cek Secara Berkala Untuk Proses Cetak Resi Pendaftaran & Kartu Ujian Atau Hubungi Admin Melalui WA : <b>+62813-7687-6109</b></footer>
           </div><!-- /.col -->
           
         </div><!-- /.row -->
@@ -81,7 +82,7 @@
             <hr>
 
         <div class="form-group">
-        <label for="">UPLOAD PAS FOTO CALON SISWA <b class="text-danger">(LAYAR MERAH UK. 2X3)</b> </label><br>
+        <label for="">UPLOAD PAS FOTO CALON SISWA <b class="text-danger">(LAYAR MERAH UK. 2X3)</b> [Tipe JPEG/JPG]</label><br>
         <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
         <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px"><br><br>
         <input type="file" name="foto_baru" class="form-control">
@@ -89,14 +90,14 @@
         <hr>
         <br> 
         <div class="form-group">
-        <label for="">UPLOAD AKTE KELAHIRAN <b class="text-danger">(Wajib Bagi Calon Peserta Didik Baru SD)</b></label><br>
+        <label for="">UPLOAD AKTE KELAHIRAN <b class="text-danger">(Wajib Bagi Calon Peserta Didik Baru SD)</b> [Tipe JPEG/JPG]</label><br>
         <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
         <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px"><br><br>
         <input type="file" name="akte_baru" class="form-control">
         </div><hr> <br>
 
         <div class="form-group">
-        <label for="">UPLOAD SLIP SETORAN BANK BUKTI PEMBAYARAN FORMULIR <b class="text-danger">(Tidak Melalui Transfer ATM)</b></label>
+        <label for="">UPLOAD SLIP SETORAN BANK BUKTI PEMBAYARAN FORMULIR <b class="text-danger">(Tidak Melalui Transfer ATM)</b> [Tipe JPEG/JPG]</label>
         <footer class="blockquote-footer">Rek. Bank Aceh : <b>10002240000336</b><br><cite title="Source Title">a.n Panitia PPDB Sekolah Sukma Bangsa Bireuen (Rp.150.000)</cite></footer><br>
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
         <img src="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="border border-dark rounded" width="150px"><br><br>
@@ -120,7 +121,7 @@
       <div class="form-group">
       <input  type="hidden" name="approve_daftarulang" class="form-control" value="<?php echo $data->approve_daftarulang;?>">
       </div>  
-        <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>         
+        <button type="submit" class="btn btn-primary font-weight-bold" style="width:100%;"><i class="fa fa-save"></i> SIMPAN DATA</button>         
         </form>
 	<?php endforeach ;?>
   <br>

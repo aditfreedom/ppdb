@@ -47,7 +47,7 @@
         <input type="text" name="sekolah_asal" class="form-control" style="height: 50px;" required>
         </div>
         <div class="form-group">
-        <label class="text-light font-weight-bold" for="">No WhatsApp</label>
+        <label class="text-light font-weight-bold" for="">No WhatsApp (Contoh : 6281325241234)</label>
         <input type="number" name="no_wa" class="form-control" placeholder="Contoh yang benar : 6281325241234" style="height: 50px;" required>
         </div>       
         <button type="submit" class="btn btn-primary font-weight-bold shadow-lg" style="width:100%;height: 50px;">DAFTAR AKUN</button>
