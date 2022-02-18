@@ -63,7 +63,7 @@
     ?>
             <td><a class="font-weight-bold text-uppercase <?= $class;?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir?>&nbsp&nbsp</a> </td>
             <td><?php echo anchor('home/editapproval/'.$data->id,'<div class="btn btn-primary btn-sm"><b>EDIT DATA</b></div>')?> <br><br><?php echo anchor('user/cetak_resi/'.$data->id,'<div class="btn btn-danger btn-sm"><b>CETAK RESI</b></i></div>')?> <br><br>
-            <a href="<?='https://wa.me/'.$data->no_wa?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a></td>	            
+            <a href="<?='https://wa.me/'.$data->no_wa.'?text=Terimakasih *'.$data->nama_lengkap.'* Telah Mendaftar Di Sekolah Sukma Bangsa Bireuen, Berikut Kami Lampirkan Resi Pendaftaran Dan Kartu Tes Seleksi Penerimaan Peserta Didik Baru.'?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a></td>	            
 
 
 		</tr>

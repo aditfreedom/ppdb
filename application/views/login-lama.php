@@ -15,7 +15,7 @@
     <title>ADMIN AREA LOGIN</title>
   </head>
   <div class="limiter">
-  <body style="background-image: url(<?php echo base_url('assets22/img/bg_regist.JPG');?>);background-size: cover;}">
+  <body style="background-image: url(<?php echo base_url('assets22/img/bg_regist.jpg');?>);background-size: cover;}">
   <div class="container">
     <div class="row">
       <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
