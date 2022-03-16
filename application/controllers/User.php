@@ -187,6 +187,12 @@ class User extends CI_Controller {
         public function cetak_resi($id){
             $sess_data = $this->session->userdata();
             $data['cetak_resi'] = $this->M_ppdb->cetak_resi($id)->result();
+            $data_user = $this->M_ppdb->cetak_resi($id)->result();
+            
+            foreach ($data_user as $data2) 
+                {
+                    $nama=$data2->nama_lengkap;
+                }
             // $this->load->view('cetak_resi',$data);
                     $this->load->library('dompdf_gen');            
                     $this->load->view('cetak_resi',$data);
@@ -196,7 +202,7 @@ class User extends CI_Controller {
                     $this->dompdf->set_paper($paper_size,$orientation);
                     $this->dompdf->load_html($html);
                     $this->dompdf->render();
-                    $this->dompdf->stream("Resi Pendaftaran PPDB ".$id, array('Attachment' =>0));
+                    $this->dompdf->stream("Resi Pendaftaran PPDB (".$nama.").pdf", array('Attachment' =>0));
             }
 
         public function registrasi_ulang($id){

@@ -68,63 +68,63 @@
                         <td class="text-center"><b>PAS FOTO CALON PESERTA DIDIK</b></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Kode Pendaftaran</td>
+                        <td class="text-left">Kode Pendaftaran</td>
                         <td>:</td>
                         <td><?=$data->id;?>/PPDB-BRN/2022</td>
                         <td rowspan="12" class="text-center"><img src="<?=base_url()?>asset/foto/<?=$data->foto?>" width="150px"></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Nama Lengkap</td>
+                        <td class="text-left">Nama Lengkap</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->nama_lengkap;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Tempat Lahir</td>
+                        <td class="text-left">Tempat Lahir</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->tptlahir;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Tanggal Lahir</td>
+                        <td class="text-left">Tanggal Lahir</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->tgllahir;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">NISN</td>
+                        <td class="text-left">NISN</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->nisn;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Alamat Lengkap</td>
+                        <td class="text-left">Alamat Lengkap</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->alamat;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Asal Sekolah</td>
+                        <td class="text-left">Asal Sekolah</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->sekolah_asal;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Nama Ayah</td>
+                        <td class="text-left">Nama Ayah</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->namaayah;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Nama Ibu</td>
+                        <td class="text-left">Nama Ibu</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->namaibu;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">No. HP Orang Tua</td>
+                        <td class="text-left">No. HP Orang Tua</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->no_hp;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">No. WA Orang Tua</td>
+                        <td class="text-left">No. WA Orang Tua</td>
                         <td>:</td>
                         <td class="text-left"> <?=$data->no_wa;?></td>
                       </tr>
                       <tr>
-                        <td class="text-center">Status Approval Formulir</td>
+                        <td class="text-left">Status Approval Formulir</td>
                         <td>:</td>
                         <td class="text-left"><b> <?=$data->approve_formulir;?></b></td>
                       </tr>
@@ -162,19 +162,19 @@
                 <br>
 
 
-                <table border="1" width="500px">
-                <tr>
-                <td class="text-center" style="width: 120px"><img src="<?=base_url()?>assets22/img/favicon.png" width="80px"></td>
-                <td class="text-center font-weight-bold" style="width: 300px">KARTU PESERTA TES<br>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP.2022-2023</td>
-                </tr>
-                <tr>
-                  <td colspan="2"><pre> Jenis Pendaftaran     : <b><?=$data->jenis;?></b><br> Nomor Pendaftaran     : <b><?=$data->id;?>/PPDB-BRN/2022</b><br> Nama Calon PD         : <b><?=$data->nama_lengkap;?></b><br> Tempat/Tanggal Lahir  : <b><?=$data->tptlahir;?>/<?= tanggal_indo($data->tgllahir);?></b><br> Asal Sekolah          : <b><?=$data->sekolah_asal;?></b></pre>
-                   <div width="300px"><pre>                          Bireuen, <?php echo tanggal_indo(date('Y-m-d'))?><br>                          Ketua Panitia,<br>                             <img src="<?=base_url()?>asset/qr/qrppdb.png" width="50"><br>                          Helmiati, S.Pd.I<br>                          NIP. 10061019</pre></div>
-                </td>   
-                               
-                </tr>
+                <table border="1">
+                    <tr>
+                      <th class="text-center" style="width: 120px"><img src="<?=base_url()?>assets22/img/favicon.png" width="80px"></th>
+                      <th class="text-center font-weight-bold" style="width: 350px">KARTU PESERTA TES<br>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2022 - 2023</th>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><br><div class="text-center"><img class="rounded border border-dark"  src="<?=base_url()?>asset/foto/<?=$data->foto?>" width="100px"></div><br>
+                      <br><pre> Jenis Pendaftaran     : <b><?=$data->jenis;?></b><br> Nomor Pendaftaran     : <b><?=$data->id;?>/PPDB-BRN/2022</b><br> Nama Calon PD         : <b><?=$data->nama_lengkap;?></b><br> Tempat/Tanggal Lahir  : <b><?=$data->tptlahir;?>/<?= tanggal_indo($data->tgllahir);?></b><br> Asal Sekolah          : <b><?=$data->sekolah_asal;?></b></pre>
+                      <pre class="text-center"><b>Bireuen, <?php echo tanggal_indo(date('Y-m-d'))?></b><br>Ketua Panitia,<br><img src="<?=base_url()?>asset/qr/qrppdb.png" width="50"><br>Helmiati, S.Pd.I<br>NIP. 10061019</pre>
+                    </td>
+                    </tr>
                   </table>
-                  
+
                   <br><br>    
                   <h4 class="text-danger font-weight-bold" style="font-size:17px;"><b>Note :</b></h4>
                   <h4 class="text-danger font-weight-bold" style="font-size:14px;"><b>*Kartu Peserta Tes Ini Harap Digunting dan Wajib Dibawa Saat Pelaksanaan Tes</b></h4>
