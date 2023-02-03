@@ -1,6 +1,6 @@
 <footer class="main-footer no-print">
-    <strong>Copyright &copy; 2021 <a href="#">Sekolah Sukma Bangsa Bireuen</a>.</strong>
-    All rights reserved.
+    <strong>Copyright &copy; 2022 <a href="#">Sekolah Sukma Bangsa Bireuen</a>.</strong>
+    All rights reserved. <a href="https://www.instagram.com/sekolahsukmabangsabrn/" class="font-weight-bold" target="_blank">Follow Instagram : @sekolahsukmabangsabrn</a>
   </footer>
 
   <!-- Control Sidebar -->
@@ -69,9 +69,9 @@ $(document).ready(function() {
     $('#example').DataTable( {
         dom: 'Bfrtip',
         buttons: [
-            {extend:'excel',title: ' ',className: 'btn btn-primary'}, 
-            {extend:'pdf',title: ' ',className: 'btn btn-primary'}, 
-            {extend:'print',title: ' ',className: 'btn btn-primary'}, 
+            {extend:'excel',title: 'DATA PPDB SSB BIREUEN',className: 'btn btn-primary'}, 
+            {extend:'pdf',title: 'DATA PPDB SSB BIREUEN',className: 'btn btn-primary'}, 
+            {extend:'print',title: 'DATA PPDB SSB BIREUEN',className: 'btn btn-primary'}, 
         ]
     } );
 } );

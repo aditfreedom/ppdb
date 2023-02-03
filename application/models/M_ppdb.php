@@ -56,7 +56,7 @@ class M_ppdb extends CI_Model{
     }
 
     public function tampil_approval(){
-        $query = $this->db->query("SELECT * from pengguna where approve_formulir = 'Antrian' OR approve_formulir = 'Diterima' OR approve_formulir = 'Ditolak'");
+        $query = $this->db->query("SELECT * from pengguna where approve_formulir = 'Antrian' OR approve_formulir = 'Diterima' OR approve_formulir = 'Ditolak' ORDER BY id DESC");
         return $query;
     }
 
@@ -66,7 +66,7 @@ class M_ppdb extends CI_Model{
     }
 
     public function tampil_lulus(){
-        $query = $this->db->query("SELECT * from pengguna where (approve_lulus = 'Antrian' OR approve_lulus = 'Lulus' OR approve_lulus = 'Tidak Lulus') AND approve_formulir = 'Diterima' ");
+        $query = $this->db->query("SELECT * from pengguna where (approve_lulus = 'Antrian' OR approve_lulus = 'Lulus' OR approve_lulus = 'Tidak Lulus') AND approve_formulir = 'Diterima' ORDER BY id DESC");
         return $query;
     }
 
@@ -127,17 +127,17 @@ class M_ppdb extends CI_Model{
     }
 
     public function hitungsdformulir(){
-        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SD' AND approve_formulir='Diterima'");
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SD' OR jenis='Jalur Prestasi SD') AND approve_formulir='Diterima'");
         return $result->num_rows();
     }
     
     public function hitungsmpformulir(){
-        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SMP' AND approve_formulir='Diterima'");
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SMP' OR jenis='Jalur Prestasi SMP') AND approve_formulir='Diterima'");
         return $result->num_rows();
     }
 
     public function hitungsmaformulir(){
-        $result = $this->db->query("SELECT*FROM pengguna WHERE jenis='Peserta Didik Baru SMA' AND approve_formulir='Diterima'");
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SMA' OR jenis='Jalur Prestasi SMA') AND approve_formulir='Diterima'");
         return $result->num_rows();
     }
 

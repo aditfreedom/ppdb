@@ -67,7 +67,7 @@
               </p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item " hidden>
             <a href="<?=base_url('home/datapengguna');?>" class="nav-link">
               <i class="nav-icon fa fa-users"></i>
               <p>
@@ -76,7 +76,7 @@
             </a>
           </li>
 
-          <li class="nav-item ">
+          <li class="nav-item " hidden>
             <a href="<?=base_url('alur.jpg');?>" class="nav-link" target="_blank">
               <i class="nav-icon fa fa-download"></i>
               <p>

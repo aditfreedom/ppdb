@@ -168,20 +168,21 @@ class Hal extends CI_Controller {
     public function tambahuser(){
 		
 		$data = array(
-			'nama_lengkap' => $this->input->post('nama_lengkap'),
-			'sekolah_asal' => $this->input->post('sekolah_asal'),
+			'nama_lengkap' => htmlspecialchars($this->input->post('nama_lengkap')),
+			'sekolah_asal' => htmlspecialchars($this->input->post('sekolah_asal')),
 			'nisn' => "0",
 			'alamat' => "",
 			'no_hp' => "",
 			'bukti_tf' => "",
-			'jenis' => $this->input->post('jenis'),
+			'jenis' => htmlspecialchars($this->input->post('jenis')),
+            'pindah_kelas' => "",
 			'foto' => "",
             'bukti_tf' => "",
-            'tptlahir' => $this->input->post('tptlahir'),
-            'tgllahir' => $this->input->post('tgllahir'),
+            'tptlahir' => htmlspecialchars($this->input->post('tptlahir')),
+            'tgllahir' => htmlspecialchars($this->input->post('tgllahir')),
             'namaayah' => "",
             'namaibu' => "",
-            'no_wa' => $this->input->post('no_wa'),
+            'no_wa' => "62". htmlspecialchars($this->input->post('no_wa')),
             'akte' => "",
 			'username' => "",
 			'password' => "",
@@ -194,8 +195,8 @@ class Hal extends CI_Controller {
 
 		);
 
-        $no_wa = $this->input->post('no_wa');
-        $tgllahir = $this->input->post('tgllahir');
+        $no_wa = htmlspecialchars($this->input->post('no_wa'));
+        $tgllahir = htmlspecialchars($this->input->post('tgllahir'));
 
 
 		$hitungusername= $this->M_ppdb->tampildatapengguna1($no_wa,$tgllahir);

@@ -95,11 +95,11 @@
         </div>
         <div class="form-group">
         <label for="">No HP Orang Tua</label>
-        <input readonly type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
+        <input type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
         </div>
         <div class="form-group">
         <label for="">No WA Aktif</label>
-        <input readonly type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
+        <input type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
         </div>
         <div class="form-group">
         <label for="">Foto</label><br>
@@ -108,10 +108,10 @@
         <a href="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT FOTO</b></a>
         </div>
         <div class="form-group">
-        <label for="">Akte Kelahiran</label><br>
+        <label for="">Akte Kelahiran/Surat Keterangan/Sertifikat Prestasi</label><br>
         <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
         <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px">
-        <a href="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT AKTE</b></a>
+        <a href="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT BERKAS</b></a>
         </div>
         <div class="form-group">
         <label for="">Bukti Transfer</label><br>

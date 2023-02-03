@@ -19,11 +19,11 @@
         <!-- Small boxes (Stat box) -->
         <h1 class="text-center font-weight-bold">SELAMAT DATANG DI APLIKASI PPDB ONLINE</h1>
         <h1 class="text-center font-weight-bold">SEKOLAH SUKMA BANGSA BIREUEN</h1>
-        <h1 class="text-center font-weight-bold">TP. 2022/2023</h1>
+        <h1 class="text-center font-weight-bold">TP. 2023/2024</h1>
         <img src="<?=base_url('logo.png')?>" width="250px" srcset="" class="img-fluid mx-auto d-block" alt="Responsive image">
         <br>
         <a class="btn btn-success font-weight-bold" href="<?=base_url('user/isi_formulir/'.$id)?>" style="width:100%;" role="button"><b>MENDAFTAR</b></a> <br><br>    
-        <a class="btn btn-warning font-weight-bold" href="https://www.youtube.com/c/SekolahSukmaBangsaBireuen" style="width:100%;" role="button" target="_blank"><b>KLIK DISINI UNTUK MELIHAT TUTORIAL CARA MENDAFTAR</b></a>     
+        <a class="btn btn-warning font-weight-bold" href="https://www.youtube.com/c/SekolahSukmaBangsaBireuen" style="width:100%;" role="button" target="_blank" hidden><b>KLIK DISINI UNTUK MELIHAT TUTORIAL CARA MENDAFTAR</b></a>     
 
 
        

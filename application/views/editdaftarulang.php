@@ -1720,7 +1720,7 @@
 
         <div class="form-group">
         <label for="">Apa Yang Anda Ketahui Tentang Sekolah Sukma Bangsa?</label>
-        <textarea readonly class="form-control" name="alasan" rows="2"><?php echo $data->alasan;?></textarea>
+        <textarea readonly class="form-control" name="alasan" rows="2"><?php echo $data->tentang_sekolah;?></textarea>
         </div>    
         <!-- <button type="submit" class="btn btn-primary" style="width:100%;"><i class="fa fa-save"></i> Simpan</button>          -->
         </form>

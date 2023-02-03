@@ -23,8 +23,9 @@ class User extends CI_Controller {
 	{
 		$this->load->model('M_ppdb');
 		$sess_data = $this->session->userdata();
+        $sess_data['subtitle']="Home";
 		$this->load->view('template/header');
-		$this->load->view('template/sidebaruser',$sess_data);
+		$this->load->view('template/sidebaruser',$sess_data,);
 		$this->load->view('homeuser');
 		$this->load->view('template/footer');
 
@@ -33,6 +34,7 @@ class User extends CI_Controller {
 
     public function isi_formulir($id){
 		$sess_data = $this->session->userdata();
+        $sess_data['subtitle'] = "Isi Formulir";
 		$id =    array ('id' => $id);
 		$data['isi_formulir'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
@@ -47,6 +49,7 @@ class User extends CI_Controller {
         $tptlahir              = $this->input->post('tptlahir');
         $tgllahir              = $this->input->post('tgllahir');
         $jenis             = $this->input->post('jenis');
+        $pindah_kelas             = $this->input->post('pindah_kelas');
         $nisn              = $this->input->post('nisn');
         $alamat            = $this->input->post('alamat');
         $sekolah_asal      = $this->input->post('sekolah_asal');
@@ -140,6 +143,7 @@ class User extends CI_Controller {
             'no_wa' => $no_wa,
             'akte' => $akte_baru,
             'jenis' => $jenis,
+            'pindah_kelas' => $pindah_kelas,
             'nisn' => $nisn,
             'alamat' =>$alamat,
             'sekolah_asal' =>$sekolah_asal,
@@ -163,6 +167,7 @@ class User extends CI_Controller {
 
     public function cetak_kartu($id){
 		$sess_data = $this->session->userdata();
+        $sess_data['subtitle'] = "Cetak Resi";
 		$id =    array ('id' => $id);
 		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
 		$data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   

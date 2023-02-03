@@ -142,6 +142,7 @@
                           <td style="width: 35%">Bireuen, <?php echo tanggal_indo(date('Y-m-d'))?><br>Ketua Panitia,<br><img src="<?=base_url()?>asset/qr/qrppdb.png" width="100px"><br>Helmiati, S.Pd.I<br>NIP. 10061019</td>
                         </tr>
                       </table>
+                      <div style="page-break-before: always;"></div>
 
                       <table style="width: 100%"  class="text-center">
                 <tr>
