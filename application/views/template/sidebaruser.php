@@ -51,7 +51,7 @@
            </a>
          </li>
 
-         <li class="nav-item has-treeview menu-open">
+         <li class="nav-item has-treeview <?= $subtitles === 'Registrasi Ulang' ? 'menu-open' : 'menu-close' ?>">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-user-check"></i>
              <p>
@@ -61,13 +61,13 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="<?= base_url('user/registrasi_ulang/' . $id); ?>" class="nav-link">
+               <a href="<?= base_url('user/registrasi_ulang/' . $id); ?>" class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active bg-primary' : '' ?>">
                  <i class="far fa fa-clipboard-check nav-icon"></i>
                  <p>Daftar Ulang</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="<?= base_url('user/cetakdaftarulang/' . $id); ?>" class="nav-link">
+               <a href="<?= base_url('user/cetakdaftarulang/' . $id); ?>" class="nav-link <?= $subtitle === 'Cetak Berkas' ? 'active bg-primary' : '' ?>">
                  <i class="far fa fa-print nav-icon"></i>
                  <p>Cetak Berkas Daftar Ulang</p>
                </a>

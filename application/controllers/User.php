@@ -24,6 +24,7 @@ class User extends CI_Controller {
 		$this->load->model('M_ppdb');
 		$sess_data = $this->session->userdata();
         $sess_data['subtitle']="Home";
+        $sess_data['subtitles']="-";
 		$this->load->view('template/header');
 		$this->load->view('template/sidebaruser',$sess_data,);
 		$this->load->view('homeuser');
@@ -35,6 +36,7 @@ class User extends CI_Controller {
     public function isi_formulir($id){
 		$sess_data = $this->session->userdata();
         $sess_data['subtitle'] = "Isi Formulir";
+        $sess_data['subtitles']="-";
 		$id =    array ('id' => $id);
 		$data['isi_formulir'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
@@ -168,6 +170,7 @@ class User extends CI_Controller {
     public function cetak_kartu($id){
 		$sess_data = $this->session->userdata();
         $sess_data['subtitle'] = "Cetak Resi";
+        $sess_data['subtitles']="-";
 		$id =    array ('id' => $id);
 		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
 		$data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
@@ -212,6 +215,8 @@ class User extends CI_Controller {
 
         public function registrasi_ulang($id){
             $sess_data = $this->session->userdata();
+            $sess_data['subtitle']="Daftar Ulang";
+            $sess_data['subtitles']="Registrasi Ulang";
             $id =    array ('id' => $id);
             // $data['registrasi_ulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result(); 
             $data['registrasi_ulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();  
@@ -333,6 +338,8 @@ class User extends CI_Controller {
     
             public function cetakdaftarulang($id){
                 $sess_data = $this->session->userdata();
+                $sess_data['subtitle']="Cetak Berkas";
+                $sess_data['subtitles']="Registrasi Ulang";
                 $id =    array ('id' => $id);
                 $data['cetakdaftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
 
