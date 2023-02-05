@@ -1,8 +1,9 @@
- <!-- Main Sidebar Container -->
- <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+<!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#212F3D">
    <!-- Brand Logo -->
    <a href="#" class="brand-link">
-     <img src="<?php echo base_url() ?>logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+     <img src="<?php echo base_url() ?>logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
      <span class="brand-text font-weight-light"><b style="font-size:18px;">PPDB SSB BIREUEN</b></span>
    </a>
 
@@ -34,7 +35,7 @@
 
 
          <li class="nav-item ">
-           <a href="<?= base_url('user/isi_formulir/' . $id); ?>" class="nav-link <?= $subtitle === 'Isi Formulir' ? 'active' : '' ?>">
+           <a href="<?= base_url('user/isi_formulir/'); ?>" class="nav-link <?= $subtitle === 'Isi Formulir' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-money-check-alt"></i>
              <p>
                Isi Formulir & Pembayaran
@@ -43,7 +44,7 @@
          </li>
 
          <li class="nav-item ">
-           <a href="<?= base_url('user/cetak_kartu/' . $id); ?>" class="nav-link <?= $subtitle === 'Cetak Resi' ? 'active' : '' ?>">
+           <a href="<?= base_url('user/cetak_kartu/'); ?>" class="nav-link <?= $subtitle === 'Cetak Resi' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-id-card-alt"></i>
              <p>
                Cetak Resi & Kartu Peserta
@@ -61,13 +62,13 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="<?= base_url('user/registrasi_ulang/' . $id); ?>" class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active bg-primary' : '' ?>">
+               <a href="<?= base_url('user/registrasi_ulang/'); ?>" class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active bg-primary' : '' ?>">
                  <i class="far fa fa-clipboard-check nav-icon"></i>
                  <p>Daftar Ulang</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="<?= base_url('user/cetakdaftarulang/' . $id); ?>" class="nav-link <?= $subtitle === 'Cetak Berkas' ? 'active bg-primary' : '' ?>">
+               <a href="<?= base_url('user/cetakdaftarulang/'); ?>" class="nav-link <?= $subtitle === 'Cetak Berkas' ? 'active bg-primary' : '' ?>">
                  <i class="far fa fa-print nav-icon"></i>
                  <p>Cetak Berkas Daftar Ulang</p>
                </a>

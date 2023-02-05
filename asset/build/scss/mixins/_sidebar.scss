@@ -4,15 +4,15 @@
 
 // Sidebar Color
 @mixin sidebar-color($color) {
-  .nav-sidebar > .nav-item {
-    & > .nav-link.active {
+  .nav-sidebar>.nav-item {
+    &>.nav-link.active {
       background-color: $color;
       color: color-yiq($color);
     }
   }
 
-  .nav-sidebar.nav-legacy > .nav-item {
-    & > .nav-link.active {
+  .nav-sidebar.nav-legacy>.nav-item {
+    &>.nav-link.active {
       border-color: $color;
     }
   }
@@ -20,9 +20,10 @@
 
 // Sidebar Mini Breakpoints
 @mixin sidebar-mini-breakpoint() {
+
   // A fix for text overflow while transitioning from sidebar mini to full sidebar
   .nav-sidebar,
-  .nav-sidebar > .nav-header,
+  .nav-sidebar>.nav-header,
   .nav-sidebar .nav-link {
     white-space: nowrap;
     overflow: hidden;
@@ -50,7 +51,7 @@
       width: 0;
     }
 
-    .sidebar .user-panel > .info,
+    .sidebar .user-panel>.info,
     .nav-sidebar .nav-link p,
     .brand-text {
       margin-left: -10px;
@@ -108,7 +109,7 @@
           }
         }
 
-        .user-panel > .info,
+        .user-panel>.info,
         .nav-sidebar .nav-link p,
         .brand-text,
         .logo-xl {
@@ -134,12 +135,12 @@
         // Make the sidebar links, menus, labels, badges
         // and angle icons disappear
         .sidebar-form,
-        .user-panel > .info {
+        .user-panel>.info {
           display: block !important;
           -webkit-transform: translateZ(0);
         }
 
-        .nav-sidebar > .nav-item > .nav-link > span {
+        .nav-sidebar>.nav-item>.nav-link>span {
           display: inline-block !important;
         }
       }

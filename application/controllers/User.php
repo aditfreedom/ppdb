@@ -33,12 +33,13 @@ class User extends CI_Controller {
 
 	}
 
-    public function isi_formulir($id){
+    public function isi_formulir(){
+        $plain_id = $this->session->userdata('id');
 		$sess_data = $this->session->userdata();
         $sess_data['subtitle'] = "Isi Formulir";
         $sess_data['subtitles']="-";
-		$id =    array ('id' => $id);
-		$data['isi_formulir'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
+		$id_data =    array ('id' => $plain_id);
+		$data['isi_formulir'] = $this->M_ppdb->tampilpengguna($id_data,'pengguna')->result();
 		$this->load->view('template/header');
 		$this->load->view('template/sidebaruser',$sess_data);
 		$this->load->view('isi_formulir',$data);
@@ -167,11 +168,12 @@ class User extends CI_Controller {
         $this->load->view('berhasil_update_biodata_formulir');
     }
 
-    public function cetak_kartu($id){
+    public function cetak_kartu(){
+        $plain_id = $this->session->userdata('id');
 		$sess_data = $this->session->userdata();
         $sess_data['subtitle'] = "Cetak Resi";
         $sess_data['subtitles']="-";
-		$id =    array ('id' => $id);
+		$id =    array ('id' => $plain_id);
 		$data['cetak_kartu'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
 		$data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
 
@@ -192,7 +194,9 @@ class User extends CI_Controller {
              }
         }
 
-        public function cetak_resi($id){
+        public function cetak_resi(){
+
+            $id = $this->session->userdata('id');
             $sess_data = $this->session->userdata();
             $data['cetak_resi'] = $this->M_ppdb->cetak_resi($id)->result();
             $data_user = $this->M_ppdb->cetak_resi($id)->result();
@@ -201,7 +205,8 @@ class User extends CI_Controller {
                 {
                     $nama=$data2->nama_lengkap;
                 }
-            // $this->load->view('cetak_resi',$data);
+
+        // $this->load->view('cetak_resi',$data);
                     $this->load->library('dompdf_gen');            
                     $this->load->view('cetak_resi',$data);
                     $paper_size = 'A4';
@@ -213,11 +218,12 @@ class User extends CI_Controller {
                     $this->dompdf->stream("Resi Pendaftaran PPDB (".$nama.").pdf", array('Attachment' =>0));
             }
 
-        public function registrasi_ulang($id){
+        public function registrasi_ulang(){
+             $plain_id = $this->session->userdata('id');
             $sess_data = $this->session->userdata();
             $sess_data['subtitle']="Daftar Ulang";
             $sess_data['subtitles']="Registrasi Ulang";
-            $id =    array ('id' => $id);
+            $id =    array ('id' => $plain_id);
             // $data['registrasi_ulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result(); 
             $data['registrasi_ulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();  
             $data2 = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();   
@@ -336,11 +342,12 @@ class User extends CI_Controller {
                 $this->load->view('berhasil_update_biodata_formulir');
             }
     
-            public function cetakdaftarulang($id){
+            public function cetakdaftarulang(){
+                $plain_id = $this->session->userdata('id');
                 $sess_data = $this->session->userdata();
                 $sess_data['subtitle']="Cetak Berkas";
                 $sess_data['subtitles']="Registrasi Ulang";
-                $id =    array ('id' => $id);
+                $id =    array ('id' => $plain_id);
                 $data['cetakdaftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
 
 
