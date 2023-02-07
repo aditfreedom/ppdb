@@ -115,7 +115,7 @@
         <div class="form-group">
           <label for="">No WA Aktif Orang Tua</label>
           <input type="number" name="no_wa" class="form-control" placeholder="Contoh : 6281376876109" maxlength="15"
-            value="<?php echo $data->no_wa; ?>" required>
+            value="<?php echo $data->no_wa; ?>" readonly>
         </div>
       </div>
     </div>

@@ -347,18 +347,7 @@ class Home extends CI_Controller {
 		);
 
 		$data2 = array(
-			'id' => $id, 'tingkat' => "", 'nama_lengkap' => "", 'nama_panggilan' => "", 'nisn' => "",
-			'tpt_lahir' => "", 'tgl_lahir' => "",'agama' => "", 'suku' => "", 'jk' => "", 'goldar' => "",
-			'anak_ke' => "", 'dari_saudara' => "", 'alamat' => "", 'jarak' => "", 'desa' => "", 'kecamatan' => "",
-			'kabupaten' => "",'provinsi' => "",'nama_ayah' => "",'tptlahir_ayah' => "",'tgllahir_ayah' => "",
-			'pendidikan_ayah' => "",'pekerjaan_ayah' => "", 'penghasilan_ayah' => "",'alamat_ayah' => "",
-			'desa_ayah' => "",'kecamatan_ayah' => "",'kabupaten_ayah' => "",'provinsi_ayah' => "",'hp_ayah' => "",
-			'nama_ibu' => "",'tptlahir_ibu' => "",'tgllahir_ibu' => "",
-			'pendidikan_ibu' => "",'pekerjaan_ibu' => "", 'penghasilan_ibu' => "",'alamat_ibu' => "",
-			'desa_ibu' => "",'kecamatan_ibu' => "",'kabupaten_ibu' => "",'provinsi_ibu' => "",'hp_ibu' => "",
-			'sekolah_asal' => "",'npsn' => "", 'alamat_sekolah' => "", 'kabupaten_sekolah' => "", 'provinsi_sekolah' => "",
-			'penyakit' => "",'olah_raga' => "", 'seni' => "",'tari' => "",'lukis' => "", 'drama' => "", 'sastra' => "",
-			'organisasi' => "",'prestasi' => "",'alasan' => "",'tentang_sekolah' => ""
+			'id' => $id
 		); 
 	
 

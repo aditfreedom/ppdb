@@ -72,6 +72,10 @@
                   <input type="number" name="nisn" class="form-control" maxlength="15" placeholder="Nomor Induk Siswa Nasional" value="<?php echo $data->nisn; ?>" required>
                 </div>
                 <div class="form-group">
+                  <label for="">NIK</label>
+                  <input type="number" name="nik_siswa" class="form-control" maxlength="15" placeholder="NIK Siswa" value="<?php echo $data->nik; ?>" required>
+                </div>
+                <div class="form-group">
                   <label for="">Golongan Darah</label>
                   <select class="form-control form-control" name="goldar" required>
                     <option selected hidden><?php echo $data->goldar; ?>
@@ -230,6 +234,11 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="">NIK Ayah</label>
+                  <input type="number" name="nik_ayah" class="form-control" maxlength="15" placeholder="NIK Ayah" value="<?php echo $data->nik_ayah; ?>" required>
+                </div>
+
+                <div class="form-group">
                   <label for="">Pendidikan Terakhir</label>
                   <select class="form-control form-control" name="pendidikan_ayah" required>
                     <option selected hidden>
@@ -336,6 +345,11 @@
                 <div class="form-group">
                   <label for="">Nama Lengkap Ibu</label>
                   <input type="text" name="nama_ibu" class="form-control" placeholder="Nama Lengkap Ibu" maxlength="200" value="<?php echo $data->nama_ibu; ?>" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="">NIK Ibu</label>
+                  <input type="number" name="nik_ibu" class="form-control" maxlength="15" placeholder="NIK Ibu" value="<?php echo $data->nik_ibu; ?>" required>
                 </div>
 
                 <div class="form-group">

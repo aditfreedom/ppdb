@@ -2,8 +2,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color:#000000">
   <!-- Brand Logo -->
   <a href="#" class="brand-link">
-    <img src="<?php echo base_url() ?>logo.png" alt="Logo"
-      class="brand-image img-circle elevation-3" style="opacity: .8">
+    <img src="<?php echo base_url() ?>logo.png" alt="Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
     <span class="brand-text font-weight-bold"><b style="font-size:18px;">PPDB SSB BIREUEN</b></span>
   </a>
 
@@ -12,37 +11,33 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <?php
-      $datafoto="";
-    foreach ($user as $data) {
-        $datafoto=$data->foto;
-    }
-    $fotoprofil="";
-    if ($datafoto==null) {
-        $fotoprofil=base_url('asset/noprofil.png');
-    } else {
-        $fotoprofil=base_url('asset/foto/'.$datafoto);
-    }
-    ?>
+      $datafoto = "";
+      foreach ($user as $data) {
+        $datafoto = $data->foto;
+      }
+      $fotoprofil = "";
+      if ($datafoto == null) {
+        $fotoprofil = base_url('asset/noprofil.png');
+      } else {
+        $fotoprofil = base_url('asset/foto/' . $datafoto);
+      }
+      ?>
       <div class="image">
-        <img src="<?=$fotoprofil?>" class="img-circle elevation-2"
-          alt="User Image">
+        <img src="<?= $fotoprofil ?>" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="<?=base_url('user/isi_formulir')?>"
-          class="d-block text-uppercase"><b><?php echo $nama_lengkap; ?><br></b></a>
-        <p class="text-light mb-0"><b><?php echo $jenis; ?></b></p>
+        <a href="<?= base_url('user/isi_formulir') ?>" class="d-block text-uppercase"><b><?php echo $nama_lengkap; ?><br></b></a>
+        <p class="text-light mb-0" style="font-size: 13px;"><b><?php echo $jenis; ?></b></p>
       </div>
     </div>
 
     <!-- Sidebar Menu -->
     <nav class="mt-2 text-sm">
-      <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu"
-        data-accordion="false">
+      <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         <li class="nav-item ">
-          <a href="<?= base_url('user'); ?>"
-            class="nav-link <?= $subtitle === 'Home' ? 'active' : '' ?>">
+          <a href="<?= base_url('user'); ?>" class="nav-link <?= $subtitle === 'Home' ? 'active' : '' ?>">
             <i class="nav-icon fa fa-home"></i>
             <p>
               Home
@@ -52,8 +47,7 @@
 
 
         <li class="nav-item ">
-          <a href="<?= base_url('user/isi_formulir/'); ?>"
-            class="nav-link <?= $subtitle === 'Isi Formulir' ? 'active' : '' ?>">
+          <a href="<?= base_url('user/isi_formulir/'); ?>" class="nav-link <?= $subtitle === 'Isi Formulir' ? 'active' : '' ?>">
             <i class="nav-icon fa fa-money-check-alt"></i>
             <p>
               Isi Formulir & Pembayaran
@@ -62,8 +56,7 @@
         </li>
 
         <li class="nav-item ">
-          <a href="<?= base_url('user/cetak_kartu/'); ?>"
-            class="nav-link <?= $subtitle === 'Cetak Resi' ? 'active' : '' ?>">
+          <a href="<?= base_url('user/cetak_kartu/'); ?>" class="nav-link <?= $subtitle === 'Cetak Resi' ? 'active' : '' ?>">
             <i class="nav-icon fa fa-id-card-alt"></i>
             <p>
               Cetak Resi & Kartu Peserta
@@ -71,8 +64,7 @@
           </a>
         </li>
 
-        <li
-          class="nav-item has-treeview <?= $subtitles === 'Registrasi Ulang' ? 'menu-open' : 'menu-close' ?>">
+        <li class="nav-item has-treeview <?= $subtitles === 'Registrasi Ulang' ? 'menu-open' : 'menu-close' ?>">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-user-check"></i>
             <p>
@@ -82,15 +74,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= base_url('user/registrasi_ulang/'); ?>"
-                class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active bg-primary' : '' ?>">
+              <a href="<?= base_url('user/registrasi_ulang/'); ?>" class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active bg-primary' : '' ?>">
                 <i class="far fa fa-clipboard-check nav-icon"></i>
                 <p>Daftar Ulang</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('user/cetakdaftarulang/'); ?>"
-                class="nav-link <?= $subtitle === 'Cetak Berkas' ? 'active bg-primary' : '' ?>">
+              <a href="<?= base_url('user/cetakdaftarulang/'); ?>" class="nav-link <?= $subtitle === 'Cetak Berkas' ? 'active bg-primary' : '' ?>">
                 <i class="far fa fa-print nav-icon"></i>
                 <p>Cetak Berkas Daftar Ulang</p>
               </a>
@@ -99,8 +89,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="<?= base_url('user/logout') ?>"
-            class="nav-link bg-danger">
+          <a href="<?= base_url('user/logout') ?>" class="nav-link bg-danger">
             <i class="nav-icon fa fa-sign-out-alt"></i>
             <p>
               Logout

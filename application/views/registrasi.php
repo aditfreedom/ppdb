@@ -56,12 +56,12 @@
       <label class="text-light font-weight-bold" for="">No WhatsApp (Contoh : 6281325241234)</label>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">62</span>
+          <span class="input-group-text" id="basic-addon1">+62</span>
         </div>
-        <input type="text" class="form-control" placeholder="81325241234" aria-label="Username" aria-describedby="basic-addon1" style="height: 50px;" name="no_wa">
+        <input type="text" class="form-control" placeholder="81325241234" aria-label="Username" aria-describedby="basic-addon1" style="height: 50px;" name="no_wa" maxlength="11">
       </div>
     </div>
-    <button type="submit" class="btn btn-primary font-weight-bold shadow-lg" style="width:100%;height: 50px;">DAFTAR AKUN</button>
+    <button type="submit" class="btn btn-info font-weight-bold shadow-lg" style="width:100%;height: 50px;">DAFTAR AKUN</button>
   </div>
   </form>
 

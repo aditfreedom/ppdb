@@ -264,77 +264,80 @@ class User extends CI_Controller
 
             public function updatelulususer()
             {
-                $id_daftarulang            = $this->input->post('id_daftarulang');
-                $id                        = $this->input->post('id');
-                $tingkat                        = $this->input->post('tingkat');
-                $nama_lengkap                        = $this->input->post('nama_lengkap');
-                $nama_panggilan                        = $this->input->post('nama_panggilan');
-                $nisn                        = $this->input->post('nisn');
-                $tpt_lahir                        = $this->input->post('tpt_lahir');
-                $tgl_lahir                        = $this->input->post('tgl_lahir');
-                $agama                        = $this->input->post('agama');
-                $suku                        = $this->input->post('suku');
-                $jk                        = $this->input->post('jk');
-                $goldar                        = $this->input->post('goldar');
-                $anak_ke                        = $this->input->post('anak_ke');
-                $dari_saudara                        = $this->input->post('dari_saudara');
-                $alamat                        = $this->input->post('alamat');
-                $jarak                        = $this->input->post('jarak');
-                $desa                        = $this->input->post('desa');
-                $kecamatan                        = $this->input->post('kecamatan');
-                $kabupaten                        = $this->input->post('kabupaten');
-                $provinsi                        = $this->input->post('provinsi');
-                $nama_ayah                        = $this->input->post('nama_ayah');
-                $tptlahir_ayah                        = $this->input->post('tptlahir_ayah');
-                $tgllahir_ayah                        = $this->input->post('tgllahir_ayah');
-                $pendidikan_ayah                        = $this->input->post('pendidikan_ayah');
-                $pekerjaan_ayah                        = $this->input->post('pekerjaan_ayah');
-                $penghasilan_ayah                        = $this->input->post('penghasilan_ayah');
-                $alamat_ayah                        = $this->input->post('alamat_ayah');
-                $desa_ayah                        = $this->input->post('desa_ayah');
-                $kecamatan_ayah                        = $this->input->post('kecamatan_ayah');
-                $kabupaten_ayah                        = $this->input->post('kabupaten_ayah');
-                $provinsi_ayah                        = $this->input->post('provinsi_ayah');
-                $hp_ayah                        = $this->input->post('hp_ayah');
-                $nama_ibu                        = $this->input->post('nama_ibu');
-                $tptlahir_ibu                        = $this->input->post('tptlahir_ibu');
-                $tgllahir_ibu                        = $this->input->post('tgllahir_ibu');
-                $pendidikan_ibu                        = $this->input->post('pendidikan_ibu');
-                $pekerjaan_ibu                        = $this->input->post('pekerjaan_ibu');
-                $penghasilan_ibu                        = $this->input->post('penghasilan_ibu');
-                $alamat_ibu                        = $this->input->post('alamat_ibu');
-                $desa_ibu                        = $this->input->post('desa_ibu');
-                $kecamatan_ibu                        = $this->input->post('kecamatan_ibu');
-                $kabupaten_ibu                        = $this->input->post('kabupaten_ibu');
-                $provinsi_ibu                        = $this->input->post('provinsi_ibu');
-                $hp_ibu                        = $this->input->post('hp_ibu');
-                $sekolah_asal                        = $this->input->post('sekolah_asal');
-                $npsn                        = $this->input->post('npsn');
-                $alamat_sekolah                        = $this->input->post('alamat_sekolah');
-                $kabupaten_sekolah                        = $this->input->post('kabupaten_sekolah');
-                $provinsi_sekolah                        = $this->input->post('provinsi_sekolah');
-                $penyakit                        = $this->input->post('penyakit');
-                $olah_raga                        = $this->input->post('olah_raga');
-                $seni                        = $this->input->post('seni');
-                $tari                        = $this->input->post('tari');
-                $lukis                        = $this->input->post('lukis');
-                $drama                        = $this->input->post('drama');
-                $sastra                        = $this->input->post('sastra');
-                $organisasi                        = $this->input->post('organisasi');
-                $prestasi                        = $this->input->post('prestasi');
-                $alasan                        = $this->input->post('alasan');
-                $tentang_sekolah                        = $this->input->post('tentang_sekolah');
+                $id_daftarulang                         = htmlspecialchars($this->input->post('id_daftarulang'));
+                $id                                     = htmlspecialchars($this->input->post('id'));
+                $tingkat                                = htmlspecialchars($this->input->post('tingkat'));
+                $nama_lengkap                           = htmlspecialchars($this->input->post('nama_lengkap'));
+                $nama_panggilan                         = htmlspecialchars($this->input->post('nama_panggilan'));
+                $nisn                                   = htmlspecialchars($this->input->post('nisn'));
+                $nik_siswa                              = htmlspecialchars($this->input->post('nik_siswa'));
+                $tpt_lahir                              = htmlspecialchars($this->input->post('tpt_lahir'));
+                $tgl_lahir                              = htmlspecialchars($this->input->post('tgl_lahir'));
+                $agama                                  = htmlspecialchars($this->input->post('agama'));
+                $suku                                   = htmlspecialchars($this->input->post('suku'));
+                $jk                                     = htmlspecialchars($this->input->post('jk'));
+                $goldar                                 = htmlspecialchars($this->input->post('goldar'));
+                $anak_ke                                = htmlspecialchars($this->input->post('anak_ke'));
+                $dari_saudara                           = htmlspecialchars($this->input->post('dari_saudara'));
+                $alamat                                 = htmlspecialchars($this->input->post('alamat'));
+                $jarak                                  = htmlspecialchars($this->input->post('jarak'));
+                $desa                                   = htmlspecialchars($this->input->post('desa'));
+                $kecamatan                              = htmlspecialchars($this->input->post('kecamatan'));
+                $kabupaten                              = htmlspecialchars($this->input->post('kabupaten'));
+                $provinsi                               = htmlspecialchars($this->input->post('provinsi'));
+                $nama_ayah                              = htmlspecialchars($this->input->post('nama_ayah'));
+                $nik_ayah                               = htmlspecialchars($this->input->post('nik_ayah'));
+                $tptlahir_ayah                          = htmlspecialchars($this->input->post('tptlahir_ayah'));
+                $tgllahir_ayah                          = htmlspecialchars($this->input->post('tgllahir_ayah'));
+                $pendidikan_ayah                        = htmlspecialchars($this->input->post('pendidikan_ayah'));
+                $pekerjaan_ayah                         = htmlspecialchars($this->input->post('pekerjaan_ayah'));
+                $penghasilan_ayah                       = htmlspecialchars($this->input->post('penghasilan_ayah'));
+                $alamat_ayah                            = htmlspecialchars($this->input->post('alamat_ayah'));
+                $desa_ayah                              = htmlspecialchars($this->input->post('desa_ayah'));
+                $kecamatan_ayah                         = htmlspecialchars($this->input->post('kecamatan_ayah'));
+                $kabupaten_ayah                         = htmlspecialchars($this->input->post('kabupaten_ayah'));
+                $provinsi_ayah                          = htmlspecialchars($this->input->post('provinsi_ayah'));
+                $hp_ayah                                = htmlspecialchars($this->input->post('hp_ayah'));
+                $nama_ibu                               = htmlspecialchars($this->input->post('nama_ibu'));
+                $nik_ibu                                = htmlspecialchars($this->input->post('nik_ibu'));
+                $tptlahir_ibu                           = htmlspecialchars($this->input->post('tptlahir_ibu'));
+                $tgllahir_ibu                           = htmlspecialchars($this->input->post('tgllahir_ibu'));
+                $pendidikan_ibu                         = htmlspecialchars($this->input->post('pendidikan_ibu'));
+                $pekerjaan_ibu                          = htmlspecialchars($this->input->post('pekerjaan_ibu'));
+                $penghasilan_ibu                        = htmlspecialchars($this->input->post('penghasilan_ibu'));
+                $alamat_ibu                             = htmlspecialchars($this->input->post('alamat_ibu'));
+                $desa_ibu                               = htmlspecialchars($this->input->post('desa_ibu'));
+                $kecamatan_ibu                          = htmlspecialchars($this->input->post('kecamatan_ibu'));
+                $kabupaten_ibu                          = htmlspecialchars($this->input->post('kabupaten_ibu'));
+                $provinsi_ibu                           = htmlspecialchars($this->input->post('provinsi_ibu'));
+                $hp_ibu                                 = htmlspecialchars($this->input->post('hp_ibu'));
+                $sekolah_asal                           = htmlspecialchars($this->input->post('sekolah_asal'));
+                $npsn                                   = htmlspecialchars($this->input->post('npsn'));
+                $alamat_sekolah                         = htmlspecialchars($this->input->post('alamat_sekolah'));
+                $kabupaten_sekolah                      = htmlspecialchars($this->input->post('kabupaten_sekolah'));
+                $provinsi_sekolah                       = htmlspecialchars($this->input->post('provinsi_sekolah'));
+                $penyakit                               = htmlspecialchars($this->input->post('penyakit'));
+                $olah_raga                              = htmlspecialchars($this->input->post('olah_raga'));
+                $seni                                   = htmlspecialchars($this->input->post('seni'));
+                $tari                                   = htmlspecialchars($this->input->post('tari'));
+                $lukis                                  = htmlspecialchars($this->input->post('lukis'));
+                $drama                                  = htmlspecialchars($this->input->post('drama'));
+                $sastra                                 = htmlspecialchars($this->input->post('sastra'));
+                $organisasi                             = htmlspecialchars($this->input->post('organisasi'));
+                $prestasi                               = htmlspecialchars($this->input->post('prestasi'));
+                $alasan                                 = htmlspecialchars($this->input->post('alasan'));
+                $tentang_sekolah                        = htmlspecialchars($this->input->post('tentang_sekolah'));
 
 
 
                 $data2 = array(
-                    'id' => $id, 'tingkat' => "$tingkat", 'nama_lengkap' => "$nama_lengkap", 'nama_panggilan' => "$nama_panggilan", 'nisn' => "$nisn",
+                    'id' => $id, 'tingkat' => "$tingkat", 'nama_lengkap' => "$nama_lengkap", 'nama_panggilan' => "$nama_panggilan", 'nisn' => "$nisn", 'nik' => "$nik_siswa",
                     'tpt_lahir' => "$tpt_lahir", 'tgl_lahir' => "$tgl_lahir",'agama' => "$agama", 'suku' => "$suku", 'jk' => "$jk", 'goldar' => "$goldar",
                     'anak_ke' => "$anak_ke", 'dari_saudara' => "$dari_saudara", 'alamat' => "$alamat", 'jarak' => "$jarak", 'desa' => "$desa", 'kecamatan' => "$kecamatan",
-                    'kabupaten' => "$kabupaten",'provinsi' => "$provinsi",'nama_ayah' => "$nama_ayah",'tptlahir_ayah' => "$tptlahir_ayah",'tgllahir_ayah' => "$tgllahir_ayah",
+                    'kabupaten' => "$kabupaten",'provinsi' => "$provinsi",'nama_ayah' => "$nama_ayah", 'nik_ayah' => "$nik_ayah", 'tptlahir_ayah' => "$tptlahir_ayah",'tgllahir_ayah' => "$tgllahir_ayah",
                     'pendidikan_ayah' => "$pendidikan_ayah",'pekerjaan_ayah' => "$pekerjaan_ayah", 'penghasilan_ayah' => "$penghasilan_ayah",'alamat_ayah' => "$alamat_ayah",
                     'desa_ayah' => "$desa_ayah",'kecamatan_ayah' => "$kecamatan_ayah",'kabupaten_ayah' => "$kabupaten_ayah",'provinsi_ayah' => "$provinsi_ayah",'hp_ayah' => "$hp_ayah",
-                    'nama_ibu' => "$nama_ibu",'tptlahir_ibu' => "$tptlahir_ibu",'tgllahir_ibu' => "$tgllahir_ibu",
+                    'nama_ibu' => "$nama_ibu", 'nik_ibu' => "$nik_ibu", 'tptlahir_ibu' => "$tptlahir_ibu",'tgllahir_ibu' => "$tgllahir_ibu",
                     'pendidikan_ibu' => "$pendidikan_ibu",'pekerjaan_ibu' => "$pekerjaan_ibu", 'penghasilan_ibu' => "$penghasilan_ibu",'alamat_ibu' => "$alamat_ibu",
                     'desa_ibu' => "$desa_ibu",'kecamatan_ibu' => "$kecamatan_ibu",'kabupaten_ibu' => "$kabupaten_ibu",'provinsi_ibu' => "$provinsi_ibu",'hp_ibu' => "$hp_ibu",
                     'sekolah_asal' => "$sekolah_asal",'npsn' => "$npsn", 'alamat_sekolah' => "$alamat_sekolah", 'kabupaten_sekolah' => "$kabupaten_sekolah", 'provinsi_sekolah' => "$provinsi_sekolah",
