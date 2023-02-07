@@ -605,9 +605,7 @@
                     <div class="form-group">
                       <label for="">Seni Tari</label>
                       <select class="form-control form-control" name="tari" required="">
-                        <option selected="<?=$data->tari;?>" hidden>
-                          <?=$data->tari;?>
-                        </option>
+                        <option selected hidden value="<?=$data->tari;?>"><?=$data->tari;?></option>
                         <option>Ya</option>
                         <option>Tidak</option>
                       </select>
@@ -617,7 +615,7 @@
                     <div class="form-group">
                       <label for="">Seni Lukis</label>
                       <select class="form-control form-control" name="lukis" required="">
-                        <option selected="" hidden="">Tidak</option>
+                      <option selected hidden value="<?=$data->lukis;?>"><?=$data->lukis;?></option>
                         <option>Ya</option>
                         <option>Tidak</option>
                       </select>
@@ -630,7 +628,7 @@
                     <div class="form-group">
                       <label for="">Drama</label>
                       <select class="form-control form-control" name="drama" required="">
-                        <option selected="" hidden="">Ya</option>
+                      <option selected hidden value="<?=$data->drama;?>"><?=$data->drama;?></option>
                         <option>Ya</option>
                         <option>Tidak</option>
                       </select>
@@ -640,7 +638,7 @@
                     <div class="form-group">
                       <label for="">Sastra</label>
                       <select class="form-control form-control" name="sastra" required="">
-                        <option selected="" hidden="">Tidak</option>
+                      <option selected hidden value="<?=$data->sastra;?>"><?=$data->sastra;?></option>
                         <option>Ya</option>
                         <option>Tidak</option>
                       </select>
@@ -650,7 +648,7 @@
                     <div class="form-group">
                       <label for="">Organisasi</label>
                       <select class="form-control form-control" name="organisasi" required="">
-                        <option selected="" hidden="">Ya</option>
+                      <option selected hidden value="<?=$data->organisasi;?>"><?=$data->organisasi;?></option>
                         <option>Ya</option>
                         <option>Tidak</option>
                       </select>
