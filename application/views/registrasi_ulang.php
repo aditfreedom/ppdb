@@ -646,6 +646,12 @@
     document.getElementById("desaayah").setAttribute('value', desaanak);
     document.getElementById("kabupatenayah").setAttribute('value', kabupatenanak);
     document.getElementById("provinsiayah").setAttribute('value', provinsianak);
+    document.getElementById("alamatjalanayah").readOnly = true;
+    document.getElementById("desaayah").readOnly = true;
+    document.getElementById("kabupatenayah").readOnly = true;
+    document.getElementById("provinsiayah").readOnly = true;
+
+
   }
 
   function alamatIbu() {
@@ -659,5 +665,9 @@
     document.getElementById("desaibu").setAttribute('value', desaanak);
     document.getElementById("kabupatenibu").setAttribute('value', kabupatenanak);
     document.getElementById("provinsiibu").setAttribute('value', provinsianak);
+    document.getElementById("alamatjalanibu").readOnly = true;
+    document.getElementById("desaibu").readOnly = true;
+    document.getElementById("kabupatenibu").readOnly = true;
+    document.getElementById("provinsiibu").readOnly = true;
   }
 </script>
