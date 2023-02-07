@@ -26,33 +26,33 @@
     <table class="table table-hover table-striped table-sm text-sm table-responsive-sm" id="example">
       <thead class="text-center bg-dark">
         <tr>
-          <th class="text-center" scope="col">NO</th>
-          <th class="text-center" scope="col">NO RESI</th>
-          <th class="text-center" scope="col">NISN</th>
-          <th class="text-center" scope="col">NAMA LENGKAP</th>
-          <th class="text-center" scope="col">TEMPAT, TANGGAL LAHIR</th>
-          <th class="text-center" scope="col">SEKOLAH ASAL</th>
-          <th class="text-center" scope="col">ALAMAT</th>
-          <th class="text-center" scope="col">NO WA</th>
-          <th class="text-center" scope="col">JENIS PENERIMAAN</th>
-          <th class="text-center" scope="col">APPROVAL FORMULIR</th>
-          <th class="text-center" scope="col">WAKTU MENDAFTAR AKUN</th>
-          <th class="text-center" scope="col">AKSI</th>
+          <th class="text-center align-middle" scope="col">NO</th>
+          <th class="text-center align-middle" scope="col">NO RESI</th>
+          <th class="text-center align-middle" scope="col">NISN</th>
+          <th class="text-center align-middle" scope="col">NAMA LENGKAP</th>
+          <th class="text-center align-middle" scope="col">TEMPAT, TANGGAL LAHIR</th>
+          <th class="text-center align-middle" scope="col">SEKOLAH ASAL</th>
+          <th class="text-center align-middle" scope="col">ALAMAT</th>
+          <th class="text-center align-middle" scope="col">NO WA</th>
+          <th class="text-center align-middle" scope="col">JENIS PENERIMAAN</th>
+          <th class="text-center align-middle" scope="col">APPROVAL FORMULIR</th>
+          <th class="text-center align-middle" scope="col">WAKTU MENDAFTAR AKUN</th>
+          <th class="text-center align-middle" scope="col">AKSI</th>
         </tr>
       </thead>
       <tbody>
         <?php $i = 1;
         foreach ($formulir as $data) : ?>
           <tr class="nomor text-center">
-            <th scope="row"><?php echo $i; ?></th>
-            <td><b><?php echo $data->id; ?>/PPDB-BRN/2023</b></td>
-            <td><?php echo $data->nisn; ?></td>
-            <td><?php echo $data->nama_lengkap; ?></td>
-            <td><?php echo $data->tptlahir; ?>, <?= $data->tgllahir; ?></td>
-            <td><?php echo $data->sekolah_asal; ?></td>
-            <td><?php echo $data->alamat; ?></td>
-            <td><?php echo $data->no_wa; ?></td>
-            <td><?php echo $data->jenis; ?></td>
+            <th scope="row" class="align-middle"><?php echo $i; ?></th>
+            <td class="align-middle"><b><?php echo $data->id; ?>/PPDB-BRN/2023</b></td>
+            <td class="align-middle"><?php echo $data->nisn; ?></td>
+            <td class="align-middle"><?php echo $data->nama_lengkap; ?></td>
+            <td class="align-middle"><?php echo $data->tptlahir; ?>, <?= $data->tgllahir; ?></td>
+            <td class="align-middle"><?php echo $data->sekolah_asal; ?></td>
+            <td class="align-middle"><?php echo $data->alamat; ?></td>
+            <td class="align-middle"><?php echo $data->no_wa; ?></td>
+            <td class="align-middle"><?php echo $data->jenis; ?></td>
             <?php
             $approval = $data->approve_formulir;
             if ($approval == "Antrian") {
@@ -63,12 +63,12 @@
               $class = "btn-danger";
             }
             ?>
-            <td><a class="font-weight-bold text-uppercase <?= $class; ?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir ?>&nbsp&nbsp</a> </td>
-            <td><b><?php echo $data->created_tima; ?></b></td>
+            <td class="align-middle"><a class="font-weight-bold text-uppercase <?= $class; ?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir ?>&nbsp&nbsp</a> </td>
+            <td class="align-middle"><b><?php echo $data->created_tima; ?></b></td>
             <td>
-                <a href="<?=base_url('home/editapproval/'.$data->id); ?>" class="btn btn-sm btn-primary mb-2"><b>EDIT DATA</b></i></u></a>
-                <a href="<?=base_url('home/cetak_resi/'.$data->id); ?>" class="btn btn-sm btn-danger mb-2" target="_blank"><b>CETAK RESI</b></i></u></a>
-                <a href="<?= 'https://wa.me/' . $data->no_wa . '?text=Terimakasih *' . $data->nama_lengkap . '* Telah Mendaftar Di Sekolah Sukma Bangsa Bireuen, Berikut Kami Lampirkan Resi Pendaftaran Dan Kartu Tes Seleksi Penerimaan Peserta Didik Baru. %0A*INFORMASI :*%0AJadwal Tes Pemetaan Akan Diinfokan lebih lanjut pada grup WhatsApp*' ?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a>
+              <a href="<?= base_url('home/editapproval/' . $data->id); ?>" class="btn btn-sm btn-primary mb-2"><b>EDIT DATA</b></i></u></a>
+              <a href="<?= base_url('home/cetak_resi/' . $data->id); ?>" class="btn btn-sm btn-danger mb-2" target="_blank"><b>CETAK RESI</b></i></u></a>
+              <a href="<?= 'https://wa.me/' . $data->no_wa . '?text=Terimakasih *' . $data->nama_lengkap . '* Telah Mendaftar Di Sekolah Sukma Bangsa Bireuen, Berikut Kami Lampirkan Resi Pendaftaran Dan Kartu Tes Seleksi Penerimaan Peserta Didik Baru. %0A*INFORMASI :*%0AJadwal Tes Pemetaan Akan Diinfokan lebih lanjut pada grup WhatsApp*' ?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a>
             </td>
 
 

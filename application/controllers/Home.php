@@ -287,6 +287,7 @@ class Home extends CI_Controller {
 
 	public function editlulus($id){
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle'] = "Lulus";
 		$id =    array ('id' => $id);
 		$data['lulus'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
@@ -404,6 +405,7 @@ class Home extends CI_Controller {
 
 	public function editdaftarulang($id){
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle'] = "Daftar Ulang";
 		$id =    array ('id' => $id);
 		$data['daftarulang'] = $this->M_ppdb->editdaftarulang($id,'daftarulang')->result();
 		$data2['approval_daftarulang'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();

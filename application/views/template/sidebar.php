@@ -16,8 +16,8 @@
            class="img-circle elevation-2" alt="User Image">
        </div>
        <div class="info">
-         <a href="#" class="d-block">Halo,
-           <b><?php echo $nama_lengkap ?>!</b></a>
+         <a href="#" class="d-block">
+           <b><?php echo $nama_lengkap ?></b></a>
        </div>
      </div>
 
