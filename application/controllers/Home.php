@@ -34,6 +34,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->model('M_ppdb');
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle']="Home";
 		$data['pensd'] = $this->M_ppdb->tampilpensd()->result();
 		$data['pensmp'] = $this->M_ppdb->tampilpensmp()->result();
 		$data['pensma'] = $this->M_ppdb->tampilpensma()->result();
@@ -43,21 +44,16 @@ class Home extends CI_Controller {
 		$data['hitungsdformulir'] = $this->M_ppdb->hitungsdformulir();
 		$data['hitungsmpformulir'] = $this->M_ppdb->hitungsmpformulir();
 		$data['hitungsmaformulir'] = $this->M_ppdb->hitungsmaformulir();
-
 		$data['hitungpindsdformulir'] = $this->M_ppdb->hitungpindsdformulir();
 		$data['hitungpindsmpformulir'] = $this->M_ppdb->hitungpindsmpformulir();
 		$data['hitungpindsmaformulir'] = $this->M_ppdb->hitungpindsmaformulir();
-
 		$data['hitungpdlulus'] = $this->M_ppdb->hitungpdlulus();
 		$data['hitungpdtidaklulus'] = $this->M_ppdb->hitungpdtidaklulus();
-
 		$data['hitungpddaftarulang'] = $this->M_ppdb->hitungpddaftarulang();
 		$data['hitungpdtidakdaftarulang'] = $this->M_ppdb->hitungpdtidakdaftarulang();
-
 		$data['hitunguser'] = $this->M_ppdb->hitunguser();
 		$data['hitungformulir'] = $this->M_ppdb->hitungformulir();
 		$data['hitungformulirpindahan'] = $this->M_ppdb->hitungformulirpindahan();
-
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('dashboard',$data);
@@ -89,6 +85,7 @@ class Home extends CI_Controller {
 	{
 		$data['kuota'] = $this->M_ppdb->tampil_data_kuota()->result();
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle']="Kuota";
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('kuota',$data);
@@ -121,6 +118,7 @@ class Home extends CI_Controller {
 
 	public function editkuota($id){
 		$sess_data = $this->session->userdata();
+			$sess_data['subtitle']="Kuota";
 		$id =    array ('id' => $id);
 		$data['kuota'] = $this->M_ppdb->editkuota($id,'kuota')->result();
 		$this->load->view('template/header');
@@ -156,6 +154,7 @@ class Home extends CI_Controller {
 	{
 		$data['formulir'] = $this->M_ppdb->tampil_approval()->result();
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle']="Formulir";
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_formulir',$data);
@@ -179,6 +178,7 @@ class Home extends CI_Controller {
 
 	public function editapproval($id){
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle']="Formulir";
 		$id =    array ('id' => $id);
 		$data['approval'] = $this->M_ppdb->tampilpengguna($id,'pengguna')->result();
 		$this->load->view('template/header');
@@ -278,6 +278,7 @@ class Home extends CI_Controller {
 	{
 		$data['lulus'] = $this->M_ppdb->tampil_lulus()->result();
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle'] = "Lulus";
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_lulus',$data);
@@ -367,11 +368,34 @@ class Home extends CI_Controller {
 		
 	
 	}
+
+	public function cetak_resi($id)
+	{
+		$sess_data = $this->session->userdata();
+		$data['cetak_resi'] = $this->M_ppdb->cetak_resi($id)->result();
+		$data_user = $this->M_ppdb->cetak_resi($id)->result();
+
+		foreach ($data_user as $data2) {
+			$nama=$data2->nama_lengkap;
+		}
+
+		// $this->load->view('cetak_resi',$data);
+		$this->load->library('dompdf_gen');
+		$this->load->view('cetak_resi', $data);
+		$paper_size = 'A4';
+		$orientation = 'portrait';
+		$html = $this->output->get_output();
+		$this->dompdf->set_paper($paper_size, $orientation);
+		$this->dompdf->load_html($html);
+		$this->dompdf->render();
+		$this->dompdf->stream("Resi Pendaftaran PPDB (".$nama.").pdf", array('Attachment' =>0));
+	}
 	
 		public function approve_daftarulang()
 	{
 		$data['daftarulang'] = $this->M_ppdb->tampil_daftarulang()->result();
 		$sess_data = $this->session->userdata();
+		$sess_data['subtitle'] = "Daftar Ulang";
 		$this->load->view('template/header');
 		$this->load->view('template/sidebar',$sess_data);
 		$this->load->view('approve_daftarulang',$data);

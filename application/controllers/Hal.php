@@ -98,7 +98,7 @@ class Hal extends CI_Controller
      public function login_admin_aksi()
      {
          $username = $this->input->post('username', true);
-         $password = $this->input->post('password', true);
+         $password = md5($this->input->post('password', true));
 
          $this->form_validation->set_rules('username', 'Username', 'required');
          $this->form_validation->set_rules('password', 'Password', 'required');

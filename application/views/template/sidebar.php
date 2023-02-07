@@ -28,8 +28,7 @@
          <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
          <li class="nav-item ">
-           <a href="<?= base_url('home'); ?>"
-             class="nav-link">
+           <a href="<?= base_url('home'); ?>" class="nav-link <?= $subtitle === 'Home' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-tachometer-alt"></i>
              <p>
                Dashboard
@@ -39,8 +38,7 @@
 
 
          <li class="nav-item ">
-           <a href="<?= base_url('home/kuota'); ?>"
-             class="nav-link">
+         <a href="<?= base_url('home/kuota'); ?>" class="nav-link <?= $subtitle === 'Kuota' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-tasks"></i>
              <p>
                Kuota Penerimaan
@@ -49,8 +47,7 @@
          </li>
 
          <li class="nav-item ">
-           <a href="<?= base_url('home/approve_formulir'); ?>"
-             class="nav-link">
+         <a href="<?= base_url('home/approve_formulir'); ?>" class="nav-link <?= $subtitle === 'Formulir' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-clipboard-check"></i>
              <p>
                Approval Formulir
@@ -58,8 +55,7 @@
            </a>
          </li>
          <li class="nav-item ">
-           <a href="<?= base_url('home/approve_lulus'); ?>"
-             class="nav-link">
+         <a href="<?= base_url('home/approve_lulus'); ?>" class="nav-link <?= $subtitle === 'Lulus' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-check"></i>
              <p>
                Konfirmasi Kelulusan
@@ -67,8 +63,7 @@
            </a>
          </li>
          <li class="nav-item ">
-           <a href="<?= base_url('home/approve_daftarulang'); ?>"
-             class="nav-link">
+         <a href="<?= base_url('home/approve_daftarulang'); ?>" class="nav-link <?= $subtitle === 'Daftar Ulang' ? 'active' : '' ?>">
              <i class="nav-icon fa fa-user-check"></i>
              <p>
                Konfirmasi Daftar Ulang

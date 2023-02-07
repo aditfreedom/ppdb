@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">KUOTA PENDAFTARAN</h1>
+            <h1 class="m-0 text-dark"><b>KUOTA PENERIMAAN</b></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -15,23 +15,24 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+    <hr>
     <!-- /.content-header -->
     <div class="content">
     <!-- <p align="right">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     <i class="fa fa-plus"></i> Tambah Data</button><br><br></p> -->
 
-    <table class="table table-hover" id="example">
-          <thead class="text-center">
+    <table class="table table-hover table-sm table-responsive-sm" id="example">
+          <thead class="text-center bg-dark">
             <tr>
-              <th scope="col">NO</th>
-              <th scope="col">JENIS PENERIMAAN</th>
-              <th scope="col">KUOTA</th>
-              <th scope="col">KETERANGAN</th>
-              <th scope="col">AKSI</th>
+              <th class="text-center" scope="col">NO</th>
+              <th class="text-center" scope="col">JENIS PENERIMAAN</th>
+              <th class="text-center" scope="col">KUOTA</th>
+              <th class="text-center" scope="col">KETERANGAN</th>
+              <th class="text-center" scope="col">AKSI</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="font-weight-light">
           <?php $i = 1; 
 	        foreach ($kuota as $data) : ?>
 		<tr class="nomor text-center">

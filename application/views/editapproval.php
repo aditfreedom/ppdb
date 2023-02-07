@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">EDIT APPROVAL FORMULIR</h1>
+            <h1 class="m-0 text-dark"><b>EDIT APPROVAL FORMULIR</b></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -15,6 +15,7 @@
         </div><!-- /.row -->
       </div><!-- /.container-fluid -->
     </div>
+    <hr>
     <section class="content">
     <?php foreach ($approval as $data) : ?>
 		<form method="post" action="<?php echo base_url().'home/cetakformulir'; ?>">
@@ -45,10 +46,14 @@
         <input hidden type="text" name="no_hp" class="form-control" value="<?php echo $data->no_hp;?>">
         </div>
 
-        <p align="right"><button type="submit" class="btn btn-success"><i class="fa fa-print"></i> <b>CETAK COVER FORMULIR PENDAFTARAN</b></button></p>         
+        <p align="right" hidden><button type="submit" class="btn btn-success"><i class="fa fa-print"></i> <b>CETAK COVER FORMULIR PENDAFTARAN</b></button></p>         
         </form>
 	<?php endforeach ;?>
-
+    <div class="card">
+      <div class="card-header bg-info">
+        <h3 class="m-0 text-light text-bold">DATA DIRI</h3>
+      </div>
+      <div class="card-body">
     <?php foreach ($approval as $data) : ?>
 		<form method="post" action="<?php echo base_url().'home/updateapproval'; ?>">
     <div class="form-group">
@@ -101,24 +106,47 @@
         <label for="">No WA Aktif</label>
         <input type="text" name="no_wa" class="form-control" value="<?php echo $data->no_wa;?>">
         </div>
+    </div>
+    </div>
+        <div class="card">
+      <div class="card-header bg-info">
+        <h3 class="m-0 text-light text-bold">BERKAS PERSYARATAN</h3>
+      </div>
+      <div class="card-body">
         <div class="form-group">
-        <label for="">Foto</label><br>
-        <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
-        <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
-        <a href="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT FOTO</b></a>
+        <table class="table table-bordered table-responsive-sm">
+          <tr class="bg-dark text-center">
+            <th>Pas Foto</th>
+            <th>Akte/Surat Keterangan/Sertifikat</th>
+            <th>Bukti Transfer</th>
+          </tr>
+          <tr class="text-center">
+            <td>
+            <input  type="hidden" name="foto" class="form-control" value="<?php echo $data->foto;?>">
+            <img src="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="border border-dark rounded" width="150px">
+            <br><br>
+            <a href="<?php echo base_url();?>asset/foto/<?php echo $data->foto;?>" class="btn btn-success btn-sm" target="_blank"><b><i class="fa fa-eye"></i> LIHAT FOTO</b></a>
+            </div>
+          </td>
+            <td> 
+              <div class="form-group">
+              <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
+              <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px">
+              <br><br>
+              <a href="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="btn btn-success btn-sm" target="_blank"><b><i class="fa fa-eye"></i> LIHAT BERKAS</b></a>
         </div>
-        <div class="form-group">
-        <label for="">Akte Kelahiran/Surat Keterangan/Sertifikat Prestasi</label><br>
-        <input  type="hidden" name="akte" class="form-control" value="<?php echo $data->akte;?>">
-        <img src="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="border border-dark rounded" width="150px">
-        <a href="<?php echo base_url();?>asset/akte/<?php echo $data->akte;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT BERKAS</b></a>
-        </div>
-        <div class="form-group">
-        <label for="">Bukti Transfer</label><br>
+            </td>
+      <td>
+      <div class="form-group">
         <input  type="hidden" name="bukti_tf" class="form-control" value="<?php echo $data->bukti_tf;?>">
         <img src="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="border border-dark rounded" width="150px">
-        <a href="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="btn btn-success btn-sm" target="_blank"><b>LIHAT BUKTI PEMBAYARAN</b></a>
+        <br><br>
+        <a href="<?php echo base_url();?>asset/buktitf/<?php echo $data->bukti_tf;?>" class="btn btn-success btn-sm" target="_blank"><b><i class="fa fa-eye"></i> LIHAT BUKTI PEMBAYARAN</b></a>
         </div>
+      </td>
+          </tr>
+        </table>
+               
         <div class="form-group">
         <input type="hidden" name="username" class="form-control" value="<?php echo $data->username;?>">
         </div>
@@ -128,6 +156,15 @@
         <div class="form-group">
         <input type="hidden" name="role" class="form-control" value="<?php echo $data->role;?>">
         </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header bg-info">
+        <h3 class="m-0 text-light text-bold">KONFIRMASI ADMIN</h3>
+      </div>
+      <div class="card-body">
         <div class="form-group">
         <label for="">Approve Formulir</label>
         <select class="form-control form-control" name="approve_formulir">
@@ -146,11 +183,13 @@
 
       <div class="form-group">
         <button type="submit" class="form-control btn btn-primary font-weight-bold">SIMPAN DATA</button>
-        </div>        </form>
+        </div>     
+            
+  </form>
 	<?php endforeach ;?>
-
-
 
     </section>
 </div>
+    </div>
+    </div>
 <br>

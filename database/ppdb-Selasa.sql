@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 07, 2023 at 07:09 AM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 7.4.30
+-- Generation Time: Feb 07, 2023 at 10:10 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ppdb2`
+-- Database: `ppdb`
 --
 
 -- --------------------------------------------------------
@@ -91,7 +91,7 @@ CREATE TABLE `daftarulang` (
   `prestasi` varchar(500) DEFAULT NULL,
   `alasan` varchar(500) DEFAULT NULL,
   `tentang_sekolah` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `daftarulang`
@@ -285,7 +285,7 @@ CREATE TABLE `kuota` (
   `jenis` varchar(255) NOT NULL,
   `kuota` int(5) NOT NULL,
   `keterangan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `kuota`
@@ -329,14 +329,14 @@ CREATE TABLE `pengguna` (
   `approve_lulus` varchar(30) DEFAULT NULL,
   `approve_daftarulang` varchar(30) DEFAULT NULL,
   `created_tima` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pengguna`
 --
 
 INSERT INTO `pengguna` (`id`, `nama_lengkap`, `tptlahir`, `tgllahir`, `nisn`, `alamat`, `sekolah_asal`, `namaayah`, `namaibu`, `no_hp`, `no_wa`, `foto`, `akte`, `bukti_tf`, `jenis`, `pindah_kelas`, `username`, `password`, `role`, `approve_formulir`, `approve_lulus`, `approve_daftarulang`, `created_tima`) VALUES
-(1, 'ADMINISTRATOR PPDB', '', '', 'admin', 'admin', 'admin', '', '', 'admin', '', 'admin', '', 'admin', 'admin', '', 'admin', 'sukma2021', '0', 'admin', 'admin', 'admin', '2023-02-07 05:56:40'),
+(1, 'ADMINISTRATOR PPDB', '', '', 'admin', 'admin', 'admin', '', '', 'admin', '', 'admin', '', 'admin', 'admin', '', 'admin', '0eab68759cc784399fa5c6ba986cdb3d', '0', 'admin', 'admin', 'admin', '2023-02-07 05:56:40'),
 (11, 'superadmin', '', '', 'superadmin', 'superadmin', 'superadmin', '', '', 'superadmin', '', 'superadmin', '', 'superadmin', 'superadmin', '', 'superadmin', 'adminsukma2021', '0', 'superadmin', 'superadmin', 'superadmin', '2023-02-07 05:56:40'),
 (18, 'adminoperator', '', '', '0', 'adminoperator', 'adminoperator', '', '', '0', '', 'adminoperator', '', 'adminoperator', '', '', 'adminoperator', 'adminoperator2021', '0', 'adminoperator', 'adminoperator', 'adminoperator', '2023-02-07 05:56:40'),
 (236, 'Aditya Aziz Fikhri', 'Lhokseumawe', '1996-01-31', '1457301021', 'Jl. H. Hanafiah No. 5, Desa Juli Cot Meurak, Kec. Juli Kab. Bireuen - Aceh', 'SMP SUKMA BANGSA BIREUEN', 'Asnawir Azhar', 'Endang Fitrianty', '6281362059403', '6281362059403', 'foto.jpg', 'aktalahirbaru.jpg', 'WhatsApp_Image_2021-12-22_at_10_10_22.jpeg', 'Jalur Prestasi SMA', '', '', '', '1', 'Antrian', 'Antrian', 'Antrian', '2023-02-07 05:56:40'),

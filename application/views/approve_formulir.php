@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">APPROVAL FORMULIR PENDAFTARAN</h1>
+          <h1 class="m-0 text-dark"><b>APPROVAL FORMULIR PENDAFTARAN</b></h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -15,27 +15,29 @@
       </div><!-- /.row -->
     </div><!-- /.container-fluid -->
   </div>
+  <hr>
+
   <!-- /.content-header -->
   <div class="content">
     <!-- <p align="right">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
     <i class="fa fa-plus"></i> Tambah Data</button><br><br></p> -->
 
-    <table class="table table-hover" id="example">
-      <thead class="text-center">
+    <table class="table table-hover table-striped table-sm text-sm table-responsive-sm" id="example">
+      <thead class="text-center bg-dark">
         <tr>
-          <th scope="col">NO</th>
-          <th scope="col">NO RESI</th>
-          <th scope="col">NISN</th>
-          <th scope="col">NAMA LENGKAP</th>
-          <th scope="col">TEMPAT, TANGGAL LAHIR</th>
-          <th scope="col">SEKOLAH ASAL</th>
-          <th scope="col">ALAMAT</th>
-          <th scope="col">NO WA</th>
-          <th scope="col">JENIS PENERIMAAN</th>
-          <th scope="col">APPROVAL FORMULIR</th>
-          <th scope="col">WAKTU MENDAFTAR AKUN</th>
-          <th scope="col">AKSI</th>
+          <th class="text-center" scope="col">NO</th>
+          <th class="text-center" scope="col">NO RESI</th>
+          <th class="text-center" scope="col">NISN</th>
+          <th class="text-center" scope="col">NAMA LENGKAP</th>
+          <th class="text-center" scope="col">TEMPAT, TANGGAL LAHIR</th>
+          <th class="text-center" scope="col">SEKOLAH ASAL</th>
+          <th class="text-center" scope="col">ALAMAT</th>
+          <th class="text-center" scope="col">NO WA</th>
+          <th class="text-center" scope="col">JENIS PENERIMAAN</th>
+          <th class="text-center" scope="col">APPROVAL FORMULIR</th>
+          <th class="text-center" scope="col">WAKTU MENDAFTAR AKUN</th>
+          <th class="text-center" scope="col">AKSI</th>
         </tr>
       </thead>
       <tbody>
@@ -43,7 +45,7 @@
         foreach ($formulir as $data) : ?>
           <tr class="nomor text-center">
             <th scope="row"><?php echo $i; ?></th>
-            <td><b><?php echo $data->id; ?>/PPDB-BRN/2022</b></td>
+            <td><b><?php echo $data->id; ?>/PPDB-BRN/2023</b></td>
             <td><?php echo $data->nisn; ?></td>
             <td><?php echo $data->nama_lengkap; ?></td>
             <td><?php echo $data->tptlahir; ?>, <?= $data->tgllahir; ?></td>
@@ -62,9 +64,11 @@
             }
             ?>
             <td><a class="font-weight-bold text-uppercase <?= $class; ?> rounded-pill" href="#" role="button">&nbsp&nbsp<?php echo $data->approve_formulir ?>&nbsp&nbsp</a> </td>
-            <td><?php echo $data->created_tima; ?></td>
-            <td><?php echo anchor('home/editapproval/' . $data->id, '<div class="btn btn-primary btn-sm"><b>EDIT DATA</b></div>') ?> <br><br><?php echo anchor('user/cetak_resi/' . $data->id, '<div class="btn btn-danger btn-sm"><b>CETAK RESI</b></i></div>') ?> <br><br>
-              <a href="<?= 'https://wa.me/' . $data->no_wa . '?text=Terimakasih *' . $data->nama_lengkap . '* Telah Mendaftar Di Sekolah Sukma Bangsa Bireuen, Berikut Kami Lampirkan Resi Pendaftaran Dan Kartu Tes Seleksi Penerimaan Peserta Didik Baru. %0A*INFORMASI :*%0AJadwal Tes Pemetaan Akan Dilaksanakan Pada Tanggal *18 - 20 Mei 2022*' ?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a>
+            <td><b><?php echo $data->created_tima; ?></b></td>
+            <td>
+                <a href="<?=base_url('home/editapproval/'.$data->id); ?>" class="btn btn-sm btn-primary mb-2"><b>EDIT DATA</b></i></u></a>
+                <a href="<?=base_url('home/cetak_resi/'.$data->id); ?>" class="btn btn-sm btn-danger mb-2" target="_blank"><b>CETAK RESI</b></i></u></a>
+                <a href="<?= 'https://wa.me/' . $data->no_wa . '?text=Terimakasih *' . $data->nama_lengkap . '* Telah Mendaftar Di Sekolah Sukma Bangsa Bireuen, Berikut Kami Lampirkan Resi Pendaftaran Dan Kartu Tes Seleksi Penerimaan Peserta Didik Baru. %0A*INFORMASI :*%0AJadwal Tes Pemetaan Akan Diinfokan lebih lanjut pada grup WhatsApp*' ?>" class="btn btn-sm btn-success" target="_blank"><b>KIRIM WA</b></i></u></a>
             </td>
 
 
