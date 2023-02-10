@@ -149,10 +149,10 @@ class Hal extends CI_Controller
                      $this->load->view('gagallogin_admin');
                  }
              } else {
-                 $this->load->view('error');
+                 $this->load->view('error_admin');
              }
          } else {
-             $this->load->view('error');
+             $this->load->view('error_admin');
          }
      }
 

@@ -34,7 +34,7 @@
           <th class="text-center align-middle" scope="col">ALAMAT</th>
           <th class="text-center align-middle" scope="col">NO WA</th>
           <th class="text-center align-middle" scope="col">JENIS PENERIMAAN</th>
-          <th class="text-center align-middle" scope="col">APPROVAL FORMULIR</th>
+          <th class="text-center align-middle" scope="col">APPROVAL DAFTAR ULANG</th>
           <th class="text-center align-middle" scope="col">AKSI</th>
         </tr>
       </thead>

@@ -22,7 +22,7 @@
         <div class="card card-signin my-5">
           <div class="card-body">
             <img src="<?=base_url()?>assets22/img/favicon.png" class="mx-auto d-block" width="100px">
-            <h6 class="text-center" style="margin-top:5px;"><b>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2022-2023</b></h6><br>
+            <h6 class="text-center" style="margin-top:5px;"><b>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2023-2024</b></h6><br>
             <h5 class="text-center"><b>ADMIN AREA</b></h5>
 
             <?php echo form_open('hal/login_admin_aksi');?>

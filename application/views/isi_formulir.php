@@ -145,7 +145,6 @@
             class="border border-dark rounded" width="150px"><br><br>
           <input type="file" name="foto_baru" class="form-control">
         </div>
-        <hr>
         <br>
         <div class="form-group">
           <label for="">UPLOAD AKTE KELAHIRAN <b class="text-danger">(Wajib Bagi Calon Peserta Didik Baru SD)<br></b>
@@ -166,7 +165,7 @@
             class="border border-dark rounded" width="150px"><br><br>
           <input type="file" name="akte_baru" class="form-control">
         </div>
-        <hr> <br>
+        <br>
 
         <div class="form-group">
           <label for="">UPLOAD BUKTI PEMBAYARAN FORMULIR <b class="text-danger"> [Tipe JPEG/JPG]</label>

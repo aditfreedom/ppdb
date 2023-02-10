@@ -168,7 +168,7 @@ function tanggal_indo($tanggal)
     <br>
 
 
-    <table border="1">
+    <table border="1" style="margin-left: auto; margin-right: auto;">
       <tr>
         <th class="text-center" style="width: 120px"><img src="<?= base_url() ?>assets22/img/favicon.png" width="80px"></th>
         <th class="text-center font-weight-bold" style="width: 350px">KARTU PESERTA TES<br>PENERIMAAN PESERTA DIDIK BARU<br>SEKOLAH SUKMA BANGSA BIREUEN<br>TP. 2023 - 2024</th>
