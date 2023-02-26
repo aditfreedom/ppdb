@@ -27,9 +27,7 @@ function tanggal_indo($tanggal)
 }
 ?>
 <!doctype html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -38,9 +36,7 @@ function tanggal_indo($tanggal)
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
   <title>RESI PENDAFTARAN <?= $nama; ?></title>
-</head>
-
-<body style="font-family: 'Times New Roman', Times, serif; color:black;background-image: url('logo.png');" ;>
+</head><body style="font-family: 'Times New Roman', Times, serif; color:black;background-image: url('logo.png');" ;>
   <div class=" container">
   <?php foreach ($cetak_resi as $data) : ?>
     <!-- <img class="mx-auto d-block" src="<?= base_url('assets22/img/favicon.png') ?>" width="80px"><br> -->
@@ -204,6 +200,4 @@ function tanggal_indo($tanggal)
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
     -->
-</body>
-
-</html>
+</body></html>

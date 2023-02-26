@@ -64,6 +64,10 @@
                           <input readonly type="text" name="nisn" class="form-control" value="<?php echo $data->nisn; ?>">
                         </div>
                         <div class="form-group">
+                          <label for="">NIK</label>
+                          <input readonly type="text" name="nik" class="form-control" value="<?php echo $data->nik; ?>">
+                        </div>
+                        <div class="form-group">
                           <label for="">Golongan Darah</label>
                           <input readonly type="text" name="goldar" class="form-control" value="<?php echo $data->goldar; ?>">
                         </div>
@@ -169,6 +173,11 @@
                         </div>
 
                         <div class="form-group">
+                          <label for="">NIK AYAH</label>
+                          <input readonly type="text" name="nik_ayah" class="form-control" value="<?php echo $data->nik_ayah; ?>">
+                        </div>
+
+                        <div class="form-group">
                           <label for="">Pendidikan Terakhir Ayah</label>
                           <input readonly type="text" name="pendidikan_ayah" class="form-control" value="<?php echo $data->pendidikan_ayah ?>">
                         </div>
@@ -245,6 +254,12 @@
                           <label for="">Nama Lengkap Ibu</label>
                           <input readonly type="text" name="nama_ibu" class="form-control" value="<?php echo $data->nama_ibu; ?>">
                         </div>
+
+                        <div class="form-group">
+                          <label for="">NIK IBU</label>
+                          <input readonly type="text" name="nik_ibu" class="form-control" value="<?php echo $data->nik_ibu; ?>">
+                        </div>
+
 
                         <div class="form-group">
                           <label for="">Pendidikan Terakhir Ibu</label>

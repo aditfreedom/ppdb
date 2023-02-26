@@ -421,6 +421,9 @@ class User extends CI_Controller
                 $nama_panggilan  = $this->input->post('nama_panggilan');
                 $tingkat		 = $this->input->post('tingkat');
                 $nisn	         = $this->input->post('nisn');
+                $nik	         = $this->input->post('nik');
+                $nik_ayah	     = $this->input->post('nik_ayah');
+                $nik_ibu	     = $this->input->post('nik_ibu');
                 $goldar	         = $this->input->post('goldar');
                 $anak_ke         = $this->input->post('anak_ke');
                 $dari_saudara    = $this->input->post('dari_saudara');
@@ -475,7 +478,6 @@ class User extends CI_Controller
 
 
 
-
                 // memanggil dan membaca template dokumen yang telah kita buat
                 $document = file_get_contents("formulir_pendaftaran_ulang.rtf");
 
@@ -484,6 +486,9 @@ class User extends CI_Controller
                 $document = str_replace("#NAMA_PANGGILAN", $nama_panggilan, $document);
                 $document = str_replace("#TINGKAT", $tingkat, $document);
                 $document = str_replace("#NISN", $nisn, $document);
+                $document = str_replace("nomorinduk", $nik, $document);
+                $document = str_replace("nomorayah", $nik_ayah, $document);
+                $document = str_replace("nomoribu", $nik_ibu, $document);
                 $document = str_replace("#GOLDAR", $goldar, $document);
                 $document = str_replace("#ANAK_KE", $anak_ke, $document);
                 $document = str_replace("#DARI_SAUDARA", $dari_saudara, $document);
@@ -547,7 +552,7 @@ class User extends CI_Controller
                 // header untuk membuka file output RTF dengan MS. Word
 
                 header("Content-type: application/msword");
-                header("Content-disposition: inline; filename=formulir_pendaftaran_ulang.doc");
+                header("Content-disposition: inline; filename=formulir_pendaftaran_ulang ".$nama_lengkap.".doc");
                 header("Content-length: ".strlen($document));
                 echo $document;
             }
@@ -599,7 +604,7 @@ class User extends CI_Controller
 
                 // header untuk membuka file output RTF dengan MS. Word
                 header("Content-type: application/msword");
-                header("Content-disposition: inline; filename=surat_pernyataan.doc");
+                header("Content-disposition: inline; filename=surat_pernyataan".$nama_lengkap.".doc");
                 header("Content-length: ".strlen($document));
                 echo $document;
             }
@@ -759,7 +764,7 @@ public function cetakpaktaintegritasuser()
     // header untuk membuka file output RTF dengan MS. Word
 
     header("Content-type: application/msword");
-    header("Content-disposition: inline; filename=pakta_integritas.doc");
+    header("Content-disposition: inline; filename=pakta_integritas".$nama_lengkap.".doc");
     header("Content-length: ".strlen($document));
     echo $document;
 }
