@@ -74,10 +74,37 @@
         <input readonly type="text" name="tgllahir" class="form-control" value="<?=$data->tgllahir;?>">
         </div>
 
-    <div class="form-group">
-        <label for="">Jenis Penerimaan</label>
-        <input readonly type="text" name="jenis" class="form-control" value="<?=$data->jenis;?>">
-      </div>
+        <div class="form-group">
+          <label for="">Jenis Penerimaan</label>
+          <select class="form-control form-control" name="jenis" readonly disabled>
+            <option selected hidden><?php echo $data->jenis; ?>
+            </option>
+            <option>Peserta Didik Baru SD</option>
+            <option>Peserta Didik Baru SMP</option>
+            <option>Peserta Didik Baru SMA</option>
+            <option>Pindahan SD</option>
+            <option>Pindahan SMP</option>
+            <option>Pindahan SMA</option>
+            <option>Jalur Prestasi SD</option>
+            <option>Jalur Prestasi SMP</option>
+            <option>Jalur Prestasi SMA</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Pindah Ke Kelas <b class="text-danger">(Khusus Calon Siswa Pindahan)</b></label>
+          <select class="form-control form-control" name="pindah_kelas" readonly disabled>
+            <option selected hidden>
+              <?php echo $data->pindah_kelas; ?>
+            </option>
+            <option values="-">-</option>
+            <option values="III">III</option>
+            <option values="IV">IV</option>
+            <option values="V">V</option>
+            <option values="VI">VI</option>
+            <option values="VIII">VIII</option>
+            <option values="XI IPS">XI IPS</option>
+          </select>
+        </div>
         <div class="form-group">
         <label for="">NISN</label>
         <input readonly type="text" name="nisn" class="form-control" value="<?php echo $data->nisn;?>">

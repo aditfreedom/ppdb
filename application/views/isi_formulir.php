@@ -77,8 +77,12 @@
               <?php echo $data->pindah_kelas; ?>
             </option>
             <option values="-">-</option>
-            <option values="I">I</option>
-            <option values="XI">XI</option>
+            <option values="III">III</option>
+            <option values="IV">IV</option>
+            <option values="V">V</option>
+            <option values="VI">VI</option>
+            <option values="VIII">VIII</option>
+            <option values="XI IPS">XI IPS</option>
           </select>
         </div>
         <div class="form-group">

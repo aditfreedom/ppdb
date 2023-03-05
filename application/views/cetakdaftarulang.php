@@ -1348,6 +1348,8 @@
                         <ul>
                             <li>Pastikan Anda Telah Melengkapi Data Pendaftaran Ulang <a href="<?= base_url('user/registrasi_ulang/') . $data->id ?>"><b>DISINI</b></a> Agar Print Out Hasil Formulir Pendaftaran Ulang, Surat Pernyataan dan Pakta Integritas Tidak Kosong</li>
                             <li>Harap Ketiga Dokumen Diatas Dibawakan Saat Proses Pendaftaran Ulang Bersama Dengan Dokumen Sesuai Pada Pengumuman Persyaratan Daftar Ulang</li>
+                            <li>Ketiga File Diatas Di Unduh dan Dibuka Menggunakan Microsoft Office Word</li>
+                            <li>Mohon Untuk Tidak Mengedit File Yang Telah Di Download Secara Manual Agar Tidak Terjadi Perbedaan Data</li>
                         </ul>
                     </div>
                 </div>
