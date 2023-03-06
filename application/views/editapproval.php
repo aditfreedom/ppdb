@@ -76,7 +76,7 @@
 
         <div class="form-group">
           <label for="">Jenis Penerimaan</label>
-          <select class="form-control form-control" name="jenis" readonly disabled>
+          <select class="form-control form-control" name="jenis" readonly>
             <option selected hidden><?php echo $data->jenis; ?>
             </option>
             <option>Peserta Didik Baru SD</option>
