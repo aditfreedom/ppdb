@@ -177,7 +177,7 @@ class M_ppdb extends CI_Model{
     }
 
     public function hitungformulir(){
-        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SD' OR jenis='Peserta Didik Baru SMP' OR jenis='Peserta Didik Baru SMA') AND approve_formulir='Diterima'");
+        $result = $this->db->query("SELECT*FROM pengguna WHERE (jenis='Peserta Didik Baru SD' OR jenis='Peserta Didik Baru SMP' OR jenis='Peserta Didik Baru SMA' OR jenis='Jalur Prestasi SD' OR jenis='Jalur Prestasi SMP' OR jenis='Jalur Prestasi SMA' OR jenis='Pindahan SD' OR jenis='Pindahan SMP' OR jenis='Pindahan SMA')  AND approve_formulir='Diterima'");
         return $result->num_rows();
     }
 
